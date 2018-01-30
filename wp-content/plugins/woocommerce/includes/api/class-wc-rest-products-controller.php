@@ -745,7 +745,7 @@ class WC_REST_Products_Controller extends WC_REST_Legacy_Products_Controller {
 
 		// Purchase Note.
 		if ( isset( $request['purchase_note'] ) ) {
-			$product->set_purchase_note( wc_clean( $request['purchase_note'] ) );
+			$product->set_purchase_note( wp_kses_post( wp_unslash( $request['purchase_note'] ) ) );
 		}
 
 		// Featured Product.
@@ -1172,10 +1172,10 @@ class WC_REST_Products_Controller extends WC_REST_Legacy_Products_Controller {
 			}
 
 			$download = new WC_Product_Download();
-			$download->set_id( $key );
+			$download->set_id( $file['id'] ? $file['id'] : wp_generate_uuid4() );
 			$download->set_name( $file['name'] ? $file['name'] : wc_get_filename_from_url( $file['file'] ) );
 			$download->set_file( apply_filters( 'woocommerce_file_download_path', $file['file'], $product, $key ) );
-			$files[]  = $download;
+			$files[] = $download;
 		}
 		$product->set_downloads( $files );
 
@@ -2034,7 +2034,7 @@ class WC_REST_Products_Controller extends WC_REST_Legacy_Products_Controller {
 			'validate_callback' => 'rest_validate_request_arg',
 		);
 		$params['sku'] = array(
-			'description'       => __( 'Limit result set to products with a specific SKU.', 'woocommerce' ),
+			'description'       => __( 'Limit result set to products with specific SKU(s). Use commas to separate.', 'woocommerce' ),
 			'type'              => 'string',
 			'sanitize_callback' => 'sanitize_text_field',
 			'validate_callback' => 'rest_validate_request_arg',
