@@ -1,0 +1,18 @@
+.secondary-header .burger-icon {
+    display: block!important;
+}
+
+.secondary-header .vertical-navigation {
+    width: 175px!important;
+}
+
+.menu-opener.color-scheme-dark .burger-icon, .menu-opener.color-scheme-dark .burger-icon:after, .menu-opener.color-scheme-dark .burger-icon:before {
+    background-color: rgba(198, 40, 40, 1)!important;
+}
+.secondary-header {
+    background-color: #f8f8f8;
+}
+
+.header-categories {
+    padding-bottom: 0!important;
+}

@@ -1572,7 +1572,7 @@ if( ! function_exists( 'woodmart_header_block_categories_menu' ) ) {
 			<div class="vertical-navigation header-categories-nav <?php if( $opened ) echo 'opened-menu'; else echo 'show-on-hover'; ?>" role="navigation">
 				<span class="menu-opener <?php echo esc_attr( $class ); ?>">
 					<span class="menu-open-label">
-						<span class="burger-icon"></span><?php esc_html_e('Browse Categories', 'woodmart'); ?>
+						<span class="burger-icon"></span><?php esc_html_e('Каталог', 'woodmart'); ?>
 					</span>
 					<span class="arrow-opener"></span>
 				</span>
@@ -2146,13 +2146,8 @@ if( ! function_exists( 'woodmart_generate_header' ) ) {
 							'mobile_icon',
 						),
 						'logo',
-						'main_nav',
 						'right-column' => array(
-							'header_links',
-							'search',
-							'wishlist',
-							'cart',
-							'full_screen_menu_icon',
+							'main_nav',
 						)
 					)	
 				),
@@ -2161,6 +2156,13 @@ if( ! function_exists( 'woodmart_generate_header' ) ) {
 						'secondary-inner' => array(
 							'categories_menu',
 							'search_extended',
+                                'right-column' => array(
+                                'header_links',
+                                'search',
+                                'wishlist',
+                                'cart',
+                                'full_screen_menu_icon',
+                            )
 						)
 					)
 				)

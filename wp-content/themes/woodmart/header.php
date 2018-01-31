@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <link rel="stylesheet" type="text/css" href="wp-content/themes/woodmart/css/styles.css">
 	<?php wp_head(); ?>
 </head>
 
