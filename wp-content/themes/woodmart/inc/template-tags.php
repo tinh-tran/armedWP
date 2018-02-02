@@ -1272,8 +1272,8 @@ if( ! function_exists( 'woodmart_header_block_cart' ) ) {
 				<a href="<?php echo esc_url( wc_get_cart_url() ); ?>">
 					<span class="woodmart-cart-totals">
 						<?php woodmart_cart_count(); ?>
-						<span class="subtotal-divider">/</span> 
-						<?php woodmart_cart_subtotal(); ?>
+						<span class="subtotal-divider">/</span>
+
 					</span>
 				</a>
 				<?php if ( $position != 'side'): ?>
@@ -1376,7 +1376,7 @@ if( ! function_exists( 'woodmart_header_block_search_extended' ) ) {
 			<form role="search" method="get" class="searchform <?php echo esc_attr( $class ); ?>" action="<?php echo esc_url( home_url( '/' ) ); ?>" <?php echo ( $data ); ?>>
 				<div>
 					<label class="screen-reader-text" for="s"><?php esc_attr_x( 'Search for:', 'label', 'woodmart' ); ?></label>
-					<input type="text" class="s" placeholder="<?php echo ($placeholder); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+					<input type="text" class="s" placeholder="Поиск по сайту" value="<?php echo get_search_query(); ?>" name="s" />
 					<input type="hidden" name="post_type" value="<?php echo esc_attr( $search_post_type ); ?>">
 					<?php if( $show_categories && $search_post_type == 'product' ) woodmart_show_categories_dropdown(); ?>
 					<button type="submit" class="searchsubmit"><?php echo esc_attr_x( 'Search', 'submit button', 'woodmart' ); ?></button>
@@ -1737,6 +1737,14 @@ if( ! function_exists( 'woodmart_header_block_header_links' ) ) {
 		
 		if( ! empty( $links ) ) {
 		?>
+		    <div class="primary-menu__phone">
+		        <span class="primary-menu__phone-item">
+		            <a href="tel:+74951062676">8 (495) 106-26-76</a>
+                </span>
+                <span class="primary-menu__phone-item">
+                    <a href="tel:88002006734">8 (800) 200-67-34</a>
+                </span>
+            </div>
 			<div class="woodmart-header-links">
 				<ul>
 					<?php foreach ($links as $key => $link):
@@ -1781,7 +1789,7 @@ if( ! function_exists( 'woodmart_get_header_links' ) ) {
 			}
 		} else {
 			$links['register'] = array(
-				'label' => esc_html__('Login / Register', 'woodmart'),
+				'label' => esc_html__('Вход', 'woodmart'),
 				'url' => $account_link
 			);
 

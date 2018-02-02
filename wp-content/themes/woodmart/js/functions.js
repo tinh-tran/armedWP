@@ -522,26 +522,34 @@ var woodmartThemeModule;
 
                 if( ! body.hasClass('enable-sticky-header') || body.hasClass('global-header-vertical') || header.length == 0 ) return;
 
-                var logo = header.find(".site-logo").clone().html(),
-                    navigation = ( header.find(".main-nav").length ) ? header.find(".main-nav").clone().html() : '',
+                var catalog = ( header.find('.vertical-navigation').length ) ? header.find('.vertical-navigation').clone().html() : '',
+                    //logo = header.find(".site-logo").clone().html(),
+                    //navigation = ( header.find(".main-nav").length ) ? header.find(".main-nav").clone().html() : '',
+                    searchExtended = ( header.find('.search-extended').length ) ? header.find(".search-extended").clone().html() : '',
                     rightColumn = ( header.find(".right-column").length ) ? header.find(".right-column").clone().html() : '',
-                    leftSide = header.find(".header-left-side").clone().html(),
+                    //leftSide = header.find(".header-left-side").clone().html(),
                     extraClass = header.data('sticky-class');
 
-                if ( header.hasClass( 'header-advanced' ) ) {
+                if ( header.hasClass( 'header-categories' ) ) {
+                    catalog = ( header.find('.vertical-navigation').length ) ? header.find('.vertical-navigation').clone().html() : '';
                     rightColumn = ( header.find(".secondary-header .right-column").length ) ? header.find(".secondary-header .right-column").clone().html() : '';
+                    searchExtended = ( header.find(".secondary-header .search-extended").length ) ? header.find(".secondary-header .search-extended").clone().html() : '';
                 }
                 
                 rightColumn = rightColumn.replace( /id="_wpnonce"/g, 'id="_wpnonce_2"' ).replace( /id="password"/g, 'id="password_2"' ).replace( /id="username"/g, 'id="username_2"' );
                 
                 var headerClone = [
-                    '<div class="sticky-header header-clone ' + extraClass + '">',
-                        '<div class="container">',
-                            '<div class="wrapp-header">',
-                                '<div class="header-left-side">' + leftSide + '</div>',
-                                '<div class="site-logo">' + logo + '</div>',
-                                '<div class="main-nav site-navigation woodmart-navigation">' + navigation + '</div>',
-                                '<div class="right-column">' + rightColumn + '</div>',
+                    '<div class="sticky-header header-categories header-clone ' + extraClass + '">',
+                        '<div class="secondary-header">',
+                            '<div class="container">',
+                                '<div class="secondary-inner">',
+                                    '<div class="vertical-navigation header-categories-nav show-on-hover" role="navigation">' + catalog + '</div>',
+                                    //'<div class="header-left-side">' + leftSide + '</div>',
+                                    //'<div class="site-logo">' + logo + '</div>',
+                                    //'<div class="main-nav site-navigation woodmart-navigation">' + navigation + '</div>',
+                                    '<div class="search-extended">' + searchExtended + '</div>',
+                                    '<div class="right-column">' + rightColumn + '</div>',
+                                '</div>',
                             '</div>',
                         '</div>',
                     '</div>',

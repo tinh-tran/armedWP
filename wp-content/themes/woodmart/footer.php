@@ -62,5 +62,6 @@
 </div> <!-- end wrapper -->
 <div class="woodmart-close-side"></div>
 <?php wp_footer(); ?>
+<script src="/wp-content/themes/woodmart/js/custom.js"></script>
 </body>
 </html>

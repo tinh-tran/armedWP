@@ -409,3 +409,5 @@ if( ! function_exists( 'woodmart_get_fonts_url') ) {
 	    return $font_url;
 	}
 }
+
+wp_enqueue_script('jquery');
