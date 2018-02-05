@@ -520,6 +520,10 @@ if ( !class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
                 if ( isset( $option[ 'yith-type' ] ) && in_array( $option[ 'yith-type' ], array( 'checkbox', 'onoff' ) ) ) {
                     $value = yith_plugin_fw_is_true( $raw_value ) ? 'yes' : 'no';
                 }
+
+                if ( isset( $option[ 'yith-type' ] ) && in_array( $option[ 'yith-type' ], array( 'textarea-editor', 'textarea-codemirror' ) ) ) {
+                    $value = $raw_value;
+                }
             }
 
             return $value;

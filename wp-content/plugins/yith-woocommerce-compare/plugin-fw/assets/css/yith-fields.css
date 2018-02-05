@@ -27,7 +27,7 @@
 }
 
 .the-metabox .yith-plugin-fw-title-field-wrapper h3.title {
-    float  : left;
+    float : left;
 }
 
 .yith-plugin-fw input[type=email],
@@ -180,37 +180,37 @@ ul.yit-icons-manager-list li.active {
 }
 
 .yith-plugin-fw-onoff-container input + span {
-    cursor      : pointer;
-    text-indent : -9999px;
-    display     : block;
-    width: 36px;
-    height: 20px;
-    background: #a4a4a4;
-    border-radius: 24px;
-    position: relative;
-    transition: all 0.3s;
+    cursor        : pointer;
+    text-indent   : -9999px;
+    display       : block;
+    width         : 36px;
+    height        : 20px;
+    background    : #a4a4a4;
+    border-radius : 24px;
+    position      : relative;
+    transition    : all 0.3s;
 }
 
-.yith-plugin-fw-onoff-container input + span:before{
-    content: '';
-    background: #fff;
-    width:16px;
-    height: 16px;
-    border-radius: 50%;
-    position: absolute;
-    top:2px;
-    left:2px;
-    transition: all 0.3s;
+.yith-plugin-fw-onoff-container input + span:before {
+    content       : '';
+    background    : #fff;
+    width         : 16px;
+    height        : 16px;
+    border-radius : 50%;
+    position      : absolute;
+    top           : 2px;
+    left          : 2px;
+    transition    : all 0.3s;
 }
 
 .yith-plugin-fw-onoff-container input:checked + span,
 .yith-plugin-fw-onoff-container input.onoffchecked + span {
-    background: #0073aa;
+    background : #0073aa;
 }
 
 .yith-plugin-fw-onoff-container input:checked + span:before,
 .yith-plugin-fw-onoff-container input.onoffchecked + span:before {
-    left:18px;
+    left : 18px;
 }
 
 /* ------- Preview ------- */
@@ -319,7 +319,13 @@ ul.yit-icons-manager-list li.active {
 
 /* ------- Textarea ------- */
 .yith-plugin-fw-textarea-editor-field-wrapper {
-    clear : both;
+    max-width : 1000px;
+    clear     : both;
+}
+
+.yith-plugin-fw-textarea-editor-field-wrapper textarea.wp-editor-area,
+.woocommerce table.form-table .yith-plugin-fw-textarea-editor-field-wrapper textarea.wp-editor-area{
+    width : 100%;
 }
 
 /* ------- Buttons ------- */

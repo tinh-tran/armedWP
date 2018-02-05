@@ -150,9 +150,12 @@ if ( !class_exists( 'YIT_Plugin_Panel' ) ) {
             global $admin_page_hooks;
 
             if ( !isset( $admin_page_hooks[ 'yit_plugin_panel' ] ) ) {
-                $position = apply_filters( 'yit_plugins_menu_item_position', '62.32' );
+                $position   = apply_filters( 'yit_plugins_menu_item_position', '62.32' );
+                $capability = apply_filters( 'yit_plugin_panel_menu_page_capability', 'manage_options' );
+                $show       = apply_filters( 'yit_plugin_panel_menu_page_show', true );
+
                 //  YITH Plugins text must not be translated
-                apply_filters( 'yit_plugin_panel_menu_page_capability', current_user_can( 'manage_options' ) ) && add_menu_page( 'yit_plugin_panel', 'YITH Plugins', 'manage_options', 'yit_plugin_panel', null, YIT_CORE_PLUGIN_URL . '/assets/images/yithemes-icon.png', $position );
+                !!$show && add_menu_page( 'yit_plugin_panel', 'YITH Plugins', $capability, 'yit_plugin_panel', null, YIT_CORE_PLUGIN_URL . '/assets/images/yithemes-icon.png', $position );
             }
         }
 
@@ -268,7 +271,7 @@ if ( !class_exists( 'YIT_Plugin_Panel' ) ) {
                     } else {
                         if ( isset( $option[ 'id' ] ) ) {
                             $value = isset( $input[ $option[ 'id' ] ] ) ? $input[ $option[ 'id' ] ] : false;
-                            if ( isset( $option[ 'type' ] ) && in_array( $option[ 'yith-type' ], array( 'checkbox', 'onoff' ) ) ) {
+                            if ( isset( $option[ 'type' ] ) && in_array( $option[ 'type' ], array( 'checkbox', 'onoff' ) ) ) {
                                 $value = yith_plugin_fw_is_true( $value ) ? 'yes' : 'no';
                             }
                             $valid_input[ $option[ 'id' ] ] = $value;
@@ -317,7 +320,7 @@ if ( !class_exists( 'YIT_Plugin_Panel' ) ) {
         public function add_premium_version_upgrade_to_menu() {
             global $submenu;
 
-            if ( apply_filters( 'yit_show_upgrade_to_premium_version', !isset( $submenu[ 'yit_plugin_panel' ][ 'how_to' ] ) ) ) {
+            if ( apply_filters( 'yit_show_upgrade_to_premium_version', isset( $submenu[ 'yit_plugin_panel' ] ) && !isset( $submenu[ 'yit_plugin_panel' ][ 'how_to' ] ) ) ) {
                 $submenu[ 'yit_plugin_panel' ][ 'how_to' ] = array(
                     sprintf( '%s%s%s', '<span id="yith-how-to-premium">', __( 'How to install premium version', 'yith-plugin-fw' ), '</span>' ),
                     'install_plugins',

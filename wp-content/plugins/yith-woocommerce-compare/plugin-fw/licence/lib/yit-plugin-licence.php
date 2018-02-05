@@ -86,7 +86,8 @@ if ( !class_exists( 'YIT_Plugin_Licence' ) ) {
          * @since 3.0.0
          */
         public function activate_license_notice() {
-            if ( apply_filters( 'yith_plugin_fw_show_activate_license_notice', !isset( $_GET[ 'page' ] ) || 'yith_plugins_activation' !== $_GET[ 'page' ] ) ) {
+            $show_license_notice = current_user_can( 'update_plugins' ) && ( !isset( $_GET[ 'page' ] ) || 'yith_plugins_activation' !== $_GET[ 'page' ] );
+            if ( apply_filters( 'yith_plugin_fw_show_activate_license_notice', $show_license_notice ) ) {
                 $products_to_activate = $this->get_to_active_products();
                 if ( !!$products_to_activate ) {
                     $product_names = array();
@@ -144,11 +145,11 @@ if ( !class_exists( 'YIT_Plugin_Licence' ) ) {
          */
         public function add_submenu_page() {
             add_submenu_page(
-                $this->_settings['parent_page'],
-                $this->_settings['page_title'],
-                $this->_settings['menu_title'],
-                $this->_settings['capability'],
-                $this->_settings['page'],
+                $this->_settings[ 'parent_page' ],
+                $this->_settings[ 'page_title' ],
+                $this->_settings[ 'menu_title' ],
+                $this->_settings[ 'capability' ],
+                $this->_settings[ 'page' ],
                 array( $this, 'show_activation_panel' )
             );
         }
@@ -157,8 +158,8 @@ if ( !class_exists( 'YIT_Plugin_Licence' ) ) {
          * Premium plugin registration
          *
          * @param $plugin_init | string | The plugin init file
-         * @param $secret_key  | string | The product secret key
-         * @param $product_id  | string | The plugin slug (product_id)
+         * @param $secret_key | string | The product secret key
+         * @param $product_id | string | The plugin slug (product_id)
          *
          * @return void
          *
@@ -170,10 +171,10 @@ if ( !class_exists( 'YIT_Plugin_Licence' ) ) {
                 require_once ABSPATH . 'wp-admin/includes/plugin.php';
             }
 
-            $plugins                             = get_plugins();
-            $plugins[$plugin_init]['secret_key'] = $secret_key;
-            $plugins[$plugin_init]['product_id'] = $product_id;
-            $this->_products[$plugin_init]       = $plugins[$plugin_init];
+            $plugins                                 = get_plugins();
+            $plugins[ $plugin_init ][ 'secret_key' ] = $secret_key;
+            $plugins[ $plugin_init ][ 'product_id' ] = $product_id;
+            $this->_products[ $plugin_init ]         = $plugins[ $plugin_init ];
         }
 
         public function get_product_type() {

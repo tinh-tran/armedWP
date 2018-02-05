@@ -17,6 +17,10 @@ h3 {
     max-width: 100%;
 }
 
+.main-page-wrapper {
+    padding-top: 0!important;
+}
+
 /* Secondary menu */
 .secondary-header .burger-icon {
     display: block!important;
@@ -816,6 +820,16 @@ h3 {
     border-left: 3px solid #c62828;
 }
 
+.dropdown-catalog__category_title h2 {
+    font-family: Rubik;
+    font-size: 1.8em;
+    font-weight: 500;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #4f4f4f!important;
+    border-left: 3px solid #c62828;
+}
+
 .single-product_wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -823,6 +837,220 @@ h3 {
 }
 
 .single-product_fixed {
-    position: fixed!important;
     right: 0;
+}
+
+.single-product_fixed-wrapper {
+    width: 250px;
+    padding-top: 40px;
+}
+
+.single-product_fixed-wrapper .tc-extra-product-options {
+    display: none;
+}
+
+h4.product_title {
+    font-family: Rubik;
+    font-size: 1.4em;
+    color: #4F4F4F;
+}
+
+.anchor
+{
+    position: relative;
+    z-index: 3;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    height: 60px;
+    margin-bottom: 5px;
+
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    background-color: #f2f2f2;
+}
+.anchor__wrapper
+{
+    width: 1366px;
+}
+.anchor__inner
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+
+    width: 1366px;
+
+    list-style: none;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.anchor__item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    text-align: center;
+
+    border-right: 1px solid #fff;
+}
+.anchor__item:last-child
+{
+    border-right: none;
+}
+.anchor__item-link
+{
+    font-family: 'Rubik';
+    font-size: 1.4em;
+
+    width: 194px;
+    padding: 21px 15px;
+
+    -webkit-transition: .4s;
+    transition: .4s;
+    text-decoration: none;
+    letter-spacing: .7px;
+
+    color: #828282;
+}
+.anchor__item-link:hover
+{
+    color: #4f4f4f;
+    background: #fff;
+}
+
+.single-product .site-content {
+    margin-top: 0px!important;
+}
+
+.view
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 0 15px;
+
+    border-bottom: 1px solid #e0e0e0;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+.view__wrapper
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
+.view__inner-slider
+{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.view__inner-description
+{
+    padding: 15px;
+
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+}
+.view__item-about
+{
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #e0e0e0;
+}
+.view__item-about--text
+{
+    font-family: 'Rubik';
+    font-size: 1.3em;
+
+    color: #828282;
+}
+.view__item-about--link
+{
+    color: #4f4f4f;
+}
+.view__item-feature__text
+{
+    display: table;
+
+    width: 100%;
+    margin: 15px 0;
+
+    table-layout: fixed;
+}
+.view__item-feature__text_in,
+.view__item-feature__text-name,
+.view__item-feature__text-value
+{
+    font-family: 'Roboto';
+    font-size: 1.3em;
+    font-weight: normal;
+
+    position: relative;
+
+    display: table-cell;
+    overflow: hidden;
+
+    text-align: left;
+    vertical-align: middle;
+
+    color: #828282;
+}
+.view__item-feature__text-name p:after
+{
+    position: absolute;
+
+    width: 100%;
+    height: 13px;
+    margin-left: 16px;
+
+    content: '';
+
+    border-bottom: 1px dotted #bdbdbd;
+}
+.view__item-feature__text-value p,
+.view__item-feature__text-value a
+{
+    margin-left: 16px;
+}
+.view__item-feature__text-value:after
+{
+    border: none;
+}
+
+.view-feature-title p,
+.view-feature-title a
+{
+    font-family: 'Rubik';
+    font-size: 16px;
+
+    letter-spacing: .8px;
+
+    color: #4f4f4f;
+}
+
+.woocommerce-product-details__short-description p {
+    font-size: 1.3em;
+    color: #828282
 }

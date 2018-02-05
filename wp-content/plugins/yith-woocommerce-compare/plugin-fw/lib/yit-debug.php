@@ -10,21 +10,21 @@
 
 !defined( 'ABSPATH' ) && exit; // Exit if accessed directly
 
-if ( !class_exists( 'YIT_Debug' ) ) {
+if ( !class_exists( 'YITH_Debug' ) ) {
     /**
-     * YIT_Debug
+     * YITH_Debug
      *
      * manages debug
      *
-     * @class       YIT_Debug
+     * @class       YITH_Debug
      * @package     Yithemes
      * @since       1.0.0
      * @author      Leanza Francesco <leanzafrancesco@gmail.com>
      *
      */
-    class YIT_Debug {
+    class YITH_Debug {
 
-        /** @var YIT_Debug */
+        /** @var YITH_Debug */
         private static $_instance;
 
         public static function get_instance() {
@@ -234,7 +234,8 @@ if ( !class_exists( 'YIT_Debug' ) ) {
          * @return string
          */
         public function get_plugin_framework_info() {
-            $plugin_fw_version   = get_file_data( trailingslashit( YIT_CORE_PLUGIN_PATH ) . 'init.php', array( 'Version' => 'Version' ) )[ 'Version' ];
+            $plugin_fw_data      = get_file_data( trailingslashit( YIT_CORE_PLUGIN_PATH ) . 'init.php', array( 'Version' => 'Version' ) );
+            $plugin_fw_version   = $plugin_fw_data[ 'Version' ];
             $plugin_fw_loaded_by = basename( dirname( YIT_CORE_PLUGIN_PATH ) );
 
             return "$plugin_fw_version (by $plugin_fw_loaded_by)";
@@ -261,8 +262,10 @@ if ( !class_exists( 'YIT_Debug' ) ) {
         }
     }
 }
-function YIT_Debug() {
-    return YIT_Debug::get_instance();
-}
+if ( !function_exists( 'YITH_Debug' ) ) {
+    function YITH_Debug() {
+        return YITH_Debug::get_instance();
+    }
 
-YIT_Debug();
+    YITH_Debug();
+}

@@ -169,7 +169,7 @@ if ( !class_exists( 'YIT_Upgrade' ) ) {
         public function admin_enqueue_scripts() {
             global $pagenow;
             if ( 'plugins.php' === $pagenow )
-                yit_enqueue_style( 'yit-upgrader', YIT_CORE_PLUGIN_URL . '/assets/css/yit-upgrader.css' );
+                wp_enqueue_style( 'yit-upgrader', YIT_CORE_PLUGIN_URL . '/assets/css/yit-upgrader.css' );
         }
 
         /**
@@ -195,7 +195,8 @@ if ( !class_exists( 'YIT_Upgrade' ) ) {
             } else {
                 //Bulk action upgrade
                 $action_url = parse_url( $upgrader->skin->options[ 'url' ] );
-                parse_str( rawurldecode( htmlspecialchars_decode( $action_url[ 'query' ] ) ) );
+                parse_str( rawurldecode( htmlspecialchars_decode( $action_url[ 'query' ] ) ), $output );
+                $plugins = isset( $output[ 'plugins' ] ) ? $output[ 'plugins' ] : '';
                 $plugins = explode( ',', $plugins );
                 foreach ( $plugins as $plugin_init ) {
                     $to_upgrade = get_plugin_data( WP_PLUGIN_DIR . '/' . $plugin_init );
