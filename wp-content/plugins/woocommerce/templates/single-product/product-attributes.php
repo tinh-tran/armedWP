@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
+<!--
 <table class="shop_attributes">
 	<?php if ( $display_dimensions && $product->has_weight() ) : ?>
 		<tr>
@@ -69,3 +70,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</tr>
 	<?php endforeach; ?>
 </table>
+-->

@@ -1521,7 +1521,7 @@ if( ! function_exists( 'woodmart_product_share_buttons' ) ) {
 		?>
 			<?php if ( woodmart_is_social_link_enable( $type ) ): ?>
 				<div class="product-share">
-					<span class="share-title"><?php echo ($type == 'share') ? esc_html__('Share', 'woodmart') :  esc_html__('Follow', 'woodmart'); ?></span>
+					<span class="share-title">Поделиться</span>
 					<?php echo woodmart_shortcode_social( array( 'type' => $type, 'size' => 'small' ) ); ?>
 				</div>
 			<?php endif ?>
