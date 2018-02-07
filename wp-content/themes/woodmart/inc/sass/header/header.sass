@@ -1,0 +1,162 @@
+/* Main position header*/
+.main-header
+  z-index: 100!important
+
+.header-categories
+  padding-bottom: 0!important
+  .search-extended
+    justify-content: flex-end
+    display: flex
+
+.vertical-navigation .item-level-0>a
+  padding: 12px 18px
+  color: #828282!important
+  line-height: 20px
+  font-size: 16px!important
+  font-weight: 400!important
+
+.right-column > .woodmart-header-links,
+.right-column > .woodmart-wishlist-info-widget,
+.right-column > .woodmart-shopping-cart
+  margin: 0 15px!important
+
+/* Sticky header position */
+.sticky-header
+  .search-extended
+    justify-content: flex-end
+    display: flex
+
+.sticky-header>.secondary-header>.container
+  width: 97%!important
+  max-width: 100%!important
+
+/* Secondary menu */
+.secondary-header
+  background-color: #f8f8f8
+  .burger-icon
+    display: block!important
+  .vertical-navigation
+    width: 315px!important
+  .menu-opener
+    padding-right: 60px!important
+    padding-left: 0!important
+
+/* Menu opener */
+.menu-opener
+  .arrow-opener
+    color: rgba(198, 40, 40, 1)!important
+    margin-right: 135px
+  .menu-open-label
+    font-size: 16px
+    font-weight: 400
+    cursor: pointer
+    text-decoration: none
+    letter-spacing: .05em
+    color: #828282
+    text-transform: none!important
+    .burger-icon
+      margin-right: 15px!important
+
+.menu-opener.color-scheme-dark .burger-icon, .menu-opener.color-scheme-dark .burger-icon:after, .menu-opener.color-scheme-dark .burger-icon:before
+  background-color: rgba(198, 40, 40, 1)!important
+
+/* Menu Main navArmed */
+#menu-main-navarmed > .menu-item
+  margin: 0 17px!important
+
+#menu-main-navarmed > .menu-item > .woodmart-nav-link span
+  font-weight: 400
+  text-transform: none!important
+  color: #828282
+  font-size: 14px!important
+  transition: all .3s ease
+
+#menu-main-navarmed > .menu-item > .woodmart-nav-link span:hover
+  color: rgba(198, 40, 40, 1)!important
+
+/* Primary menu */
+.primary-menu__phone
+  position: relative
+  display: flex
+  flex-direction: column
+  margin: 0 28px
+  justify-content: center
+  align-items: center
+
+.primary-menu__phone-item a
+  font-size: 14px
+  font-weight: 400
+  text-decoration: none
+  letter-spacing: .03em
+  color: #828282
+
+/* Search on header */
+.search-extended form
+  width: 290px
+
+.searchform input[type=text]
+  font-size: 12px!important
+  padding: 10px
+  color: #828282
+  border: 1px solid #f2f2f2
+  background: #fff!important
+  height: 36px!important
+
+/* Dropdown menu */
+.sub-menu-dropdown.color-scheme-light, .woodmart-dark .sub-menu-dropdown
+  background-color: #fff!important
+
+.dropdown-catalog
+  &__category
+    padding: 25px 30px
+    height: 100%
+    &_title p
+      font-size: 1.8em
+      font-weight: 500
+      text-transform: uppercase
+      color: #4f4f4f !important
+      font-family: Rubik
+      border-left: 3px solid $headerItemHoverColor
+      padding: 0 10px
+    &_wrapper
+      margin: 20px 0
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: start
+    &_link
+      display: flex
+      align-items: center
+      width: 250px
+      height: 75px
+      padding: 60px 0
+      text-decoration: none
+      color: $headerItemColor
+      &:hover
+        color: $headerItemHoverColor
+    &_image
+      width: 78px
+      height: 78px
+    &_text
+      font-size: 1.4em
+      padding: 10px
+      color: #828282
+      &:hover
+        color: $GlobalColor
+
+.subtitle-h4 h4
+  font-family: 'Rubik'
+  font-size: 2.1em
+  padding: 5px 0
+  text-align: center
+  letter-spacing: .05em
+  color: #828282!important
+  font-weight: 500!important
+
+
+@media (min-width: 1200px)
+  .header-full-width .main-header .navigation-wrap > .container, .header-full-width .main-header .secondary-header > .container, .header-full-width .main-header > .container, .header-full-width .single-breadcrumbs-wrapper > .container, .header-full-width .sticky-header > .container, .header-full-width .topbar-wrapp > .container
+    width: 97%!important
+    max-width: 100%!important
+

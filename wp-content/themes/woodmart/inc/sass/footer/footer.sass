@@ -1,0 +1,119 @@
+.footer
+  &__contacts
+    &-item
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-start
+      &:not(:last-child)
+        margin-bottom: 15px
+    &-text
+      width: 90%
+      font-size: 1.4em
+      &-wrap
+        width: 90%
+    &-image
+      margin-right: 10px
+      margin-top: 3px
+    &-link
+      color: $linkFooterColor
+      text-decoration: none
+      &:hover
+        color: $linkHoverFooterColor
+
+.copyright
+  margin-top: 31px
+  width: 100%
+  &__wrapp
+    max-width: 1110px
+    margin: 0 auto
+    position: relative
+    padding-bottom: 12px
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 1px
+      bottom: 0
+      background-image: linear-gradient(to right, rgba(224,224,224,0) 0%, rgba(224,224,224,1) 50%, rgba(224,224,224,0) 100%)
+  &__list
+    margin-bottom: 18px
+  &__text, &__copy-text
+    text-align: center
+    font-size: 1.4em
+    color: $textFooterColor
+  &__copy-text
+    padding-bottom: 6px
+
+@media screen and (max-width: 1024px)
+  .copyright
+    margin-top: 10px
+    &__text
+      padding: 0 7px
+
+.social
+  display: flex
+  justify-content: center
+  align-items: center
+  list-style: none
+  flex-wrap: wrap
+  &__element
+    width: 33px
+    height: 33px
+    position: relative
+    &:not(:last-child)
+      margin-right: 20px
+    &_lg
+      width: 44px
+      height: 44px
+      background-image: url('/wp-content/uploads/social__sprite.svg')
+      background-repeat: no-repeat
+    &_md
+      background-image: url('/wp-content/uploads/social__sprite.svg')
+      background-repeat: no-repeat
+
+@each $soc, $position in (vk, 0px),(fb, -44px),(od, -88px),(in, -132px),(tw, -176px),(tg, -220px),(you, -264px),(g, -308px),(y, -352px),(s, -396px),(wh, -440px),(v, -484px)
+  .social__element_#{$soc}-lg
+    background-position: 0 $position
+@each $soc, $position in (vk, 0px),(fb, -44px),(od, -88px),(in, -132px),(tw, -176px),(tg, -220px),(you, -264px),(g, -308px),(y, -352px),(s, -396px),(wh, -440px),(v, -484px)
+  .social__element_#{$soc}-lg:hover
+    background-position: -44px $position
+
+
+@each $soc, $position in (vk, 0px),(fb, -33px),(od, -66px),(in, -99px),(tw, -132px),(tg, -165px),(you, -198px),(g, -231px),(y, -264px),(s, -297px),(wh, -330px),(v, -363px)
+  .social__element_#{$soc}-md
+    background-position: 0 $position
+@each $soc, $position in (vk, 0px),(fb, -33px),(od, -66px),(in, -99px),(tw, -132px),(tg, -165px),(you, -198px),(g, -231px),(y, -264px),(s, -297px),(wh, -330px),(v, -363px)
+  .social__element_#{$soc}-md:hover
+    background-position: -33px $position
+
+.copyright-info p
+  font-family: Rubik
+  font-style: normal
+  font-weight: 300
+  line-height: normal
+  font-size: 27px
+  text-align: center
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  color: #828282
+
+.footer-widget
+  margin-bottom: 0px!important
+
+
+.widget-title, .widgettitle
+  font-family: 'Rubik'
+  font-size: 1.8em!important
+  font-weight: 500!important
+  margin-bottom: 19px
+  padding-left: 10px
+  letter-spacing: .1em
+  text-transform: none!important
+  color: #4f4f4f!important
+  border-left: 3px solid #c62828
+
+.color-scheme-dark .woodmart-widget a, .color-scheme-dark div[class^=vc_wp] a
+  color: #828282!important
+
+.color-scheme-dark .woodmart-widget a:focus, .color-scheme-dark .woodmart-widget a:hover, .color-scheme-dark div[class^=vc_wp] a:focus, .color-scheme-dark div[class^=vc_wp] a:hover
+  color: #C62828!important

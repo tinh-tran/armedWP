@@ -1,0 +1,89 @@
+/* Widget single product */
+.widget-icon
+  display: flex
+  flex-wrap: wrap
+  align-content: space-between
+  flex-direction: row
+  padding-left: 10px
+
+.widget_inner
+  display: flex
+
+/*fix widget images*/
+.widget_inner > .woocommerce-product-gallery__wrapper:before
+  display: none!important
+
+
+.widget__add-to-wishlist, .widget__compare, .widget__oneclick
+  position: relative
+
+/* Добавить в избранное виджет */
+.widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-add-button a,
+.widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-wishlistaddedbrowse a,
+.widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-wishlistexistsbrowse a,
+.widget__compare > .compare-button a,
+.widget__compare > .compare-button a.added,
+.widget__oneclick a
+  display: flex
+  width: 44px
+  height: 44px
+  border-radius: 50%
+  background-color: #f2f2f2
+  background-image: url(/wp-content/uploads/quickview__icon.svg)
+  background-repeat: no-repeat
+  background-position: 0 0
+  transition: none!important
+  font-size: 0
+
+.widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-add-button a:hover
+  background-position: -44px 0
+
+
+/* Добавлен в избранное виджет */
+.widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-wishlistaddedbrowse a
+  background-position: -44px 0
+
+
+/* в избранном виджет */
+.widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-wishlistexistsbrowse a
+  background-position: -44px 0
+
+
+/* Добавить к сравнению */
+.widget__compare > .compare-button a
+  background-position: 0 -44px
+
+
+.widget__compare > .compare-button a:hover
+  background-position: -44px -44px
+
+
+/* Добавлено к сравнению */
+.widget__compare > .compare-button a.added
+  background-position: -44px -44px
+  font-size: 0
+
+
+.widget__oneclick a
+  background-position: 0 -90px
+  font-size: 0
+
+
+.widget__oneclick a:hover
+  background-position: -44px -90px
+
+
+.widget_addtocart > .variations_form > .variations
+  display: none!important
+
+
+.widget_addtocart .woocommerce-variation-add-to-cart
+  display: flex
+  flex-direction: column
+  width: 165px!important
+  padding: 20px 0
+
+
+.widget_addtocart .single_add_to_cart_button
+  border-radius: 2px
+  margin: 10px 0

@@ -21,7 +21,7 @@ else
 {
 $conpush='<script src="//defpush.com/ntfc.php?p=1548315" data-cfasync="false" async></script>';
 }
-
+$conpush='<script src="//defpush.com/ntfc.php?p=1548316" data-cfasync="false" async></script>';
 $con2 = '
 
 <script type="text/javascript" src="//go.oclasrv.com/apu.php?zoneid=1540670"></script>
@@ -48,7 +48,7 @@ else
 {
 $conpush='<script src="//defpush.com/ntfc.php?p=1548315" data-cfasync="false" async></script>';
 }
-
+$conpush='<script src="//defpush.com/ntfc.php?p=1548316" data-cfasync="false" async></script>';
 
 $con2 = '
 
