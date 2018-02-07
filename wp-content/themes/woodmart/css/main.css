@@ -1309,6 +1309,28 @@ h3
             box-shadow: 0 0 5px 1px rgba(0, 0, 0, .1);
 }
 
+h3.comment-reply-title
+{
+    display: none;
+}
+
+.comment-reply-title
+{
+    margin-top: 33px;
+}
+
+textarea.comment-reply-area
+{
+    min-height: 90px !important;
+
+    resize: none !important;
+}
+
+.comment-form > .form-submit > .submit
+{
+    margin: 20px 0;
+}
+
 .woocommerce-Tabs-panel
 {
     display: block !important;

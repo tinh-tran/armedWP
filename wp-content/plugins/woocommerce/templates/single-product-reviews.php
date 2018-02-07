@@ -29,6 +29,19 @@ if ( ! comments_open() ) {
 <div id="reviews" class="vc_row">
 	<div class="col-sm-12" id="comments">
 
+        <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
+            <div class="wpb_wrapper">
+                <h2 class="woocommerce-Reviews-title"><?php
+                    if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) ) {
+                        /* translators: 1: reviews count 2: product name */
+                        printf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span>' . get_the_title() . '</span>' );
+                    } else {
+                        _e( 'Reviews', 'woocommerce' );
+                    }
+                    ?></h2>
+            </div>
+        </div>
+
         <?php
         if ( 'no' === get_option( 'woocommerce_enable_review_rating' ) ) {
             return;
@@ -47,27 +60,7 @@ if ( ! comments_open() ) {
 
         <?php endif; ?>
 
-        <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
-            <div class="wpb_wrapper">
-                <h2>Отзывы (<?php
-                    if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) ) {
-                        /* translators: 1: reviews count 2: product name */
-                        printf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span></span>' );
-                    } else {
-                        _e( 'Reviews', 'woocommerce' );
-                    }
-                    ?>)</h2>
 
-            </div>
-        </div>
-        <h2 class="woocommerce-Reviews-title"><?php
-			if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) ) {
-				/* translators: 1: reviews count 2: product name */
-				printf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span>' . get_the_title() . '</span>' );
-			} else {
-				_e( 'Reviews', 'woocommerce' );
-			}
-		?></h2>
 
 		<?php if ( have_comments() ) : ?>
 
@@ -96,14 +89,17 @@ if ( ! comments_open() ) {
 
 		<div class="col-sm-12" id="review_form_wrapper">
 			<div id="review_form">
+                <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
+                    <div class="wpb_wrapper">
+                        <h2 id="reply-title" class="comment-reply-title">Добавить отзыв</h2>
+                    </div>
+                </div>
 				<?php
 					$commenter = wp_get_current_commenter();
 
 					$comment_form = array(
 						'title_reply'          => have_comments() ? __( 'Add a review', 'woocommerce' ) : sprintf( __( 'Be the first to review &ldquo;%s&rdquo;', 'woocommerce' ), get_the_title() ),
 						'title_reply_to'       => __( 'Leave a Reply to %s', 'woocommerce' ),
-						'title_reply_before'   => '<span id="reply-title" class="comment-reply-title">',
-						'title_reply_after'    => '</span>',
 						'comment_notes_after'  => '',
 						'fields'               => array(
 							'author' => '<p class="comment-form-author">' . '<label for="author">' . esc_html__( 'Name', 'woocommerce' ) . ' <span class="required">*</span></label> ' .
@@ -131,7 +127,7 @@ if ( ! comments_open() ) {
 						</select></div>';
 					}
 
-					$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . esc_html__( 'Your review', 'woocommerce' ) . ' <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required></textarea></p>';
+					$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . esc_html__( 'Your review', 'woocommerce' ) . ' <span class="required">*</span></label><textarea class="comment-reply-area" id="comment" name="comment" cols="45" rows="8" aria-required="true" required></textarea></p>';
 
 					comment_form( apply_filters( 'woocommerce_product_review_comment_form_args', $comment_form ) );
 				?>
