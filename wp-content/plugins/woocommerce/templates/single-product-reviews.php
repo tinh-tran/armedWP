@@ -26,9 +26,41 @@ if ( ! comments_open() ) {
 }
 
 ?>
-<div id="reviews" class="woocommerce-Reviews">
-	<div id="comments">
-		<h2 class="woocommerce-Reviews-title"><?php
+<div id="reviews" class="vc_row">
+	<div class="col-sm-12" id="comments">
+
+        <?php
+        if ( 'no' === get_option( 'woocommerce_enable_review_rating' ) ) {
+            return;
+        }
+
+        $rating_count = $product->get_rating_count();
+        $review_count = $product->get_review_count();
+        $average      = $product->get_average_rating();
+
+        if ( $rating_count > 0 ) : ?>
+
+            <div class="woocommerce-product-rating">
+                <?php echo wc_get_rating_html( $average, $rating_count ); ?>
+                <?php if ( comments_open() ) : ?><a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)</a><?php endif ?>
+            </div>
+
+        <?php endif; ?>
+
+        <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
+            <div class="wpb_wrapper">
+                <h2>Отзывы (<?php
+                    if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) ) {
+                        /* translators: 1: reviews count 2: product name */
+                        printf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span></span>' );
+                    } else {
+                        _e( 'Reviews', 'woocommerce' );
+                    }
+                    ?>)</h2>
+
+            </div>
+        </div>
+        <h2 class="woocommerce-Reviews-title"><?php
 			if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) ) {
 				/* translators: 1: reviews count 2: product name */
 				printf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span>' . get_the_title() . '</span>' );
@@ -62,7 +94,7 @@ if ( ! comments_open() ) {
 
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->get_id() ) ) : ?>
 
-		<div id="review_form_wrapper">
+		<div class="col-sm-12" id="review_form_wrapper">
 			<div id="review_form">
 				<?php
 					$commenter = wp_get_current_commenter();

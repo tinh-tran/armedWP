@@ -24,7 +24,4 @@ gulp.task('liveReload', function() {
 
 gulp.task('default', ['liveReload', 'sass'], function () {
     gulp.watch('inc/sass/**/*.sass', ['sass']);
-    gulp.watch('./js/**/*.js').on('change', browserSync.reload);
-    gulp.watch('./**/*.php').on('change', browserSync.reload);
-    gulp.watch('./css/**/*.css').on('change', browserSync.reload);
 });
