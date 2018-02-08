@@ -470,7 +470,7 @@ var woodmartThemeModule;
                         marginBottom : -heightHideInfo
                     });
 
-                    $el.addClass('hover-ready'); 
+                    $el.addClass('hover-ready');
                 };
 
                 $('.product-grid-item').each(function() {

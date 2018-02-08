@@ -17,6 +17,43 @@ jQuery(document).ready(function( $ ) {
 
     $('.comment-form > .form-submit > .submit').val('Оставить отзыв');
 
+    $('.product-price-rating > .price > .amount').append("<a class='product__question product__question-detail' href='#'></a>");
+    $('.product-price-rating > .price > inc > .amount').append("<a class='product__question product__question-detail' href='#'></a>");
+
+
+    $('.bg-product-grid-item').hover(
+        function() {
+            if ($(this).hasClass('product_entity')) {
+                $(this).removeClass('product_entity_nothover').addClass('product_entity_hover');
+            }
+            else if ($(this).hasClass('product_entitySm')) {
+                $(this).removeClass('product_entitySm_nothover').addClass('product_entitySm_hover');
+            }
+            else
+            {
+                $(this).removeClass('hidden-widget').addClass('visible-widget');
+                $(this).children('.product__asside').removeClass('product__asside_hide').addClass('product__asside_active');
+                $(this).children('.product__buttonWrapp').removeClass('product__buttonWrapp_hide').addClass('product__buttonWrapp_active');
+            }
+        },
+        function(){
+            if ($(this).hasClass('product_entity')){
+                $(this).removeClass('product_entity_hover').addClass('product_entity_nothover');
+            }
+            else if ($(this).hasClass('product_entitySm')) {
+                $(this).removeClass('product_entitySm_hover').addClass('product_entitySm_nothover');
+            }
+            else
+            {
+                $(this).removeClass('visible-widget').addClass('hidden-widget');
+                $(this).children('.product__asside').removeClass('product__asside_active').addClass('product__asside_hide');
+                $(this).children('.product__buttonWrapp').removeClass('product__buttonWrapp_active').addClass('product__buttonWrapp_hide');
+            }
+
+        }
+    );
+
+
 /* Tooltip */
 
     function simple_tooltip(target_items, name){

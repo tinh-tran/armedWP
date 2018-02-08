@@ -523,7 +523,7 @@ if( ! function_exists( 'woodmart_quick_shop_wrapper' ) ) {
 		global $product;
 		?>
 			<div class="quick-shop-wrapper">
-				<div class="quick-shop-close"><span><?php esc_html_e('Close', 'woodmart'); ?></span></div>
+				<div class="quick-shop-close"><span><?php esc_html_e('Закрыть', 'woodmart'); ?></span></div>
 				<div class="quick-shop-form">
 				</div>
 			</div>

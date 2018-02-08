@@ -17,8 +17,12 @@ $related_product_view = woodmart_get_opt( 'related_product_view' );
 if ( $related_products ) : ?>
 
 	<section class="related products">
-		
-		<h3 class="title slider-title"><?php echo esc_html__( 'Related products', 'woocommerce' ); ?></h3>
+
+        <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
+            <div class="wpb_wrapper">
+                <h2 id="reply-title" class="comment-reply-title"><?php echo esc_html__( 'Related products', 'woocommerce' ); ?></h2>
+            </div>
+        </div>
 		
 		<?php 
 		
