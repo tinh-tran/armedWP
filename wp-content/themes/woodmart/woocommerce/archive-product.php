@@ -37,7 +37,13 @@ if ( ! woodmart_is_woo_ajax() ) {
 	<?php do_action( 'woodmart_before_shop_page' ); ?>
 		
 	<?php do_action( 'woocommerce_archive_description' ); ?>
-		
+
+    <!-- TODO здесь напиши новый вывод заголовка в каталоге -->
+        <?php if ( $shop_title ): ?>
+            <h1><?php woocommerce_page_title(); ?></h1>
+        <?php endif ?>
+
+
 	<div class="shop-loop-head">
 		<div class="woodmart-woo-breadcrumbs">
 			<?php woocommerce_breadcrumb(); ?>

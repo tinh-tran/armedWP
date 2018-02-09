@@ -70,45 +70,7 @@ $classes[] = 'category-grid-item';
 $classes[] = 'cat-design-' . $categories_design;
 
 ?>
-<div <?php wc_product_cat_class($classes, $category); ?> data-loop="<?php echo esc_attr( $woocommerce_loop['loop'] ); ?>">
-	<div class="wrapp-category">
-		<div class="category-image-wrapp">
-			<a href="<?php echo esc_url( get_term_link( $category->slug, 'product_cat' ) ); ?>" class="category-image">
-				<?php do_action( 'woocommerce_before_subcategory', $category ); ?>
 
-				<?php
-					/**
-					 * woocommerce_before_subcategory_title hook
-					 *
-					 * @hooked woodmart_category_thumb_double_size - 10
-					 */
-					do_action( 'woocommerce_before_subcategory_title', $category );
-				?>
-			</a>
-		</div>
-		<div class="hover-mask">
-			<h3 class="category-title">
-				<?php
-					echo esc_html( $category->name );
-
-					if ( $category->count > 0 )
-						echo apply_filters( 'woocommerce_subcategory_count_html', ' <mark class="count">(' . $category->count . ')</mark>', $category );
-				?>
-			</h3>
-
-			<div class="more-products"><a href="<?php echo esc_url( get_term_link( $category->slug, 'product_cat' ) ); ?>"><?php echo sprintf( _n( '%s product', '%s products', $category->count, 'woodmart' ), $category->count ); ?></a></div>
-
-			<?php
-				/**
-				 * woocommerce_after_subcategory_title hook
-				 */
-				do_action( 'woocommerce_after_subcategory_title', $category );
-			?>
-		</div>
-		<a href="<?php echo esc_url( get_term_link( $category->slug, 'product_cat' ) ); ?>" class="category-link"></a>
-		<?php do_action( 'woocommerce_after_subcategory', $category ); ?>
-	</div>
-</div>
 
 <?php $woodmart_loop['double_size'] = false; ?>
 <?php if( ! $isotope ) echo woodmart_get_grid_clear($woocommerce_loop['loop'], $woocommerce_loop['columns'], $xz_columns); ?>

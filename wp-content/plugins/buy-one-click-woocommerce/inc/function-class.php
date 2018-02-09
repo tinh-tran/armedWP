@@ -98,7 +98,7 @@ class BuyFunction {
                         if (!empty(BuyCore::$buyoptions['fio_verifi'])) {
                             echo 'required';
                         }
-                        ?> placeholder="<?php echo BuyCore::$buyoptions['fio_descript']; ?>" name="txtname">	
+                        ?> placeholder="<?php echo BuyCore::$buyoptions['fio_descript']; ?>" name="txtname">
                            <?php } ?>
                            <?php if (!empty(BuyCore::$buyoptions['fon_chek'])) { ?>
                         <input class="buyvalide" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" <?php
@@ -129,7 +129,7 @@ class BuyFunction {
 
                     <input type="hidden" name="buy_nametovar" value="<?php echo $nametovar; ?>" />
                     <input type="hidden" name="buy_pricetovar" value="<?php echo $pricetovar; ?>" />
-                    <input type="hidden" name="buy_idtovar" value="<?php echo $idtovar; ?>" /> 
+                    <input type="hidden" name="buy_idtovar" value="<?php echo $idtovar; ?>" />
 
                     <input type="submit" data-custom="<?php echo $custom; ?>" class="button buyButtonOkForm" value="<?php echo BuyCore::$buyoptions['butform_descript']; ?>" name="btnsend">
                 </form>

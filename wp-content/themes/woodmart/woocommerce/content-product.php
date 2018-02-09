@@ -76,7 +76,7 @@ if( $current_view == 'list' ){
 	$woocommerce_loop['columns'] = 1;
 	$classes[] = 'product-list-item'; 
 }else{
-	$classes[] = 'woodmart-hover-' . $hover; 
+	$classes[] = 'woodmart-hover-base';
 }
 
 
@@ -120,7 +120,102 @@ else
 ?>
 <div <?php post_class( $classes ); ?> data-loop="<?php echo esc_attr( $woocommerce_loop['loop'] ); ?>" data-id="<?php echo esc_attr( $product->get_id() ); ?>">
 
-	<?php wc_get_template_part( 'content', 'product-' . $hover ); ?>
+    <div class="bg-product-grid-item hidden-widget">
+        <div class="content-product-imagin">
+            <div class="product-grid-item__title">
+                <?php
+                /**
+                 * woocommerce_shop_loop_item_title hook
+                 *
+                 * @hooked woocommerce_template_loop_product_title - 10
+                 */
+
+                do_action( 'woocommerce_shop_loop_item_title' );
+                ?>
+            </div>
+
+        </div>
+        <div class="product-grid-item__title">
+            <?php
+            /**
+             * woocommerce_shop_loop_item_title hook
+             *
+             * @hooked woocommerce_template_loop_product_title - 10
+             */
+
+            do_action( 'woocommerce_shop_loop_item_title' );
+            ?>
+        </div>
+
+        <div class="product-element-top">
+            <a href="<?php echo esc_url( get_permalink() ); ?>" class="product-image-link">
+                <?php
+                /**
+                 * woocommerce_before_shop_loop_item_title hook
+                 *
+                 * @hooked woocommerce_show_product_loop_sale_flash - 10
+                 * @hooked woodmart_template_loop_product_thumbnail - 10
+                 */
+                do_action( 'woocommerce_before_shop_loop_item_title' );
+                ?>
+            </a>
+            <?php woodmart_hover_image(); ?>
+            <div class="wrapp-swatches"></div>
+
+            <?php woodmart_quick_shop_wrapper(); ?>
+
+
+            <div class="widget-icon widget-icon-grid">
+                <div class="widget__add-to-wishlist">
+                    <?php echo do_shortcode("[yith_wcwl_add_to_wishlist]"); ?>
+                </div>
+
+                <div class="widget__compare">
+                    <?php echo do_shortcode("[yith_compare_button]"); ?>
+                </div>
+
+                <div class="widget__quick-view">
+                    <?php woodmart_quick_view_btn( get_the_ID() ); ?>
+                </div>
+
+                <div class="widget__oneclick">
+                    <?php echo do_shortcode("[viewBuyButton]"); ?>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="product-information">
+            <?php
+            woodmart_product_categories();
+            woodmart_product_brands_links();
+            ?>
+            <div class="product-price-rating">
+                <?php
+                /**
+                 * woocommerce_after_shop_loop_item_title hook
+                 *
+                 * @hooked woocommerce_template_loop_rating - 5
+                 * @hooked woocommerce_template_loop_price - 10
+                 */
+                do_action( 'woocommerce_after_shop_loop_item_title');
+                ?>
+            </div>
+
+            <div class="fade-in-block">
+
+                <div class="woodmart-buttons">
+
+                    <div class="woodmart-add-btn"><?php do_action( 'woocommerce_after_shop_loop_item' ); ?></div>
+
+
+                </div>
+                <?php if ( $timer ): ?>
+                    <?php woodmart_product_sale_countdown(); ?>
+                <?php endif ?>
+            </div>
+        </div>
+    </div>
 
 </div>
 <?php $woodmart_loop['double_size'] = false; ?>
