@@ -17,7 +17,7 @@ if( woodmart_is_woo_ajax() == 'fragments' ) {
 }
 
 if ( ! woodmart_is_woo_ajax() ) {
-	get_header( 'shop' ); 
+	get_header( 'shop' );
 } else {
 	woodmart_page_top_part();
 }
@@ -38,7 +38,6 @@ if ( ! woodmart_is_woo_ajax() ) {
 		
 	<?php do_action( 'woocommerce_archive_description' ); ?>
 
-    <!-- TODO здесь напиши новый вывод заголовка в каталоге -->
         <?php if ( $shop_title ): ?>
             <h1><?php woocommerce_page_title(); ?></h1>
         <?php endif ?>

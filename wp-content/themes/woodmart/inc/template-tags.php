@@ -686,6 +686,8 @@ if( ! function_exists( 'woodmart_page_title' ) ) {
 
 		$title_class = 'page-title-';
 
+		$title_catalog = 'page-title-catalog';
+
 		$title_color = $title_type = $title_size = 'default';
 
 		// Get default styles from Options Panel
@@ -869,7 +871,7 @@ if( ! function_exists( 'woodmart_page_title' ) ) {
 
 			?>
 				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) && ! is_singular( "product" ) ) : ?>
-					<div class="page-title <?php echo esc_attr( $title_class ); ?> title-shop" style="<?php echo esc_attr( $style ); ?>">
+					<div class="page-title <?php echo esc_attr( $title_catalog ); ?> title-shop">
 						<div class="container">
 							<div class="nav-shop">
 
@@ -882,8 +884,10 @@ if( ! function_exists( 'woodmart_page_title' ) ) {
 										<h1><?php woocommerce_page_title(); ?></h1>
 									<?php endif ?>
 								</div>
-								
-								<?php if( ! is_singular( "product" ) && $shop_categories ) woodmart_product_categories_nav(); ?>
+
+
+								<!-- TODO вывод категорий под заголовком в каталоге -->
+								<?php // if( ! is_singular( "product" ) && $shop_categories ) woodmart_product_categories_nav(); ?>
 
 							</div>
 						</div>
