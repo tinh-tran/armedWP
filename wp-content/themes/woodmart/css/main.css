@@ -887,6 +887,41 @@ h3
     color: #4f4f4f;
 }
 
+.area-sidebar-shop
+{
+    padding: 20px !important; 
+
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.product-categories .cat-item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row; 
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
+.product-categories .cat-item .count
+{
+    font-size: 1.3em !important;
+
+    margin: 0 !important;
+
+    color: #828282 !important;
+    border: none !important;
+}
+
 /* Product menu */
 .anchor
 {
