@@ -26,8 +26,12 @@ do_action( 'woocommerce_before_cart' );
 
 do_action( 'woocommerce_before_cart_table' ); ?>
 
+<div class="armed-title">
+    <h1>Ваша <?php esc_html_e( 'Cart', 'woocommerce' ); ?></h1>
+</div>
+
 <div class="woocommerce cart-content-wrapper">
-	
+
 	<form class="woocommerce-cart-form cart-data-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<div class="cart-table-section">
 

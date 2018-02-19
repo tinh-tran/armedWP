@@ -3,11 +3,14 @@ body
   background-color: rgba(248, 248, 248, 1)
 
 .main-page-wrapper
-  background-color: #F8F8F8!important
+  background-color: #fff!important
   padding-top: 0!important
 
 .container
   width: 100%!important
+
+.main-header
+  margin-bottom: 0!important
 
 @media (min-width: 1200px)
   .container, .woodmart-google-map-content-wrap
@@ -68,3 +71,29 @@ h3
   del
     .amount
       font-size: 12px!important
+
+/* Breadcrumbs */
+.woodmart-woo-breadcrumbs
+  background-color: #fff
+  .woocommerce-breadcrumb
+    margin: 15px 0!important
+    a
+      font-family: $fontFamilyAdditionally
+      font-weight: 300
+      font-size: 14px !important
+      letter-spacing: 0.05em!important
+      color: #4f4f4f!important
+      &:after
+        display: inline-block
+        width: 4px
+        height: 10px
+        padding-right: .5rem
+        padding-left: .5rem
+        content: ''
+        color: #636c72
+        background: url(/wp-content/themes/woodmart/images/breadcrums.png) center no-repeat
+    .breadcrumb-last
+      color: #828282
+      font-weight: 300!important
+      font-family: $fontFamilyAdditionally
+      font-size: 14px

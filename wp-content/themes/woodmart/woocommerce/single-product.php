@@ -12,8 +12,14 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 get_header( 'shop' ); ?>
+<div class="single-product-container">
+    <div class="woodmart-woo-breadcrumbs">
+        <div class="container">
+            <?php woocommerce_breadcrumb(); ?>
+    </div>
+</div>
 
-<div class="anchor">
+    <div class="anchor">
     <div class="container">
         <div class="anchor__wrapper">
             <ul class="anchor__inner">
@@ -29,7 +35,7 @@ get_header( 'shop' ); ?>
     </div>
 </div>
 
-<div class="single-product_wrapper">
+    <div class="single-product_wrapper">
     <div class="single-product_content col-sm-10">
         <?php
             /**
@@ -160,7 +166,7 @@ get_header( 'shop' ); ?>
 </div>
 
     <div class="clearfix"></div>
-
+</div>
 <div class="container-fluid related-product">
 	<div class="container related-and-upsells"><?php
 			/**

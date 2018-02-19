@@ -427,21 +427,21 @@ if( ! function_exists( 'woodmart_checkout_steps' ) ) {
 
 		?>
             <div class="woodmart-checkout-steps">
-                <ul>
+                <ol class="steps-list">
                 	<li class="step-cart <?php echo (is_cart()) ? 'step-active' : 'step-inactive'; ?>">
                 		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>">
-                			<span><?php esc_html_e('Shopping cart', 'woodmart'); ?></span>
+                			<span><?php esc_html_e('Корзина', 'woodmart'); ?></span>
                 		</a>
                 	</li>
                 	<li class="step-checkout <?php echo (is_checkout() && ! is_order_received_page()) ? 'step-active' : 'step-inactive'; ?>">
                 		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>">
-                			<span><?php esc_html_e('Checkout', 'woodmart'); ?></span>
+                			<span><?php esc_html_e('Оформление заказа', 'woodmart'); ?></span>
                 		</a>
                 	</li>
                 	<li class="step-complete <?php echo (is_order_received_page()) ? 'step-active' : 'step-inactive'; ?>">
-                		<span><?php esc_html_e('Order complete', 'woodmart'); ?></span>
+                		<span><?php esc_html_e('Оплата заказа', 'woodmart'); ?></span>
                 	</li>
-                </ul>
+                </ol>
             </div>
 		<?php
 	}

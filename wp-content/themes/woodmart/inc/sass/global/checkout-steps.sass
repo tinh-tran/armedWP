@@ -1,0 +1,84 @@
+$number-of-steps:  3
+
+$line-width:       2px
+$bullet-size:      2.5em
+$number-size:      16px
+
+$background-color: #E0E0E0
+$foreground-color: #E0E0E0
+$number-color: #4f4f4f
+
+$active-background-color: #7DC472
+$active-foreground-color: white
+
+.woodmart-checkout-steps ol
+  position: relative
+  overflow: hidden
+  counter-reset: wizard
+  font-size: $number-size
+  font-family: $fontFamilyDefault
+
+.woodmart-checkout-steps
+  li
+    position: relative
+    float: left
+    width: 100% / $number-of-steps
+    text-align: center
+    color: $active-background-color
+    a
+      color: $number-color
+      font-family: $fontFamilyDefault
+      font-size: 14px
+      padding:
+        top: 80px
+        left: 50px
+        right: 50px
+        bottom: 30px
+      &:hover, &:focus
+        color: $background-color
+    span
+      font-size: 14px
+
+.woodmart-checkout-steps
+  .step-active ~ li
+    color: $foreground-color
+
+.woodmart-checkout-steps
+  li:before
+    counter-increment: wizard
+    content: counter(wizard)
+    display: block
+    color: $active-foreground-color
+    background-color: $active-background-color
+    border: $line-width solid $active-background-color
+    text-align: center
+    width: $bullet-size
+    height: $bullet-size
+    line-height: $bullet-size
+    border-radius: $bullet-size
+    position: relative
+    left: 50%
+    margin-bottom: $bullet-size / 2
+    margin-left: $bullet-size * -0.5
+    z-index: 1
+  .step-active ~ li:before
+    background-color: $background-color
+    color: $number-color
+    border-color: $foreground-color
+
+.woodmart-checkout-steps
+  li + li
+    &:after
+      content: ""
+      display: block
+      width: 100%
+      background-color: $active-background-color
+      height: $line-width
+      position: absolute
+      left: -50%
+      top: $bullet-size / 2
+      z-index: 0
+
+.woodmart-checkout-steps
+  .step-active ~ li:after
+    background-color: $foreground-color

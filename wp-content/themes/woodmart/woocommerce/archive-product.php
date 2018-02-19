@@ -38,16 +38,8 @@ if ( ! woodmart_is_woo_ajax() ) {
 		
 	<?php do_action( 'woocommerce_archive_description' ); ?>
 
-        <?php if ( $shop_title ): ?>
-            <h1><?php woocommerce_page_title(); ?></h1>
-        <?php endif ?>
-
 
 	<div class="shop-loop-head">
-		<div class="woodmart-woo-breadcrumbs">
-			<?php woocommerce_breadcrumb(); ?>
-			<?php woocommerce_result_count(); ?>
-		</div>
 		<div class="woodmart-shop-tools">
 			<?php
 				/**

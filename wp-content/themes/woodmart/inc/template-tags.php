@@ -871,6 +871,12 @@ if( ! function_exists( 'woodmart_page_title' ) ) {
 
 			?>
 				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) && ! is_singular( "product" ) ) : ?>
+				    <div class="woodmart-woo-breadcrumbs">
+				        <div class="container">
+                            <?php woocommerce_breadcrumb(); ?>
+                            <?php woocommerce_result_count(); ?>
+                        </div>
+                    </div>
 					<div class="page-title <?php echo esc_attr( $title_catalog ); ?> title-shop">
 						<div class="container">
 							<div class="nav-shop">

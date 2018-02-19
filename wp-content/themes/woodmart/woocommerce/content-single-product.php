@@ -76,14 +76,9 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 					<div class="<?php echo esc_attr( $product_summary_class ); ?> summary entry-summary">
 						<div class="summary-inner">
 							<?php if ( $product_design == 'default' ): ?>
-								<div class="single-breadcrumbs-wrapper">
-									<div class="single-breadcrumbs">
-										<?php woocommerce_breadcrumb(); ?>
-										<?php if ( woodmart_get_opt( 'products_nav' ) ): ?>
-											<?php woodmart_products_nav(); ?>
-										<?php endif ?>
-									</div>
-								</div>
+								<?php if ( woodmart_get_opt( 'products_nav' ) ): ?>
+									<?php woodmart_products_nav(); ?>
+								<?php endif ?>
 							<?php endif ?>
 
 							<?php
