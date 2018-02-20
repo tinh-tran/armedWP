@@ -21,23 +21,23 @@ define('WPLANG', 'ru_RU');
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
 //define('DB_NAME', 'armed');
-//define('DB_NAME', 'rsresurs_wp');
-define('DB_NAME', 'u481580_wp');
+define('DB_NAME', 'rsresurs_wp');
+//define('DB_NAME', 'u481580_wp');
 
 /** Имя пользователя MySQL */
 //define('DB_USER', 'root');
-//define('DB_USER', 'rsresurs_wp');
-define('DB_USER', 'u481580_wp');
+define('DB_USER', 'rsresurs_wp');
+//define('DB_USER', 'u481580_wp');
 
 /** Пароль к базе данных MySQL */
 //define('DB_PASSWORD', '');
-//define('DB_PASSWORD', 't&demw0B');
-define('DB_PASSWORD', 'BA.Kg4teRa');
+define('DB_PASSWORD', 't&demw0B');
+//define('DB_PASSWORD', 'BA.Kg4teRa');
 
 /** Имя сервера MySQL */
 //define('DB_HOST', 'localhost');
-//define('DB_HOST', 'rsresurs.beget.tech');
-define('DB_HOST', 'u481580.mysql.masterhost.ru');
+define('DB_HOST', 'rsresurs.beget.tech');
+//define('DB_HOST', 'u481580.mysql.masterhost.ru');
 
 /** Кодировка базы данных для создания таблиц. */
 define('DB_CHARSET', 'utf8mb4');
