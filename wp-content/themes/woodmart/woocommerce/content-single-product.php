@@ -126,37 +126,100 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 			<div class="row">
 				<div class="col-sm-12 poduct-tabs-inner">
 
-                <section id="product-view">
+                    <section id="product-view">
 
-                    <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
-                        <h2>Преимущества</h2>
-                    </div>
-
-
-                    <div class="slider-advantages">
-                        <?php if( have_rows('advantages') ): ?>
-
-                                <?php while( have_rows('advantages') ): the_row();
-
-                                    // vars
-                                    $title = get_sub_field('advantages_title');
-                                    $image = get_sub_field('advantages_images');
-                                    $content = get_sub_field('advantages_description');
-
-                                    ?>
+                        <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
+                            <h2>Преимущества</h2>
+                        </div>
 
 
-                                        <div class="advantages-item">
-                                            <img src="<?php echo $image; ?>" alt="" />
-                                            <h4><?php echo $title; ?></h4>
-                                            <p><?php echo $content; ?></p>
-                                        </div>
+                        <div class="slider-advantages">
+                            <?php if( have_rows('advantages') ): ?>
+
+                                    <?php while( have_rows('advantages') ): the_row();
+
+                                        // vars
+                                        $title = get_sub_field('advantages_title');
+                                        $image = get_sub_field('advantages_images');
+                                        $content = get_sub_field('advantages_description');
+
+                                        ?>
 
 
-                                <?php endwhile; ?>
-                    </div>
-                    <?php endif; ?>
-                </section>
+                                            <div class="advantages-item">
+                                                <img src="<?php echo $image; ?>" alt="" />
+                                                <div class="single-product__preim">
+                                                    <h5><?php echo $title; ?></h5>
+                                                    <p><?php echo $content; ?></p>
+                                                </div>
+                                            </div>
+
+
+                                    <?php endwhile; ?>
+                        </div>
+                        <?php endif; ?>
+                    </section>
+
+                    <?php echo do_shortcode("[vc_separator]"); ?>
+
+                    <section id="#video">
+                        <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
+                            <h2>Видео</h2>
+                        </div>
+
+                        <div class="slider-video">
+                            <?php if( have_rows('video') ): ?>
+
+                                <?php while( have_rows('video') ): the_row();
+
+                                //vars
+                                $title = get_sub_field('video_title');
+                                $link = get_sub_field('video_link');
+
+                                ?>
+
+                                    <div class="video-item">
+                                        <h2 class="wpb_heading wpb_video_heading"><?php echo $title; ?></h2>
+                                        <!--<div style="width:509px;height:286px;" class="youtube" id="<?php echo $link; ?>" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd720"></div>-->
+                                        <iframe width="509" height="286" src="https://www.youtube.com/embed/<?php echo $link; ?>?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    </div>
+
+
+                            <?php endwhile; ?>
+                        </div>
+                        <?php endif; ?>
+                    </section>
+
+                    <?php echo do_shortcode("[vc_separator]"); ?>
+
+                    <section id="detail">
+                        <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
+                            <h2>Характеристики</h2>
+                        </div>
+                    </section>
+
+                    <?php echo do_shortcode("[vc_separator]"); ?>
+
+                    <section id="complect">
+                        <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
+                            <h2>Состав комплекта</h2>
+                        </div>
+                    </section>
+
+                    <?php echo do_shortcode("[vc_separator]"); ?>
+
+                    <section id="full-description">
+                        <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
+                            <h2>Описание товара</h2>
+                        </div>
+                        <div class="wpb_text_column wpb_content_element  description_product">
+                            <?php the_field('full_description'); ?>
+                        </div>
+
+                    </section>
+
+                    <?php echo do_shortcode("[vc_separator]"); ?>
+
 					<?php
 						/**
 						 * woocommerce_after_single_product_summary hook
@@ -167,7 +230,6 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 						 */
 						do_action( 'woocommerce_after_single_product_summary' );
 					?>
-
 				</div>
 			</div>	
 		</div>

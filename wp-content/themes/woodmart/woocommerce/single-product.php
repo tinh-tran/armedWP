@@ -28,7 +28,7 @@ get_header( 'shop' ); ?>
                 <li class="anchor__item"><a class="anchor__item-link" href="#video">Видео</a></li>
                 <li class="anchor__item"><a class="anchor__item-link" href="#detail">Характеристики</a></li>
                 <li class="anchor__item"><a class="anchor__item-link" href="#complect">Состав комплекта</a></li>
-                <li class="anchor__item"><a class="anchor__item-link" href="#description_product">Описание товара</a></li>
+                <li class="anchor__item"><a class="anchor__item-link" href="#full-description">Описание товара</a></li>
                 <li class="anchor__item"><a class="anchor__item-link" href="#testimonial">Отзывы</a></li>
             </ul>
         </div>

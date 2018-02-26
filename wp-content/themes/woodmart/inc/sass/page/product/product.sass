@@ -1,4 +1,5 @@
 @import "menu/menu"
+@import "advantages/advantages"
 @import "slick/slick"
 @import "view/view"
 @import "widget/widget"
@@ -113,12 +114,29 @@ span.sku_wrapper
 
 .description_product
   p, ul
-    font-family: Roboto
+    font-family: Roboto !important
     font-style: normal
     font-weight: normal
     line-height: normal
     font-size: 14px
     color: #828282
+  ul
+    margin: 15px 0
+    padding-left: 20px
+    text-align: left
+    li
+      position: relative
+      &:before
+        content: '\f110'
+        font-family: woodmart-font
+        position: absolute
+        top: 6px
+        left: -20px
+        font-size: 8px
+        color: $GlobalColor
 
 #tab-brand_tab p, #tab-description p, #tab-woodmart_additional_tab p
   line-height: 1.5 !important
+
+.poduct-tabs-inner section
+  margin-bottom: 40px
