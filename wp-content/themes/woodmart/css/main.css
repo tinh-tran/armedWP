@@ -1051,6 +1051,11 @@ h3
     background: #fff;
 }
 
+.active__anchor
+{
+    background: #fff;
+}
+
 .advantages-item
 {
     margin: 0 10px;
@@ -1190,6 +1195,10 @@ h3
 
     border-bottom: 1px dotted #bdbdbd;
 }
+.view__item-feature__text-value
+{
+    width: 40%;
+}
 .view__item-feature__text-value p,
 .view__item-feature__text-value a
 {
@@ -1241,6 +1250,21 @@ h3
 
     width: 70px;
     height: 60px;
+}
+
+.add-to-cart
+{
+    padding: 20px 0;
+}
+.add-to-cart h5
+{
+    font-family: 'Rubik';
+    font-size: 16px;
+    font-weight: 400; 
+
+    letter-spacing: .05em;
+
+    color: #4f4f4f;
 }
 
 /* Widget single product */
@@ -1525,6 +1549,16 @@ textarea.comment-reply-area
 .comment-form > .form-submit > .submit
 {
     margin: 20px 0;
+}
+
+#video,
+#advantages,
+#testimonial,
+#complect,
+#detail
+{
+    margin-top: -135px;
+    padding-top: 135px;
 }
 
 .single-product-container

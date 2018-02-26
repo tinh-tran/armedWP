@@ -79,20 +79,105 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 
 							<?php endif ?>
 
-							<?php
-								/**
-								 * woocommerce_single_product_summary hook
-								 *
-								 * @hooked woocommerce_template_single_title - 5
-								 * @hooked woocommerce_template_single_rating - 10
-								 * @hooked woocommerce_template_single_price - 10
-								 * @hooked woocommerce_template_single_excerpt - 20
-								 * @hooked woocommerce_template_single_add_to_cart - 30
-								 * @hooked woocommerce_template_single_meta - 40
-								 * @hooked woocommerce_template_single_sharing - 50
-								 */
-								do_action( 'woocommerce_single_product_summary' );
-							?>
+                            <div class="short-description">
+                                <?php
+                                if ( !function_exists( 'woocommerce_template_single_excerpt' ) ) {
+                                    require_once '/includes/wc-template-functions.php';
+                                }
+                                // NOTICE! Understand what this does before running.
+                                $result = woocommerce_template_single_excerpt();
+                                ?>
+                            </div>
+
+                            <?php echo do_shortcode("[vc_separator]"); ?>
+
+
+                            <div class="view__inner-feature">
+                                <div class="view__item-feature__text">
+                                    <div class="view__item-feature__text-name view-feature-title">
+                                        <p>Характеристики:</p>
+                                    </div>
+                                    <div class="view__item-feature__text-value view-feature-title"><a href="#detail">Все характеристики</a></div>
+                                </div>
+                                <div class="view__item-feature__text">
+                                    <div class="view__item-feature__text-name">
+                                        <p>Габаритные размеры (ВхШхГ) (± 5%)</p>
+                                    </div>
+                                    <div class="view__item-feature__text-value">
+                                        <p>Хит продаж / Новинка</p>
+                                    </div>
+                                </div>
+                                <div class="view__item-feature__text">
+                                    <div class="view__item-feature__text-name">
+                                        <p>Цвет</p>
+                                    </div>
+                                    <div class="view__item-feature__text-value">
+                                        <p>Черный</p>
+                                    </div>
+                                </div>
+                                <div class="view__item-feature__text">
+                                    <div class="view__item-feature__text-name">
+                                        <p>Гарантия</p>
+                                    </div>
+                                    <div class="view__item-feature__text-value">
+                                        <p>18 месяцев</p>
+                                    </div>
+                                </div>
+                                <div class="view__item-feature__text">
+                                    <div class="view__item-feature__text-name">
+                                        <p>Наши предложения</p>
+                                    </div>
+                                    <div class="view__item-feature__text-value">
+                                        <p>Хит продаж / Новинка</p>
+                                    </div>
+                                </div>
+                                <div class="view__item-feature__text">
+                                    <div class="view__item-feature__text-name">
+                                        <p>Цвет</p>
+                                    </div>
+                                    <div class="view__item-feature__text-value">
+                                        <p>Черный</p>
+                                    </div>
+                                </div>
+                                <div class="view__item-feature__text">
+                                    <div class="view__item-feature__text-name">
+                                        <p>Гарантия</p>
+                                    </div>
+                                    <div class="view__item-feature__text-value">
+                                        <p>18 месяцев</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="add-to-cart">
+                                <h5>Другие варианты товара:</h5>
+                                <?php
+                                if ( !function_exists( 'woocommerce_template_single_add_to_cart' ) ) {
+                                    require_once '/includes/wc-template-functions.php';
+                                }
+                                // NOTICE! Understand what this does before running.
+                                $result = woocommerce_template_single_add_to_cart();
+                                ?>
+                            </div>
+
+                            <!-- TODO Обычное отображение summary информации (Сделать в мобильке) -->
+                            <div>
+                                <?php
+                                    /**
+                                     * woocommerce_single_product_summary hook
+                                     *
+                                     * @hooked woocommerce_template_single_title - 5
+                                     * @hooked woocommerce_template_single_rating - 10
+                                     * @hooked woocommerce_template_single_price - 10
+                                     * @hooked woocommerce_template_single_excerpt - 20
+                                     * @hooked woocommerce_template_single_add_to_cart - 30
+                                     * @hooked woocommerce_template_single_meta - 40
+                                     * @hooked woocommerce_template_single_sharing - 50
+                                     */
+                                    //do_action( 'woocommerce_single_product_summary' );
+                                ?>
+                            </div>
 						</div>
 					</div>
 				</div><!-- .summary -->
@@ -126,7 +211,7 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 			<div class="row">
 				<div class="col-sm-12 poduct-tabs-inner">
 
-                    <section id="product-view">
+                    <section id="advantages">
 
                         <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
                             <h2>Преимущества</h2>
@@ -162,7 +247,7 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 
                     <?php echo do_shortcode("[vc_separator]"); ?>
 
-                    <section id="#video">
+                    <section id="video">
                         <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
                             <h2>Видео</h2>
                         </div>
