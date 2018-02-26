@@ -1,0 +1,59 @@
+.asside_right
+  width: 50px
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  list-style: none
+  overflow: hidden
+  padding-top: 30px
+  height: 100%
+  background-color: #fff
+  border: solid 1px rgb(242, 242, 242)
+  position: fixed
+  top: 112px
+  right: 0
+  z-index: 1000
+  //&:hover
+    width: 235px
+  &__item
+    margin-left: 11px
+    margin-bottom: 15px
+    width: 210px
+    display: flex
+    justify-content: flex-end
+    position: relative
+  &__link
+    font-size: 1.4em
+    letter-spacing: 0.05em
+    font-family: 'Rubik'
+    text-decoration:  none
+    display: flex
+    align-items: center
+    font-weight: 400
+    color: #bdbdbd
+    &:hover
+      color: #4f4f4f
+      & .asside_right__icon_compar
+        background-position: -211px -234px
+      & .asside_right__icon_favorites
+        background-position: -211px -258px
+      & .asside_right__icon_basket
+        background-position: -211px -210px
+      & .asside_right__icon_filters
+        background-position: -211px -18px
+
+  &__icon
+    width: 24px
+    height: 24px
+    margin-right: 15px
+    margin-left: 15px
+    background-image: url("images/sprite.png")
+    background-repeat: no-repeat
+    &_compar
+      background-position: -187px -234px
+    &_favorites
+      background-position: -187px -258px
+    &_basket
+      background-position: -187px -210px
+    &_filters
+      background-position: -187px -18px

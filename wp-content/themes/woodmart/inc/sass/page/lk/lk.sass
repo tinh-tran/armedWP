@@ -1,0 +1,40 @@
+.lk
+  display: flex
+  margin: 0 auto
+  background-color: #fff
+  position: relative
+.head-lk
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  color: $lkHeadColor
+  font-size: 2.6em
+  font-family: 'Rubik'
+  letter-spacing: 0.05em
+  font-weight: 400
+  &__icon
+    width: 30px
+    height: 30px
+    background-image: url("images/sprite.png")
+    background-repeat: no-repeat
+    &_change
+      background-position: -235px -48px
+    &_orders
+      background-position: -235px -48px
+      margin-right: 5px
+    &_profile
+      background-position: -235px -138px
+      margin-right: 5px
+    &_company
+      background-position: -235px -168px
+      margin-right: 5px
+
+@import "asside_left/asside_left"
+@import "asside_right/asside_right"
+@import "edit/edit"
+@import "index/index"
+@import "profil/profil"
+@import "orders/orders"
+@import "table/table"
+@import "orders_info/orders_info"
+@import "orders_change/orders_change"

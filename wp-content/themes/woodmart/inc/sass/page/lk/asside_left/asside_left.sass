@@ -1,0 +1,71 @@
+.asside_left
+  width: 50px
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  list-style: none
+  overflow: hidden
+  padding-top: 30px
+  height: 100%
+  background-color: #fff
+  border: solid 1px rgb(242, 242, 242)
+  position: fixed
+  top: 112px
+  z-index: 1000
+  &:hover
+    width: 225px
+  &__item
+    margin-left: 11px
+    margin-bottom: 15px
+    width: 210px
+  &__link
+    font-size: 1.4em
+    letter-spacing: 0.05em
+    font-family: 'Rubik'
+    text-decoration:  none
+    display: flex
+    align-items: center
+    font-weight: 400
+    color: #bdbdbd
+    &:hover
+      color: #4f4f4f
+      & .asside_left__icon_index
+        background-position: -211px -42px
+      & .asside_left__icon_orders
+        background-position: -211px -66px
+      & .asside_left__icon_document
+        background-position: -211px -90px
+      & .asside_left__icon_service
+        background-position: -211px -114px
+      & .asside_left__icon_profile
+        background-position: -211px -138px
+      & .asside_left__icon_company
+        background-position: -211px -162px
+      & .asside_left__icon_address
+        background-position: -48px -216px
+      & .asside_left__icon_settings
+        background-position: -211px -186px
+
+
+  &__icon
+    width: 24px
+    height: 24px
+    margin-right: 20px
+    background-image: url("images/sprite.png")
+    background-repeat: no-repeat
+    &_index
+      background-position: -187px -42px
+    &_orders
+      background-position: -187px -66px
+    &_document
+      background-position: -187px -90px
+    &_service
+      background-position: -187px -114px
+    &_profile
+      background-position: -187px -138px
+    &_company
+      background-position: -187px -162px
+    &_address
+      background-position: 0 -216px
+    &_settings
+      background-position: -187px -186px

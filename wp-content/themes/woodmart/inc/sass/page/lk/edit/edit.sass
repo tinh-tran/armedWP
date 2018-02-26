@@ -1,0 +1,300 @@
+.edit
+  width: 100%
+  height: auto
+  padding: 15px
+  background-color: #fff
+  margin-right: 50px
+  margin-left: 50px
+  &__head
+    display: flex
+    align-items: center
+    text-transform: uppercase
+    color: $lkHeadColor
+    font-size: 2.6em
+    font-family: 'Rubik'
+    font-weight: 400
+  &__icon
+    width: 30px
+    height: 30px
+    background-image: url("images/Icon/lk_sprite.svg")
+    background-repeat: no-repeat
+    &_company
+      background-position: 0 -210px
+      margin-right: 5px
+  &__name-company
+    color: $GlobalColor
+    padding-left: 10px
+    font-size: 0.8em
+    align-self: flex-end
+    padding-bottom: 2px
+  &__tabs
+    margin-top: 20px
+    &-wrapp
+      height: 670px
+      &_tabs1
+        margin: 0 auto
+        max-width: 852px
+      &_tabs2
+        max-width: 1366px
+        margin: 0 auto
+      &_tabs3
+        margin: 0 auto
+        max-width: 450px
+    &-drope
+      margin-bottom: 15px
+      width: 100%
+      height: 90px
+      background-image: url("images/lk/drope__zone.svg")
+      background-repeat: no-repeat
+    &-text
+      color: $lkTextColor
+      font-size: 1.4em
+      margin-bottom: 15px
+    &-label
+      margin-top: 15px
+      font-size: 1.4em
+      font-weight: 300
+      color: $lkLabelColor
+    &-days
+      margin-top: 15px
+  &__map
+    display: flex
+    align-items: center
+    &-tick
+    &-text
+      font-size: 1.4em
+      color: $lkLabelColor
+    &-link
+      color: $lkTextColor
+      font-size: 1.4em
+      letter-spacing: 0.05em
+      &:hover
+        text-decoration: none
+  &__form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &-label
+      width: 45%
+      display: flex
+      font-weight: 300
+      flex-wrap: wrap
+      color: $lkLabelColor
+      font-size: 1.4em
+      margin-bottom: 15px
+      &_logo
+        position: relative
+    &-input
+      border: solid 1px rgb(224, 224, 224)
+      width: 405px
+      height: 40px
+      margin-top: 5px
+      padding-left: 15px
+    &-button
+      font-size: 1em
+      height: 40px
+      position: absolute
+      right: 0
+      top: 7px
+  &__chuse-company
+    margin-bottom: 15px
+  &__chuse-address
+    margin-bottom: 15px
+  &__users
+    &-link
+      color: $lkUserLinkColor
+      font-size: 1.4em
+      text-decoration: none
+    &-arrow
+      background-image: url("images/lk/users__arrow.svg")
+      background-repeat: no-repeat
+      width: 9px
+      height: 6px
+      position: relative
+      right: -5px
+    &-head
+      display: flex
+      justify-content: space-between
+      margin-bottom: 10px
+      padding: 0 20px
+    &-body
+      height: 290px
+    &-link
+      display: flex
+      align-items: center
+    &-link:nth-child(1n)
+      width: calc(100%/5)
+  &__user
+    display: flex
+    justify-content: space-between
+    padding: 10px 20px
+    border-radius: 3px
+    border: 1px solid #E0E0E0
+    &:not(:last-child)
+      margin-bottom: 10px
+    &-button
+      margin-right: 20px
+    &_info
+      width: calc(100%/5)
+      color: $lkUserLinkColor
+      text-decoration: none
+      font-size: 1.4em
+    &_element
+      display: flex
+      justify-content: flex-start
+    &-icon
+      background-image: url("images/lk/user__edit.svg")
+      background-repeat: no-repeat
+      width: 26px
+      height: 26px
+      margin-right: 10px
+      cursor: pointer
+      &_edit
+        background-position: 0 -52px
+        &:hover
+          background-position: -26px -52px
+      &_copy
+        background-position: 0 -78px
+        &:hover
+          background-position: -26px -78px
+      &_del
+        background-position: 0 -104px
+        &:hover
+          background-position: -26px -104px
+    &-data
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+      width: 70%
+      margin: 0 auto
+      padding-top: 15px
+      &_label
+        width: calc(100%/2 - 45px)
+        width: 404px
+        font-size: 1.4em
+        font-weight: 300
+        color: #828282
+        margin-bottom: 15px
+      &_input
+        border: solid 1px rgb(224, 224, 224)
+        width: 100%
+        height: 40px
+        padding-left: 15px
+  &__button
+    &-wrapp
+      margin-top: 35px
+      display: flex
+      align-items: center
+      justify-content: center
+.form
+  &__address
+    &-city
+      display: flex
+      flex-wrap: wrap
+    &-home
+      display: flex
+      justify-content: space-between
+  &__city
+    &-label
+      width: 100%
+      font-weight: 300
+      display: flex
+      flex-wrap: wrap
+      color: $lkLabelColor
+      font-size: 1.4em
+      margin-bottom: 15px
+    &-input
+      border: solid 1px rgb(224, 224, 224)
+      width: 100%
+      height: 40px
+      margin-top: 5px
+      padding-left: 15px
+  &__home
+    &-label
+      width: calc(100%/3 - 30px)
+      color: $lkLabelColor
+      font-size: 1.4em
+      font-weight: 300
+      margin-bottom: 15px
+    &-input
+      border: solid 1px rgb(224, 224, 224)
+      width: 100%
+      height: 40px
+      padding-left: 15px
+.delete
+  &__break
+    width: 16px
+    height: 16px
+    background-image: url("images/lk/delete__break.png")
+    background-repeat: no-repeat
+    position: absolute
+    right: -20px
+    top: 8px
+    cursor: pointer
+.opening-hours, .break-hours
+  display: flex
+  flex-wrap: wrap
+  &__label
+    position: relative
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin-bottom: 15px
+    font-size: 1.4em
+    color: $lkLabelColor
+  &__hour-start, &__minute-start, &__hour-end, &__minute-end
+    width: 42px
+    font-family: Roboto
+    height: 26px
+    font-size: 1em
+    color: $lkTextColor
+  &__delimiter
+    padding: 0 5px
+    font-size: 1.5em
+  &__add
+    font-size: 1.4em
+    width: 100%
+    cursor: pointer
+    color: $lkLinkColor
+    text-align: center
+    &:hover
+      color: #000
+.day
+  margin-bottom: 15px
+  &__label
+    border: 1px solid #F2F2F2
+    border-radius: 2px
+    padding: 8px 14px
+    margin-right: 5px
+    position: relative
+    font-size: 1.4em
+    letter-spacing: 0.05em
+    cursor: pointer
+  &__indicator
+    display: none
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    border-radius: 2px
+  &__input
+    display: none
+    &:checked + .day__indicator
+      display: flex
+      justify-content: center
+      align-items: center
+      color: #fff
+      background-color: $ConfirmColor
+.schedule
+  margin-bottom: 15px
+  &__input
+    display: none
+    &:checked + .schedule__label
+      text-decoration: underline
+      color: $lkTextColor
+  &__label
+    font-size: 1.2em
+    color: $lkLabelColor
+    margin-right: 10px
+    cursor: pointer

@@ -8,6 +8,7 @@ wp-content/upgrade/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 wp-content/themes/woodmart/node_modules
+/wp-config.php
 
 /.htaccess
 /license.txt

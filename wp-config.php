@@ -32,8 +32,8 @@ define('DB_USER', 'u481580_wp');
 define('DB_PASSWORD', 'BA.Kg4teRa');
 
 /** Имя сервера MySQL */
-//define('DB_HOST', 'localhost');
-define('DB_HOST', 'u481580.mysql.masterhost.ru');
+define('DB_HOST', 'localhost:3307');
+//define('DB_HOST', 'u481580.mysql.masterhost.ru');
 
 /** Кодировка базы данных для создания таблиц. */
 define('DB_CHARSET', 'utf8mb4');
