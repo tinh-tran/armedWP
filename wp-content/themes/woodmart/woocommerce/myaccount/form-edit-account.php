@@ -35,10 +35,10 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
                   <input class="profile__input" type="text" name="account_last_name" id="account_last_name" value="<?php echo esc_attr( $user->last_name ); ?>" />
                 </label>
                 <label class="profile__label" for="ProfileMiddleName">Отчество
-                  <input class="profile__input" type="text" name="ProfileMiddleName" id="ProfileMiddleName">
+                  <input class="profile__input" type="text" name="account_middle_name" value="<?php echo esc_attr(get_the_author_meta( 'account_middle_name', $user->ID )); ?>" />
                 </label>
                 <label class="profile__label" for="ProfilePhone">Номер телефона
-                  <input class="profile__input" type="text" name="ProfilePhone" id="ProfilePhone">
+                  <input class="profile__input" type="text" name="tel" value="<?php echo esc_attr(get_the_author_meta( 'tel', $user->ID )); ?>"/>
                 </label>
                 <label class="profile__label" for="ProfileMail">Электронная почта
                   <input class="profile__input" type="text" name="account_email" id="account_email" value="<?php echo esc_attr( $user->user_email ); ?>" />
@@ -88,46 +88,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
               -->
             </div>
           </div>
-
-
-
-
-	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
-
-	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
-		<label for="account_first_name"><?php esc_html_e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>
-		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="<?php echo esc_attr( $user->first_name ); ?>" />
-	</p>
-	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
-		<label for="account_last_name"><?php esc_html_e( 'Last name', 'woocommerce' ); ?> <span class="required">*</span></label>
-		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" value="<?php echo esc_attr( $user->last_name ); ?>" />
-	</p>
-	<div class="clear"></div>
-
-	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-		<label for="account_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-		<input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" value="<?php echo esc_attr( $user->user_email ); ?>" />
-	</p>
-
-	<fieldset>
-		<legend><?php esc_html_e( 'Password change', 'woocommerce' ); ?></legend>
-
-		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-			<label for="password_current"><?php esc_html_e( 'Current password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current" />
-		</p>
-		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-			<label for="password_1"><?php esc_html_e( 'New password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" />
-		</p>
-		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-			<label for="password_2"><?php esc_html_e( 'Confirm new password', 'woocommerce' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" />
-		</p>
-	</fieldset>
-	<div class="clear"></div>
-
-	<?php do_action( 'woocommerce_edit_account_form' ); ?>
+<?php do_action( 'woocommerce_edit_account_form' ); ?>
 
 	<p>
 		<?php wp_nonce_field( 'save_account_details' ); ?>
@@ -137,5 +98,11 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
 </form>
+
+
+
+
+
+	
 
 <?php do_action( 'woocommerce_after_edit_account_form' ); ?>
