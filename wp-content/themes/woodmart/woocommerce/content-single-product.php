@@ -76,9 +76,7 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 					<div class="<?php echo esc_attr( $product_summary_class ); ?> summary entry-summary">
 						<div class="summary-inner">
 							<?php if ( $product_design == 'default' ): ?>
-								<?php if ( woodmart_get_opt( 'products_nav' ) ): ?>
-									<?php woodmart_products_nav(); ?>
-								<?php endif ?>
+
 							<?php endif ?>
 
 							<?php
@@ -127,6 +125,38 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 poduct-tabs-inner">
+
+                <section id="product-view">
+
+                    <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
+                        <h2>Преимущества</h2>
+                    </div>
+
+
+                    <div class="slider-advantages">
+                        <?php if( have_rows('advantages') ): ?>
+
+                                <?php while( have_rows('advantages') ): the_row();
+
+                                    // vars
+                                    $title = get_sub_field('advantages_title');
+                                    $image = get_sub_field('advantages_images');
+                                    $content = get_sub_field('advantages_description');
+
+                                    ?>
+
+
+                                        <div class="advantages-item">
+                                            <img src="<?php echo $image; ?>" alt="" />
+                                            <h4><?php echo $title; ?></h4>
+                                            <p><?php echo $content; ?></p>
+                                        </div>
+
+
+                                <?php endwhile; ?>
+                    </div>
+                    <?php endif; ?>
+                </section>
 					<?php
 						/**
 						 * woocommerce_after_single_product_summary hook
@@ -137,6 +167,7 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 						 */
 						do_action( 'woocommerce_after_single_product_summary' );
 					?>
+
 				</div>
 			</div>	
 		</div>

@@ -18,7 +18,7 @@ gulp.task('sass', function () {
 
 gulp.task('liveReload', function() {
     browserSync.init({
-        proxy: "armedwp"
+        proxy: "wp.armed.ru"
     });
 });
 

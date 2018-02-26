@@ -75,3 +75,35 @@ jQuery(document).ready(function( $ ) {
     });
 
 });
+
+
+/* Slick advantages */
+jQuery(document).ready(function ($) {
+    $('.slider-advantages').slick({dots: false,autoplaySpeed: 5000,speed: 300,infinite: true,arrows: true,nextArrow: '<button type="button" role="button" aria-label="Next" style="color:#bdbdbd; font-size:20px;" class="slick-next default"><i class="ultsl-arrow-right4"></i></button>',prevArrow: '<button type="button" role="button" aria-label="Previous" style="color:#bdbdbd; font-size:20px;" class="slick-prev default"><i class="ultsl-arrow-left4"></i></button>',slidesToScroll:4,slidesToShow:4,swipe: true,draggable: true,touchMove: true,pauseOnHover: true,adaptiveHeight: true,responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ],pauseOnDotsHover: true,customPaging: function(slider, i) {
+            return '<i type="button" style="color:#333333;" class="ultsl-record" data-role="none"></i>';
+        },});
+});
+
+

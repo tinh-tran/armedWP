@@ -19,7 +19,7 @@ get_header( 'shop' ); ?>
     </div>
 </div>
 
-    <div class="anchor">
+<div class="anchor">
     <div class="container">
         <div class="anchor__wrapper">
             <ul class="anchor__inner">
@@ -35,135 +35,149 @@ get_header( 'shop' ); ?>
     </div>
 </div>
 
-    <div class="single-product_wrapper">
+<div class="single-product_wrapper">
     <div class="single-product_content col-sm-10">
-        <?php
-            /**
-             * woocommerce_before_main_content hook
-             *
-             * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-             * @hooked woocommerce_breadcrumb - 20
-             */
-            do_action( 'woocommerce_before_main_content' );
-        ?>
+        <div class="product_title">
+            <h1 itemprop="name" class="entry-title"><?php if( $is_quick_view ): ?><a href="<?php the_permalink(); ?>"><?php endif; ?><?php the_title(); ?><?php if( $is_quick_view ): ?></a><?php endif; ?> <small><?php the_field('short_title'); ?></small></h1>
+            <?php if ( woodmart_get_opt( 'products_nav' ) ): ?>
+                <?php woodmart_products_nav(); ?>
+            <?php endif ?>
+        </div>
 
-            <?php while ( have_posts() ) : the_post(); ?>
+    <?php
+        /**
+         * woocommerce_before_main_content hook
+         *
+         * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+         * @hooked woocommerce_breadcrumb - 20
+         */
+        do_action( 'woocommerce_before_main_content' );
+    ?>
 
-                <?php wc_get_template_part( 'content', 'single-product' ); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-            <?php endwhile; // end of the loop. ?>
+            <?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-        <?php
-            /**
-             * woocommerce_after_main_content hook
-             *
-             * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-             */
-            do_action( 'woocommerce_after_main_content' );
-        ?>
+        <?php endwhile; // end of the loop. ?>
 
-        <div class="clearfix"></div>
-    </div>
+    <?php
+        /**
+         * woocommerce_after_main_content hook
+         *
+         * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+         */
+        do_action( 'woocommerce_after_main_content' );
+    ?>
+
+    <div class="clearfix"></div>
+</div>
     <div class="single-product_fixed col-sm-4">
-        <div class="single-product_fixed-wrapper">
-            <h4 itemprop="name" class="product_title entry-title"><?php if( $is_quick_view ): ?><a href="<?php the_permalink(); ?>"><?php endif; ?><?php the_title(); ?><?php if( $is_quick_view ): ?></a><?php endif; ?></h4>
+    <div class="single-product_fixed-wrapper">
+        <h4 itemprop="name" class="product_title entry-title"><?php if( $is_quick_view ): ?><a href="<?php the_permalink(); ?>"><?php endif; ?><?php the_title(); ?><?php if( $is_quick_view ): ?></a><?php endif; ?></h4>
+        <?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
 
-            <div class="images widget_inner">
+            <span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span></span>
 
-                <div class="woocommerce-product-gallery__wrapper">
-                    <?php
-                    $attributes = array(
-                        'title' => esc_attr( get_the_title( get_post_thumbnail_id() ) )
-                    );
-
-                    if ( has_post_thumbnail() ) {
-
-                        echo '<figure class="woocommerce-product-gallery__image">' . get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), $attributes ) . '</figure>';
+        <?php endif; ?>
 
 
-                        if ( $attachment_count > 0 ) {
-                            foreach ( $attachment_ids as $attachment_id ) {
-                                echo '<figure class="woocommerce-product-gallery__image">' . wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) ) . '</figure>';
-                            }
+        <div class="images widget_inner">
+
+            <div class="woocommerce-product-gallery__wrapper">
+                <?php
+                $attributes = array(
+                    'title' => esc_attr( get_the_title( get_post_thumbnail_id() ) )
+                );
+
+                if ( has_post_thumbnail() ) {
+
+                    echo '<figure class="woocommerce-product-gallery__image">' . get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), $attributes ) . '</figure>';
+
+
+                    if ( $attachment_count > 0 ) {
+                        foreach ( $attachment_ids as $attachment_id ) {
+                            echo '<figure class="woocommerce-product-gallery__image">' . wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) ) . '</figure>';
                         }
-
-                    } else {
-
-                        echo '<figure class="woocommerce-product-gallery__image--placeholder">' . apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woodmart' ) ), $post->ID ) . '</figure>';
-
                     }
 
-                    ?>
-                </div>
+                } else {
 
-                <?php
+                    echo '<figure class="woocommerce-product-gallery__image--placeholder">' . apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woodmart' ) ), $post->ID ) . '</figure>';
 
-                if ( $attachment_count > 0 ) {
-                    woodmart_add_inline_script('woodmart-theme', '
-                jQuery(".product-quick-view .woocommerce-product-gallery__wrapper").addClass("owl-carousel").owlCarousel({
-                    rtl: jQuery("body").hasClass("rtl"),
-                    items: 1, 
-                    dots:false,
-                    nav: true,
-                    navText: false
-                });
-            ', 'after');
                 }
 
                 ?>
+            </div>
 
-                <div class="widget-icon">
-                    <div class="widget__add-to-wishlist">
-                        <?php echo do_shortcode("[yith_wcwl_add_to_wishlist]"); ?>
-                    </div>
+            <?php
 
-                    <div class="widget__compare">
-                        <?php echo do_shortcode("[yith_compare_button]"); ?>
-                    </div>
+            if ( $attachment_count > 0 ) {
+                woodmart_add_inline_script('woodmart-theme', '
+            jQuery(".product-quick-view .woocommerce-product-gallery__wrapper").addClass("owl-carousel").owlCarousel({
+                rtl: jQuery("body").hasClass("rtl"),
+                items: 1, 
+                dots:false,
+                nav: true,
+                navText: false
+            });
+        ', 'after');
+            }
 
-                    <div class="widget__oneclick">
-                        <?php echo do_shortcode("[viewBuyButton]"); ?>
-                    </div>
+            ?>
+
+            <div class="widget-icon">
+                <div class="widget__add-to-wishlist">
+                    <?php echo do_shortcode("[yith_wcwl_add_to_wishlist]"); ?>
+                </div>
+
+                <div class="widget__compare">
+                    <?php echo do_shortcode("[yith_compare_button]"); ?>
+                </div>
+
+                <div class="widget__oneclick">
+                    <?php echo do_shortcode("[viewBuyButton]"); ?>
                 </div>
             </div>
-
-            <!-- Price -->
-            <div class="widget_price">
-                <?php
-                if ( !function_exists( 'woocommerce_template_single_price' ) ) {
-                    require_once '/includes/wc-template-functions.php';
-                }
-                // NOTICE! Understand what this does before running.
-                $result = woocommerce_template_single_price();
-            ?>
-            </div>
-
-            <!-- Add to cart -->
-            <div class="widget_addtocart">
-                <?php
-                if ( !function_exists( 'woocommerce_template_single_add_to_cart' ) ) {
-                    require_once '/includes/wc-template-functions.php';
-                }
-                // NOTICE! Understand what this does before running.
-                $result = woocommerce_template_single_add_to_cart();
-            ?>
-            </div>
-
-            <!-- Sharing button -->
-            <div class="widget_sharing">
-                <?php
-                if ( !function_exists( 'woodmart_product_share_buttons' ) ) {
-                    require_once '/inc/woocommerce.php';
-                }
-
-                // NOTICE! Understand what this does before running.
-                $result = woodmart_product_share_buttons();
-            ?>
-            </div>
-
         </div>
+
+        <!-- Price -->
+        <div class="widget_price">
+            <?php
+            if ( !function_exists( 'woocommerce_template_single_price' ) ) {
+                require_once '/includes/wc-template-functions.php';
+            }
+            // NOTICE! Understand what this does before running.
+            $result = woocommerce_template_single_price();
+        ?>
+        </div>
+
+        <!-- Add to cart -->
+        <div class="widget_addtocart">
+            <?php
+            if ( !function_exists( 'woocommerce_template_single_add_to_cart' ) ) {
+                require_once '/includes/wc-template-functions.php';
+            }
+            // NOTICE! Understand what this does before running.
+            $result = woocommerce_template_single_add_to_cart();
+        ?>
+        </div>
+
+        <!-- Sharing button -->
+        <div class="widget_sharing">
+            <?php
+            if ( !function_exists( 'woodmart_product_share_buttons' ) ) {
+                require_once '/inc/woocommerce.php';
+            }
+
+            // NOTICE! Understand what this does before running.
+            $result = woodmart_product_share_buttons();
+        ?>
+        </div>
+
     </div>
 </div>
+</div>
+
 
     <div class="clearfix"></div>
 </div>

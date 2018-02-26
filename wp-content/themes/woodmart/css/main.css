@@ -1288,8 +1288,8 @@ h3
     display: -ms-flexbox;
     display: flex;
 
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
 
     -webkit-transition: none !important;
             transition: none !important;
@@ -1298,35 +1298,37 @@ h3
     background-color: #f2f2f2;
     background-image: url(/wp-content/uploads/quickview__icon.svg);
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -2px -1px;
 }
 
 .widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-add-button a:hover
 {
-    background-position: -44px 0;
+    background-position: -46px -1px;
 }
 
 /* Добавлен в избранное виджет */
 .widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-wishlistaddedbrowse a
 {
-    background-position: -44px 0;
+    background-position: -46px -1px;
 }
 
 /* в избранном виджет */
 .widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-wishlistexistsbrowse a
 {
-    background-position: -44px 0;
+    background-position: -46px -1px;
 }
 
 /* Добавить к сравнению */
 .widget__compare > .compare-button a
 {
-    background-position: 0 -44px;
+    padding: 0 19px !important; 
+
+    background-position: -2px -46px;
 }
 
 .widget__compare > .compare-button a:hover
 {
-    background-position: -44px -44px;
+    background-position: -46px -46px;
 }
 
 /* Добавлено к сравнению */
@@ -1334,19 +1336,19 @@ h3
 {
     font-size: 0; 
 
-    background-position: -44px -44px;
+    background-position: -46px -46px;
 }
 
 .widget__oneclick a
 {
     font-size: 0; 
 
-    background-position: 0 -90px;
+    background-position: -2px -92px;
 }
 
 .widget__oneclick a:hover
 {
-    background-position: -44px -90px;
+    background-position: -46px -92px;
 }
 
 .widget_addtocart > .variations_form > .variations
@@ -1569,7 +1571,7 @@ textarea.comment-reply-area
 .single-product_fixed-wrapper
 {
     width: 250px;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .single-product_fixed-wrapper .tc-extra-product-options
@@ -1577,10 +1579,31 @@ textarea.comment-reply-area
     display: none;
 }
 
+.product_title
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    margin: 30px 0;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
 h4.product_title
 {
     font-family: Rubik;
     font-size: 1.4em;
+
+    margin: 0 !important; 
 
     color: #4f4f4f;
 }
@@ -1590,20 +1613,46 @@ h4.product_title
     display: none;
 }
 
-.product-single__title h2
+.product-single__title h1,
+.product-single__title h2,
+.product_title h1,
+.product_title h2
 {
     font-family: 'Rubik';
     font-size: 2.3em !important;
-    font-size: 2.2em;
     font-weight: normal;
 
+    margin: 0; 
     padding-left: 7px;
 
     text-align: left;
+    letter-spacing: .05em;
     text-transform: uppercase;
 
     color: #4f4f4f;
     border-left: 3px solid #c62828;
+}
+.product-single__title h1 small,
+.product-single__title h2 small,
+.product_title h1 small,
+.product_title h2 small
+{
+    font-size: 14px;
+
+    color: #c62828;
+}
+
+.woodmart-products-nav
+{
+    margin: 10px 0 0 0 !important;
+}
+
+span.sku_wrapper
+{
+    font-family: 'Roboto'; 
+    font-size: 12px;
+
+    color: #888;
 }
 
 .product-single__prem-image
