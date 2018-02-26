@@ -545,10 +545,14 @@ if( ! function_exists( 'woodmart_page_top_part' ) ) {
 		?>
 
 		<!-- MAIN CONTENT AREA -->
-		<?php $main_container_class = woodmart_get_main_container_class(); ?>
+		<?php 
+		
+		if( ! is_page( '8' ) ){
+		$main_container_class = woodmart_get_main_container_class(); ?>
 		<div class="<?php echo esc_attr( $main_container_class ); ?>">
 			<div class="row content-layout-wrapper">
 		<?php
+		}
 	}
 }
 

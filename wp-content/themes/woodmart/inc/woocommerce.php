@@ -1129,7 +1129,7 @@ if(!function_exists( 'woodmart_woo_wrapper_end' )) {
  * My account sidebar
  * ------------------------------------------------------------------------------------------------
  */
-
+/* 
 if( ! function_exists( 'woodmart_before_my_account_navigation' ) ) {
 	function woodmart_before_my_account_navigation() {
 		echo '<div class="woodmart-my-account-sidebar">';
@@ -1158,7 +1158,7 @@ if( ! function_exists( 'woodmart_after_my_account_navigation' ) ) {
 
 	add_action( 'woocommerce_account_navigation', 'woodmart_after_my_account_navigation', 30 );
 }
-
+ */
 
 
 /**
@@ -2897,8 +2897,8 @@ if( ! function_exists( 'woodmart_my_account_wishlist_start' ) ) {
 	function woodmart_my_account_wishlist_start(){
 		if ( !is_user_logged_in() || !woodmart_get_opt( 'my_account_wishlist' ) ) return;
 		?>
-			<div class="woocommerce">
-				<div class="woocommerce-my-account-wrapper">
+			
+				<div class="lk">
 		<?php
 	}
 	add_action( 'yith_wcwl_before_wishlist_form', 'woodmart_my_account_wishlist_start', 10 );
@@ -2930,7 +2930,7 @@ if( ! function_exists( 'woodmart_my_account_wishlist_add_nav' ) ) {
 				<?php endif; ?>
 			</div><!-- .woodmart-my-account-sidebar" -->
 			
-			<div class="woocommerce-MyAccount-content">
+			<!-- <div class="woocommerce-MyAccount-content"> -->
 		<?php
 	}
 	add_action( 'yith_wcwl_before_wishlist_form', 'woodmart_my_account_wishlist_add_nav', 10 );
@@ -2945,9 +2945,9 @@ if( ! function_exists( 'woodmart_my_account_wishlist_end' ) ) {
 	function woodmart_my_account_wishlist_end(){
 		if ( !is_user_logged_in() || !woodmart_get_opt( 'my_account_wishlist' ) ) return;
 		?>
-				</div><!-- .woocommerce-MyAccount-content -->
-			</div><!-- .woocommerce-my-account-wrapper -->
-		</div><!-- .woocommerce -->
+				
+			</div><!-- lk -->
+		
 		<?php
 	}
 	add_action( 'yith_wcwl_after_wishlist_form', 'woodmart_my_account_wishlist_end', 10 );	
@@ -2960,14 +2960,14 @@ if( ! function_exists( 'woodmart_my_account_wishlist_end' ) ) {
  */
 if( ! function_exists( 'woodmart_my_account_wrapp_start' ) ) {
 	function woodmart_my_account_wrapp_start(){
-		echo '<div class="woocommerce-my-account-wrapper">';
+		//echo '<div class="woocommerce-my-account-wrapper">';
 	}
 	add_action( 'woocommerce_account_navigation', 'woodmart_my_account_wrapp_start', 1 );
 }
 
 if( ! function_exists( 'woodmart_my_account_wrapp_end' ) ) {
 	function woodmart_my_account_wrapp_end(){
-		echo '</div><!-- .woocommerce-my-account-wrapper -->';
+	//	echo '</div><!-- .woocommerce-my-account-wrapper -->';
 	}
 	add_action( 'woocommerce_account_content', 'woodmart_my_account_wrapp_end', 10000 );
 }
