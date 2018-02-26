@@ -436,7 +436,7 @@ function wc1c_mode_import($type, $filename, $namespace = null) {
   wc1c_set_transaction_mode();
 
   if (!$namespace) $namespace = preg_replace("/^([a-zA-Z]+).+/", '$1', $filename);
-  if (!in_array($namespace, array('import', 'offers', 'orders'))) wc1c_error(sprintf("Unknown import file type: %s", $namespace));
+  if (!in_array($namespace, array('import', 'offers', 'orders','prices','rests'))) wc1c_error(sprintf("Unknown import file type: %s", $namespace));
 
   $wc1c_namespace = $namespace;
   list($wc1c_is_full, $wc1c_is_moysklad) = wc1c_xml_parse_head($fp);
