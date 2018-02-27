@@ -172,33 +172,6 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                     </div>
                                 </div>
 
-
-
-
-                                <div class="view__item-feature__text">
-                                    <div class="view__item-feature__text-name">
-                                        <p>Наши предложения</p>
-                                    </div>
-                                    <div class="view__item-feature__text-value">
-                                        <p>Хит продаж / Новинка</p>
-                                    </div>
-                                </div>
-                                <div class="view__item-feature__text">
-                                    <div class="view__item-feature__text-name">
-                                        <p>Цвет</p>
-                                    </div>
-                                    <div class="view__item-feature__text-value">
-                                        <p>Черный</p>
-                                    </div>
-                                </div>
-                                <div class="view__item-feature__text">
-                                    <div class="view__item-feature__text-name">
-                                        <p>Гарантия</p>
-                                    </div>
-                                    <div class="view__item-feature__text-value">
-                                        <p>18 месяцев</p>
-                                    </div>
-                                </div>
                             </div>
 
 
@@ -333,6 +306,71 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                         <div class="wpb_text_column wpb_content_element  dropdown-catalog__category_title product-single__title">
                             <h2>Характеристики</h2>
                         </div>
+
+                        <div class="wpb_text_column detail__table-title">
+                            <div class="wpb_wrapper">
+                                <p>Основные характеристики</p>
+
+                            </div>
+                        </div>
+                        <table class="detail__table" id="detail-table">
+                            <tbody>
+                            <?php // Габаритные размеры
+                                if ( get_field('_height') ):
+                            ?>
+                                <tr>
+                                    <th>
+                                        <p class="detail__table-item">Габаритные размеры (ВхШхГ) (± 5%)</p>
+                                    </th>
+                                    <td>
+                                        <p class="detail__table-item"><?php the_field('_height'); ?>x<?php the_field('_width'); ?>x<?php the_field('_length'); ?> мм</p>
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
+
+                            <?php // Вес продукта
+                                if ($weight):
+                            ?>
+                                <tr>
+                                    <th>
+                                        <p class="detail__table-item"><?php echo $weight['label']; ?></p>
+                                    </th>
+                                    <td>
+                                        <p class="detail__table-item"><?php echo $weight['value']; ?></p>
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
+                            <tr>
+                                <th>
+                                    <p class="detail__table-item">Гарантия<a class="product__question product__question-detail" title="Тут какой-то текст" href="#"></a></p>
+                                </th>
+                                <td>
+                                    <p class="detail__table-item detail__table-item__success">Есть</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+                        <div class="wpb_text_column detail__table-title">
+                            <div class="wpb_wrapper">
+                                <p>Прочие</p>
+
+                            </div>
+                        </div>
+                        <table class="detail__table">
+                            <tbody>
+                            <tr>
+                                <th>
+                                    <p class="detail__table-item">Наши предложени</p>
+                                </th>
+                                <td>
+                                    <p class="detail__table-item">Хит продаж / Новинка</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
                     </section>
 
                     <?php echo do_shortcode("[vc_separator]"); ?>

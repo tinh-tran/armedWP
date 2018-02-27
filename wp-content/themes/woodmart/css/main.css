@@ -1561,6 +1561,16 @@ textarea.comment-reply-area
     padding-top: 135px;
 }
 
+.single_add_to_cart_button
+{
+    font-family: 'Rubik' !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+
+    letter-spacing: .07em !important;
+    text-transform: none !important;
+}
+
 .single-product-container
 {
     background: #fff;
@@ -5386,4 +5396,203 @@ iframe
     opacity: 1;
 
     filter: alpha(opacity=100);
+}
+
+.Button
+{
+    font-family: 'Rubik';
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    cursor: pointer;
+    text-decoration: none; 
+
+    border: 0;
+    border-radius: 2px;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.Button_Size_XL
+{
+    width: 255px;
+    height: 65px;
+}
+.Button_Size_L
+{
+    width: 180px;
+    height: 45px;
+}
+.Button_Size_M
+{
+    width: 165px;
+    height: 45px;
+}
+.Button_Size_S
+{
+    width: 150px;
+    height: 45px;
+}
+.Button_Size_XS
+{
+    width: 140px;
+    height: 40px;
+}
+.Button_Color_Red
+{
+    background-color: #c62828;
+}
+.Button_Color_White
+{
+    border: 1px solid #e0e0e0; 
+    background-color: white;
+}
+.Button_Color_NotColor
+{
+    background-color: rgba(255, 255, 255, 0);
+}
+.Button-Text
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    letter-spacing: .05em; 
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.Button-Text_Color_White
+{
+    color: white;
+}
+.Button-Text_Uppercase
+{
+    text-transform: uppercase;
+}
+.Button-Text_Size_L
+{
+    font-size: 16px;
+}
+.Button-Text_Size_M
+{
+    font-size: 14px;
+}
+.Button-Text_Size_S
+{
+    font-size: 12px;
+}
+.Button-Icon
+{
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+    padding: 0 13px; 
+
+    background-image: url('/wp-content/themes/woodmart/images/sprite/sprite.png');
+    background-repeat: no-repeat;
+}
+.Button-Icon_Tel
+{
+    background-position: -122px -24px;
+}
+.Button-Icon_Entity
+{
+    background-position: -122px -44px;
+}
+.Button-Icon_ArrowRedLeft
+{
+    margin-top: 3px;
+
+    background-position: -48px -90px;
+}
+.Button-Icon_ArrowRedRight
+{
+    margin-top: 4px;
+
+    background-position: -48px -72px;
+}
+.Button-Icon_ArrowWhiteLeft
+{
+    background-position: -66px -90px;
+}
+.Button-Icon_ArrowWhiteRight
+{
+    background-position: -66px -72px;
+}
+.Button-Icon_Basket
+{
+    background-position: -122px -104px;
+}
+.Button-Icon_BasketRed
+{
+    background-position: -40px -270px;
+}
+.Button-Icon_Lock
+{
+    background-position: -122px -84px;
+}
+.Button-Icon_Cancel
+{
+    background-position: 0 -270px;
+}
+.Button-Icon_CancelRed
+{
+    background-position: -20px -270px;
+}
+.Button-Icon_AddUser
+{
+    background-position: -80px -290px;
+}
+.Button-Icon_AddUserRed
+{
+    background-position: -100px -290px;
+}
+.Button-Icon_Pencil
+{
+    background-position: -122px -64px;
+}
+.Button-Icon_User
+{
+    background-position: -60px -310px;
+}
+.Button-Icon_UserBlack
+{
+    background-position: -80px -310px;
+}
+.Button-Icon_UserRed
+{
+    background-position: -100px -310px;
+}
+.Button-Icon_PlusBasketWhite
+{
+    background-position: -96px -37px;
+}
+.Button-Icon_Present
+{
+    background-position: -88px -88px;
+}
+
+.Button:hover .Button-Icon_Cancel
+{
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); 
+
+    background-position: -20px -270px;
+}
+
+.Button:hover .Button-Icon_BasketRed
+{
+    background-position: -60px -270px;
 }

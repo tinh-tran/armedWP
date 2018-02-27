@@ -1417,7 +1417,7 @@ if( ! function_exists( 'woodmart_product_video_button' ) ) {
 		$video_url = get_post_meta(get_the_ID(),  '_woodmart_product_video', true );
 		?>
 			<div class="product-video-button">
-				<a href="<?php echo esc_url( $video_url ); ?>"><span><?php esc_html_e('Watch video', 'woodmart'); ?></span></a>
+				<a href="<?php echo esc_url( $video_url ); ?>"><span><?php esc_html_e('Видео', 'woodmart'); ?></span></a>
 			</div>
 		<?php
 	}
@@ -1426,7 +1426,7 @@ if( ! function_exists( 'woodmart_product_video_button' ) ) {
 if( ! function_exists( 'woodmart_product_zoom_button' ) ) {
 	function woodmart_product_zoom_button() {
 		?>
-			<div class="woodmart-show-product-gallery-wrap"><a href="#" class="woodmart-show-product-gallery"><span><?php esc_html_e('Click to enlarge', 'woodmart'); ?></span></a></div>
+			<div class="woodmart-show-product-gallery-wrap"><a href="#" class="woodmart-show-product-gallery"><span><?php esc_html_e('Увеличить', 'woodmart'); ?></span></a></div>
 		<?php
 	}
 }
