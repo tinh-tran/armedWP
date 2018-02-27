@@ -93,28 +93,76 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 
 
                             <div class="view__inner-feature">
+
+
+                                <?php
+
+                                /*
+                                 * Задаем переменные для вывода характеристик
+                                 * ==========================================
+                                 * Основные характеристики
+                                 */
+                                $varWeight = "_weight";
+                                $weight = get_field_object($varWeight);
+
+                                /*
+                                 * ========================================
+                                 * Ингаляторы-небулайзеры
+                                 * ========================================
+                                 */
+                                    $varRezhim      = "rezhim";
+                                    $rezhim         = get_field_object($varRezhim);
+
+                                    $varSpeedRaspil = "speed_raspil";
+                                    $speed_raspil   = get_field_object($varSpeedRaspil);
+
+                                    $varMaxFlow     = "max_flow";
+                                    $max_flow       = get_field_object($varMaxFlow);
+
+                                    $varMaxPower    = "max_power";
+                                    $max_power      = get_field_object($varMaxFlow);
+
+                                    $varMaxVol      = "max_vol";
+                                    $max_vol        = get_field_object($varMaxVol);
+
+                                    $varAvRash      = "av_rash";
+                                    $av_rash        = get_field_object($varAvRash);
+                                ?>
+
                                 <div class="view__item-feature__text">
                                     <div class="view__item-feature__text-name view-feature-title">
                                         <p>Характеристики:</p>
                                     </div>
                                     <div class="view__item-feature__text-value view-feature-title"><a href="#detail">Все характеристики</a></div>
                                 </div>
-                                <div class="view__item-feature__text">
-                                    <div class="view__item-feature__text-name">
-                                        <p>Габаритные размеры (ВхШхГ) (± 5%)</p>
+
+                                <?php // Габаритные размеры Высота-Ширина-Глубина
+                                    if( get_field('_height') ):
+                                ?>
+                                    <div class="view__item-feature__text">
+                                        <div class="view__item-feature__text-name">
+                                            <p>Габаритные размеры (ВхШхГ) (± 5%)</p>
+                                        </div>
+                                        <div class="view__item-feature__text-value">
+                                            <p><?php the_field('_height'); ?>x<?php the_field('_width'); ?>x<?php the_field('_length'); ?> мм</p>
+                                        </div>
                                     </div>
-                                    <div class="view__item-feature__text-value">
-                                        <p>Хит продаж / Новинка</p>
+                                <?php endif; ?>
+
+                                <?php //Вес товара
+                                    if( $weight ):
+                                ?>
+                                    <div class="view__item-feature__text">
+                                        <div class="view__item-feature__text-name">
+                                            <p><?php echo $weight['label']; ?></p>
+                                        </div>
+                                        <div class="view__item-feature__text-value">
+                                            <p><?php echo $weight['value']; ?> кг</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="view__item-feature__text">
-                                    <div class="view__item-feature__text-name">
-                                        <p>Цвет</p>
-                                    </div>
-                                    <div class="view__item-feature__text-value">
-                                        <p>Черный</p>
-                                    </div>
-                                </div>
+                                <?php endif; ?>
+
+                                <!-- TODO Здесь пойдут харки Основные по ингаляторам -->
                                 <div class="view__item-feature__text">
                                     <div class="view__item-feature__text-name">
                                         <p>Гарантия</p>
@@ -123,6 +171,10 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                         <p>18 месяцев</p>
                                     </div>
                                 </div>
+
+
+
+
                                 <div class="view__item-feature__text">
                                     <div class="view__item-feature__text-name">
                                         <p>Наши предложения</p>
