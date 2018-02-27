@@ -23,7 +23,7 @@ if ( class_exists( 'YITH_WCWL' ) ) $wishlist_page_id = yith_wcwl_object_id( get_
 
 do_action( 'woocommerce_before_account_navigation' );
 ?>
-<div class="lk">
+
     <menu class="asside_left">
             <li class="asside_left__item"><a class="asside_left__link" href="/my-account/"><span class="asside_left__icon asside_left__icon_index"></span>Главная</a></li>
             <li class="asside_left__item"><a class="asside_left__link" href="/my-account/orders/"><span class="asside_left__icon asside_left__icon_orders"></span>Заказы</a></li>

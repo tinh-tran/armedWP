@@ -21,8 +21,10 @@ get_header(); ?>
 			<!-- 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> -->
 
 					<section class="start-section container-fullhd">
+					<div class="lk">
 						<?php the_content(); ?>
 						<?php wp_link_pages(); ?>
+						</div>
 					</section>
 
 					<?php woodmart_entry_meta(); ?>
