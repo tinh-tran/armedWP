@@ -442,6 +442,8 @@ return $contact_fields;
 add_filter('user_contactmethods', 'modify_contact_methods');
 
 
+
+// сохранение полей пользователя
 add_action( 'woocommerce_save_account_details', 'my_woocommerce_save_account_details' );
 
 function my_woocommerce_save_account_details( $user_id ) {
