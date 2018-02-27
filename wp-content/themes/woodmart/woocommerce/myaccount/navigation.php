@@ -23,9 +23,18 @@ if ( class_exists( 'YITH_WCWL' ) ) $wishlist_page_id = yith_wcwl_object_id( get_
 
 do_action( 'woocommerce_before_account_navigation' );
 ?>
+<div class="lk">
+    <menu class="asside_left">
+            <li class="asside_left__item"><a class="asside_left__link" href="/my-account/"><span class="asside_left__icon asside_left__icon_index"></span>Главная</a></li>
+            <li class="asside_left__item"><a class="asside_left__link" href="/my-account/orders/"><span class="asside_left__icon asside_left__icon_orders"></span>Заказы</a></li>
+            <li class="asside_left__item"><a class="asside_left__link" href="lk_document.html"><span class="asside_left__icon asside_left__icon_document"></span>Документы</a></li>
+            <li class="asside_left__item"><a class="asside_left__link" href="lk_service.html"><span class="asside_left__icon asside_left__icon_service"></span>Cервис</a></li>
+            <li class="asside_left__item"><a class="asside_left__link" href="/my-account/edit-account/"><span class="asside_left__icon asside_left__icon_profile"></span>Профиль</a></li>
+            <li class="asside_left__item"><a class="asside_left__link" href="lk_edit.html"><span class="asside_left__icon asside_left__icon_company"></span>Профиль компаниии</a></li>
+            <li class="asside_left__item"><a class="asside_left__link" href="/my-account/edit-account/"><span class="asside_left__icon asside_left__icon_settings"></span>Настройки</a></li>
+          </menu>
 
-<nav class="woocommerce-MyAccount-navigation">
-	<ul>
+	<ul class="hidden">
 		<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 			<li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
 				<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"><?php echo esc_html( $label ); ?></a>
@@ -45,6 +54,6 @@ do_action( 'woocommerce_before_account_navigation' );
           <a href="<?php echo esc_url( wc_get_account_endpoint_url( 'customer-logout' ) ); ?>"><?php echo esc_html__( 'Logout', 'woocommerce' ); ?></a>
         </li>
 	</ul>
-</nav>
+
 
 <?php do_action( 'woocommerce_after_account_navigation' ); ?>

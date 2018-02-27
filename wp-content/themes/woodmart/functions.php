@@ -427,3 +427,32 @@ wp_clear_scheduled_hook('wp_update_themes');
 remove_action( 'load-update-core.php', 'wp_update_plugins' );
 add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 wp_clear_scheduled_hook( 'wp_update_plugins' );
+
+
+//======= Новые поля в разделе Контакты =============
+function modify_contact_methods( $contact_fields ) {
+ 
+// Новы поля
+$contact_fields['tel'] = 'Tel';
+$contact_fields['account_middle_name'] = 'account_middle_name';
+
+ 
+return $contact_fields;
+}
+add_filter('user_contactmethods', 'modify_contact_methods');
+
+
+
+// сохранение полей пользователя
+add_action( 'woocommerce_save_account_details', 'my_woocommerce_save_account_details' );
+
+function my_woocommerce_save_account_details( $user_id ) {
+
+  update_user_meta( $user_id, 'tel', htmlentities( $_POST[ 'tel' ] ) );
+  update_user_meta( $user_id, 'account_middle_name', htmlentities( $_POST[ 'account_middle_name' ] ) );
+  
+ 
+    
+}
+
+

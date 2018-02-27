@@ -11,20 +11,23 @@ get_header(); ?>
 
 ?>
 
-<div class="site-content <?php echo esc_attr( $content_class ); ?>" role="main">
+   
+
+
+	<!-- <div class="site-content <?php echo esc_attr( $content_class ); ?>" role="main"> -->
 
 		<?php /* The loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<!-- 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> -->
 
-					<div class="entry-content">
+					<section class="start-section container-fullhd">
 						<?php the_content(); ?>
 						<?php wp_link_pages(); ?>
-					</div>
+					</section>
 
 					<?php woodmart_entry_meta(); ?>
 
-				</article><!-- #post -->
+				<!-- </article> #post --> 
 
 				<?php 
 					// If comments are open or we have at least one comment, load up the comment template.
@@ -35,9 +38,8 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-</div><!-- .site-content -->
-
-
-<?php get_sidebar(); ?>
+<!-- </div><!-- .site-content -->   -->
+	  
+<?php// get_sidebar(); ?>
 
 <?php get_footer(); ?>
