@@ -2189,6 +2189,35 @@ if( ! function_exists( 'woodmart_generate_header' ) ) {
 					)
 				)
 			);
+			
+			$configurations['myaccount'] = array(
+				'container' => array(
+					'wrapp-header' => array(
+						'header-left-side' => array(
+							'mobile_icon',
+						),
+						'logo',
+						'right-column' => array(
+							'main_nav',
+						)
+					)	
+				),
+				// 'secondary-header' => array(
+					// 'container' => array(
+						// 'secondary-inner' => array(
+							// 'categories_menu',
+							// 'search_extended',
+                                // 'right-column' => array(
+                                // 'header_links',
+                                // 'search',
+                                // 'wishlist',
+                                // 'cart',
+                                // 'full_screen_menu_icon',
+                            // )
+						// )
+					// )
+				// )
+			);
 
 			$configurations['advanced'] = array(
 				'container' => array(
