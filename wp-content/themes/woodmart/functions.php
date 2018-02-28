@@ -346,7 +346,7 @@ if( ! function_exists( 'woodmart_enqueue_scripts' ) ) {
             'promo_popup_hide_mobile' => ( woodmart_get_opt( 'promo_popup_hide_mobile' ) ) ? 'yes' : 'no',
             'product_images_captions' => ( woodmart_get_opt( 'product_images_captions' ) ) ? 'yes' : 'no',
             'ajax_add_to_cart' => ( apply_filters( 'woodmart_ajax_add_to_cart', true ) ) ? woodmart_get_opt( 'single_ajax_add_to_cart' ) : false,
-            'all_results' => esc_html__('View all results', 'woodmart'),
+            'all_results' => esc_html__('Показать весь результат', 'woodmart'),
             'product_gallery' => woodmart_get_product_gallery_settings(),
             'zoom_enable' => ( woodmart_get_opt( 'image_action' ) == 'zoom') ? 'yes' : 'no',
             'ajax_scroll' => ( woodmart_get_opt( 'ajax_scroll' ) ) ? 'yes' : 'no',

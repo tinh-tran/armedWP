@@ -34,10 +34,8 @@ $scroll = ( $tabs_layout == 'accordion' );
 
 if ( ! empty( $tabs ) ) : ?>
 
-	<div class="woocommerce-tabs wc-tabs-wrapper tabs-layout-<?php echo esc_attr( $tabs_layout ); ?>">
+	<div id="testimonial" class="woocommerce-tabs wc-tabs-wrapper tabs-layout-<?php echo esc_attr( $tabs_layout ); ?>">
 		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<div class="woodmart-tab-wrapper">
-				<a href="#tab-<?php echo esc_attr( $key ); ?>" class="woodmart-accordion-title tab-title-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
 				<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>">
 					<div class="wc-tab-inner <?php if( $scroll ) echo 'woodmart-scroll'; ?>">
 						<div class="title-next <?php echo ($scroll) ? 'woodmart-scroll-content' : '';  ?>">
@@ -45,7 +43,6 @@ if ( ! empty( $tabs ) ) : ?>
 						</div>
 					</div>
 				</div>
-			</div>
 		<?php endforeach; ?>
 	</div>
 

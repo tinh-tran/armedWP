@@ -1545,9 +1545,10 @@ h3
 
 .slick-slider > button
 {
-    font-size: 30px !important; 
+    font-size: 30px !important;
 
     position: absolute !important;
+    z-index: 2; 
 
     width: 0 !important;
 
@@ -1669,7 +1670,7 @@ h3
 .view__item-feature__text-value p,
 .view__item-feature__text-value a
 {
-    margin-left: 16px;
+    margin-left: 0;
 }
 .view__item-feature__text-value:after
 {
@@ -1728,15 +1729,22 @@ h3
 {
     padding: 20px 0;
 }
-.add-to-cart h5
+.add-to-cart p.variable-title
 {
     font-family: 'Rubik';
     font-size: 16px;
-    font-weight: 400; 
+    font-weight: 400;
+
+    padding: 0 0 10px 0; 
 
     letter-spacing: .05em;
 
     color: #4f4f4f;
+}
+
+.widget_addtocart p.variable-title
+{
+    display: none;
 }
 
 /* Widget single product */
@@ -1869,7 +1877,7 @@ h3
         flex-direction: column;
 
     width: 165px !important;
-    padding: 20px 0; 
+    padding: 0; 
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1891,6 +1899,24 @@ h3
 
     background-image: url(/wp-content/uploads/product-widget.svg);
     background-position: 0 -66px;
+}
+
+.widget_sharing
+{
+    margin: 20px 0;
+}
+
+.product-share .share-title
+{
+    font-family: 'Roboto' !important;
+    font-size: 14px;
+    font-weight: 400 !important;
+
+    margin-bottom: 10px;
+
+    text-align: left;
+
+    color: #bdbdbd !important;
 }
 
 /* detail-tabs */
@@ -2023,6 +2049,22 @@ textarea.comment-reply-area
     margin: 20px 0;
 }
 
+.woocommerce-noreviews
+{
+    font-family: Roboto;
+    font-size: 1.4em;
+    font-weight: normal;
+
+    padding-bottom: 50px; 
+
+    color: #828282;
+}
+
+ol.commentlist
+{
+    padding-bottom: 50px;
+}
+
 #video,
 #advantages,
 #testimonial,
@@ -2051,6 +2093,8 @@ textarea.comment-reply-area
 .woocommerce-Tabs-panel
 {
     display: block !important;
+
+    margin-top: -30px;
 }
 
 .single-product_content,
@@ -5503,6 +5547,25 @@ span.sku_wrapper
     justify-content: space-between;
 }
 
+body.woocommerce-checkout .woocommerce > .login
+{
+    margin: 0 auto !important;
+}
+
+.form-row
+{
+    margin: 20px 0 !important;
+}
+
+.woocommerce-billing-fields h3
+{
+    font-family: 'Rubik' !important;
+    font-weight: 500 !important;
+
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
 .bg-product-grid-item
 {
     border: 1px solid #e0e0e0; 
@@ -5935,6 +5998,11 @@ iframe
     opacity: 1;
 
     filter: alpha(opacity=100);
+}
+
+.video-item iframe
+{
+    max-width: 95%;
 }
 
 .Button

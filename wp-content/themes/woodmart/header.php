@@ -14,7 +14,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<div id="wptime-plugin-preloader"></div>
 <?include("metrics.php");?>
 	<?php if ( woodmart_needs_header() ): ?>
 		<?php do_action( 'woodmart_after_body_open' ); ?>

@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<!--
+<!-- TODO Вывод атрибутов средствами WordPress
 <table class="shop_attributes">
 	<?php if ( $display_dimensions && $product->has_weight() ) : ?>
 		<tr>

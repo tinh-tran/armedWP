@@ -37,6 +37,16 @@ if( ! function_exists( 'woodmart_shortcode_social' )) {
 		?>
 
 			<div class="<?php echo esc_attr( $classes ); ?>">
+
+
+                <a class="quickview-item_buy__social-icon__vk" href="#"></a>
+                <a class="quickview-item_buy__social-icon__fb" href="#"></a>
+                <a class="quickview-item_buy__social-icon__yt" href="#"></a>
+                <a class="quickview-item_buy__social-icon__it" href="#"></a>
+                <a class="quickview-item_buy__social-icon__tg" href="#"></a>
+
+
+
 				<?php if ( ( $type == 'share' && woodmart_get_opt('share_fb') ) || ( $type == 'follow' && woodmart_get_opt( 'fb_link' ) != '')): ?>
 					<div class="woodmart-social-icon social-facebook"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'fb_link' )) : 'https://www.facebook.com/sharer/sharer.php?u=' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-facebook"></i><?php esc_html_e('Facebook', 'woodmart') ?></a></div>
 				<?php endif ?>

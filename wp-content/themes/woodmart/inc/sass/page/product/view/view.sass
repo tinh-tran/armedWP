@@ -58,7 +58,7 @@
           width: 20%
           p,
           a
-            margin-left: 16px
+            margin-left: 0
           &:after
             border: none
 .view-feature-title
@@ -93,9 +93,14 @@
 
 .add-to-cart
   padding: 20px 0
-  h5
+  p.variable-title
     font-family: $fontFamilyAdditionally
     font-size: 16px
     letter-spacing: 0.05em
     color: #4f4f4f
     font-weight: 400
+    padding: 0 0 10px 0
+
+.widget_addtocart
+  p.variable-title
+    display: none

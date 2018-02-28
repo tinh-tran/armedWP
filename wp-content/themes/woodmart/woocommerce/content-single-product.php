@@ -109,6 +109,8 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                 $concentrators = acf_get_fields('4616');
                                 // Рециркуляторы
                                 $recirculators = acf_get_fields('4626');
+                                // Коляски
+                                $kolyaskis     = acf_get_fields('4663');
 
                                 ?>
 
@@ -152,11 +154,11 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                  * =========================================
                                  */
                                     if( $concentrators )
-                                        //$i = 0;
+                                        $i = 0;
                                     {
                                         foreach( $concentrators as $concentrator )
-                                        { //$i++;
-                                        //if($i >5) break;
+                                        { $i++;
+                                        if($i >5) break;
                                             $value = get_field( $concentrator['name'] );
                                             if ($concentrator['choices']){
                                                 $map = array(
@@ -182,11 +184,11 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                  * =========================================
                                  */
                                 if( $recirculators )
-                                    //$i = 0;
+                                    $i = 0;
                                 {
                                     foreach( $recirculators as $recirculator )
-                                    { //$i++;
-                                    //if($i >5) break;
+                                    { $i++;
+                                    if($i >2) break;
                                         $value = get_field( $recirculator['name'] );
                                         if ($recirculator['choices']){
                                             $map = array(
@@ -197,8 +199,38 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                         }
                                         if( $value && $value != 'no') {
                                             echo '<div class="view__item-feature__text">';
-                                            echo '<div class="view__item-feature__text-name"><p>' . $recirculator['label'] . '</p></div>';
-                                            echo '<div class="view__item-feature__text-value"><p>' . $value . '</p></div>';
+                                                echo '<div class="view__item-feature__text-name"><p>' . $recirculator['label'] . '</p></div>';
+                                                echo '<div class="view__item-feature__text-value"><p>' . $value . '</p></div>';
+                                            echo '</div>';
+                                        }
+                                    }
+                                }
+                                ?>
+
+                                <?php
+                                /*
+                                 * =========================================
+                                 * Коляски
+                                 * =========================================
+                                 */
+                                if( $kolyaskis )
+                                    $i = 0;
+                                {
+                                    foreach( $kolyaskis as $kolyaski )
+                                    { $i++;
+                                        if($i >6) break;
+                                        $value = get_field( $kolyaski['name'] );
+                                        if ($kolyaski['choices']){
+                                            $map = array(
+                                                'yes' => '<i class="icon-ok"></i>'
+                                            );
+                                            $value = $map[ $value ];
+                                        } else {
+                                        }
+                                        if( $value && $value != 'no') {
+                                            echo '<div class="view__item-feature__text">';
+                                                echo '<div class="view__item-feature__text-name"><p>' . $kolyaski['label'] . '</p></div>';
+                                                echo '<div class="view__item-feature__text-value"><p>' . $value . '</p></div>';
                                             echo '</div>';
                                         }
                                     }
@@ -208,7 +240,6 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 
 
                             <div class="add-to-cart">
-                                <h5>Другие варианты товара:</h5>
                                 <?php
                                 if ( !function_exists( 'woocommerce_template_single_add_to_cart' ) ) {
                                     require_once '/includes/wc-template-functions.php';
@@ -394,6 +425,62 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                     if( $value && $value != 'no') {
                                         echo '<tr>';
                                             echo '<th><p class="detail__table-item">' . $concentrator['label'] . '</p></th>';
+                                            echo '<td><p class="detail__table-item">' . $value . '</p></td>';
+                                        echo '</tr>';
+                                    }
+                                }
+                            }
+                            ?>
+
+                            <?php
+                            /*
+                             * =========================================
+                             * Рециркуляторы
+                             * =========================================
+                             */
+                            if( $recirculators )
+                            {
+                                foreach( $recirculators as $recirculator )
+                                {
+                                    $value = get_field( $recirculator['name'] );
+                                    if ($recirculator['choices']){
+                                        $map = array(
+                                            'yes' => '<i class="icon-ok"></i>'
+                                        );
+                                        $value = $map[ $value ];
+                                    } else {
+                                    }
+                                    if( $value && $value != 'no') {
+                                        echo '<tr>';
+                                            echo '<th><p class="detail__table-item">' . $recirculator['label'] . '</p></th>';
+                                            echo '<td><p class="detail__table-item">' . $value . '</p></td>';
+                                        echo '</tr>';
+                                    }
+                                }
+                            }
+                            ?>
+
+                            <?php
+                            /*
+                             * =========================================
+                             * Коляски
+                             * =========================================
+                             */
+                            if( $kolyaskis )
+                            {
+                                foreach( $kolyaskis as $kolyaski )
+                                {
+                                    $value = get_field( $kolyaski['name'] );
+                                    if ($kolyaski['choices']){
+                                        $map = array(
+                                            'yes' => '<i class="icon-ok"></i>'
+                                        );
+                                        $value = $map[ $value ];
+                                    } else {
+                                    }
+                                    if( $value && $value != 'no') {
+                                        echo '<tr>';
+                                            echo '<th><p class="detail__table-item">' . $kolyaski['label'] . '</p></th>';
                                             echo '<td><p class="detail__table-item">' . $value . '</p></td>';
                                         echo '</tr>';
                                     }

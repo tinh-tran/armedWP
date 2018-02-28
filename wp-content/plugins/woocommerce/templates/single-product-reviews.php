@@ -36,7 +36,7 @@ if ( ! comments_open() ) {
                         /* translators: 1: reviews count 2: product name */
                         printf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span>' . get_the_title() . '</span>' );
                     } else {
-                        _e( 'Reviews', 'woocommerce' );
+                        _e( 'Отзывы', 'woocommerce' );
                     }
                     ?></h2>
             </div>
