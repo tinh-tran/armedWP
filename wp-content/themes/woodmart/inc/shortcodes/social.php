@@ -13,7 +13,7 @@ if( ! function_exists( 'woodmart_shortcode_social' )) {
 			'tooltip' => 'no',
 			'style' => 'default', // circle colored
 			'size' => 'default', // circle colored
-			'form' => 'circle',
+			'form' => 'default', // circle
 			'color' => 'dark',
 			'el_class' => '',
 		), $atts ));
@@ -39,29 +39,43 @@ if( ! function_exists( 'woodmart_shortcode_social' )) {
 			<div class="<?php echo esc_attr( $classes ); ?>">
 
 
-                <a class="quickview-item_buy__social-icon__vk" href="#"></a>
-                <a class="quickview-item_buy__social-icon__fb" href="#"></a>
-                <a class="quickview-item_buy__social-icon__yt" href="#"></a>
-                <a class="quickview-item_buy__social-icon__it" href="#"></a>
-                <a class="quickview-item_buy__social-icon__tg" href="#"></a>
 
+                <?php if ( ( $type == 'share' && woodmart_get_opt('share_fb') ) || ( $type == 'follow' && woodmart_get_opt( 'fb_link' ) != '')): ?>
+                    <div class="woodmart-social-icon social-vkontakte"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'fb_link' )) : 'https://vk.com/share.php?url=' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?> quickview-item_buy__social-icon__vk"><?php esc_html_e('Вконтакте', 'woodmart') ?></a></div>
+                <?php endif ?>
 
-
-				<?php if ( ( $type == 'share' && woodmart_get_opt('share_fb') ) || ( $type == 'follow' && woodmart_get_opt( 'fb_link' ) != '')): ?>
-					<div class="woodmart-social-icon social-facebook"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'fb_link' )) : 'https://www.facebook.com/sharer/sharer.php?u=' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-facebook"></i><?php esc_html_e('Facebook', 'woodmart') ?></a></div>
+                <?php if ( ( $type == 'share' && woodmart_get_opt('share_fb') ) || ( $type == 'follow' && woodmart_get_opt( 'fb_link' ) != '')): ?>
+					<div class="woodmart-social-icon social-facebook"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'fb_link' )) : 'https://www.facebook.com/sharer/sharer.php?u=' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?> quickview-item_buy__social-icon__fb"><?php esc_html_e('Facebook', 'woodmart') ?></a></div>
 				<?php endif ?>
 
 				<?php if ( ( $type == 'share' && woodmart_get_opt('share_twitter') ) || ( $type == 'follow' && woodmart_get_opt( 'twitter_link' ) != '')): ?>
-					<div class="woodmart-social-icon social-twitter"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'twitter_link' )) : 'http://twitter.com/share?url=' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-twitter"></i><?php esc_html_e('Twitter', 'woodmart') ?></a></div>
+					<div class="woodmart-social-icon social-twitter"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'twitter_link' )) : 'http://twitter.com/share?url=' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?> quickview-item_buy__social-icon__tw"><?php esc_html_e('Twitter', 'woodmart') ?></a></div>
 				<?php endif ?>
 
 				<?php if ( ( $type == 'share' && woodmart_get_opt('share_google') ) || ( $type == 'follow' && woodmart_get_opt( 'google_link' ) != '' ) ): ?>
-					<div class="woodmart-social-icon social-google"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'google_link' )) : 'http://plus.google.com/share?url=' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-google-plus"></i><?php esc_html_e('Google', 'woodmart') ?></a></div>
+					<div class="woodmart-social-icon social-google"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'google_link' )) : 'http://plus.google.com/share?url=' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?> quickview-item_buy__social-icon__google"><?php esc_html_e('Google', 'woodmart') ?></a></div>
 				<?php endif ?>
 
 				<?php if ( ( $type == 'share' && woodmart_get_opt('share_email') ) || ( $type == 'follow' && woodmart_get_opt( 'social_email' ) ) ): ?>
 					<div class="woodmart-social-icon social-email"><a href="mailto:<?php echo '?subject=' . esc_html__('Check this ', 'woodmart') . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-envelope"></i><?php esc_html_e('Email', 'woodmart') ?></a></div>
 				<?php endif ?>
+
+                <?php if ( ( $type == 'share' && woodmart_get_opt('share_ok') ) || ( $type == 'follow' && woodmart_get_opt( 'ok_link' ) != '' ) ): ?>
+                    <div class="woodmart-social-icon social-ok"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'ok_link' )) : 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=
+' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?> quickview-item_buy__social-icon__yt"><?php esc_html_e('Odnoklassniki', 'woodmart') ?></a></div>
+                <?php endif ?>
+
+                <?php if ( $type == 'share' && woodmart_get_opt('share_whatsapp') ): ?>
+                    <div class="woodmart-social-icon social-whatsapp"><a href="<?php echo ($type == 'follow') ? ( woodmart_get_opt( 'whatsapp_link' )) : 'whatsapp://send?text=' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?> quickview-item_buy__social-icon__wa"><?php esc_html_e('WhatsApp', 'woodmart') ?></a></div>
+                <?php endif ?>
+
+
+                <?php /*
+                       *========================
+                       * Follow social link
+                       *========================
+                       */ ?>
+
 
 				<?php if ( $type == 'follow' && woodmart_get_opt( 'isntagram_link' ) != ''): ?>
 					<div class="woodmart-social-icon social-instagram"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'isntagram_link' )) : '' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-instagram"></i><?php esc_html_e('Instagram', 'woodmart') ?></a></div>
@@ -69,10 +83,6 @@ if( ! function_exists( 'woodmart_shortcode_social' )) {
 
 				<?php if ( $type == 'follow' && woodmart_get_opt( 'youtube_link' ) != ''): ?>
 					<div class="woodmart-social-icon social-youtube"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'youtube_link' )) : '' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-youtube"></i><?php esc_html_e('YouTube', 'woodmart') ?></a></div>
-				<?php endif ?>
-
-				<?php if ( ( $type == 'share' && woodmart_get_opt('share_pinterest') ) || ( $type == 'follow' && woodmart_get_opt( 'pinterest_link' ) != '' ) ): ?>
-					<div class="woodmart-social-icon social-pinterest"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'pinterest_link' )) : 'http://pinterest.com/pin/create/button/?url=' . get_the_permalink() . '&media=' . $thumb_url[0]; ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-pinterest"></i><?php esc_html_e('Pinterest', 'woodmart') ?></a></div>
 				<?php endif ?>
 
 				<?php if ( $type == 'follow' && woodmart_get_opt( 'tumblr_link' ) != ''): ?>
@@ -109,15 +119,6 @@ if( ! function_exists( 'woodmart_shortcode_social' )) {
 
 				<?php if ( $type == 'follow' && woodmart_get_opt( 'spotify_link' ) != ''): ?>
 					<div class="woodmart-social-icon social-spotify"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'spotify_link' )) : '' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-spotify"></i><?php esc_html_e('Spotify', 'woodmart') ?></a></div>
-				<?php endif ?>
-
-				<?php if ( ( $type == 'share' && woodmart_get_opt('share_ok') ) || ( $type == 'follow' && woodmart_get_opt( 'ok_link' ) != '' ) ): ?>
-					<div class="woodmart-social-icon social-ok"><a href="<?php echo ($type == 'follow') ? esc_url(woodmart_get_opt( 'ok_link' )) : 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=
-' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-odnoklassniki"></i><?php esc_html_e('Odnoklassniki', 'woodmart') ?></a></div>
-				<?php endif ?>
-
-				<?php if ( $type == 'share' && woodmart_get_opt('share_whatsapp') ): ?>
-					<div class="woodmart-social-icon social-whatsapp"><a href="<?php echo ($type == 'follow') ? ( woodmart_get_opt( 'whatsapp_link' )) : 'whatsapp://send?text=' . get_the_permalink(); ?>" target="<?php echo esc_attr( $target ); ?>" class="<?php if( $tooltip == "yes" ) echo 'woodmart-tooltip'; ?>"><i class="fa fa-whatsapp"></i><?php esc_html_e('WhatsApp', 'woodmart') ?></a></div>
 				<?php endif ?>
 
 			</div>

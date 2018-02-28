@@ -14,7 +14,7 @@
 
 jQuery(document).ready(function( $ ) {
 
-    $(".single-product_fixed-wrapper").stick_in_parent({offset_top: 150});
+    $(".single-product_fixed-wrapper").stick_in_parent({offset_top: 100});
     $(".anchor").stick_in_parent({offset_top: 60});
 
     $('.comment-form > .form-submit > .submit').val('Оставить отзыв');

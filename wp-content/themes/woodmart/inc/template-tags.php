@@ -1175,7 +1175,7 @@ if( ! function_exists( 'woodmart_cookies_popup' ) ) {
 						<?php if ( $page_id ): ?>
 							<a href="<?php echo get_permalink( $page_id ); ?>" class="cookies-more-btn"><?php esc_html_e( 'More info' , 'woodmart' ); ?></a>
 						<?php endif ?>
-						<a href="#" class="btn btn-size-small btn-color-primary cookies-accept-btn"><?php esc_html_e( 'Accept' , 'woodmart' ); ?></a>
+						<a href="#" class="btn btn-size-small btn-color-primary cookies-accept-btn"><?php esc_html_e( 'Согласен' , 'woodmart' ); ?></a>
 					</div>
 				</div>
 			</div>
@@ -1814,7 +1814,7 @@ if( ! function_exists( 'woodmart_get_header_links' ) ) {
 				$links['register']['dropdown'] = '
 					<div class="sub-menu-dropdown color-scheme-' . $color_scheme . '">
 						<div class="login-dropdown-inner">
-							<h3 class="login-title"><span>' . esc_html__('Авторизация', 'woodmart') . '</span><a class="create-account-link" href="' . esc_url( $account_link ) . '">' . esc_html__('Create an Account', 'woodmart') . '</a>' . '</h3>
+							<h3 class="login-title"><span>' . esc_html__('Авторизация', 'woodmart') . '</span><a class="create-account-link" href="' . esc_url( $account_link ) . '">' . esc_html__('Регистрация', 'woodmart') . '</a>' . '</h3>
 							' . woodmart_login_form( false, $account_link ) . '
 						</div>
 					</div>
@@ -1963,7 +1963,7 @@ if( ! function_exists( 'woodmart_login_form' ) ) {
 				<div class="close-login-form"><span><?php esc_html_e('Close', 'woodmart'); ?></span></div>
 
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide form-row-username">
-					<label for="username"><?php esc_html_e( 'Номер телефона или почта', 'woodmart' ); ?> <span class="required">*</span></label>
+					<label for="username"><?php esc_html_e( 'Ваша почта', 'woodmart' ); ?> <span class="required">*</span></label>
 					<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
 				</p>
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide form-row-password">

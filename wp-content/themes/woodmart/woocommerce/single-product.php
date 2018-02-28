@@ -162,6 +162,28 @@ get_header( 'shop' ); ?>
         ?>
         </div>
 
+        <!-- TODO просто верстка - Выбор города, стоимость доставки и пункты самовывоза -->
+        <div class="quickview-inner_buy__delivery">
+            <div class="quickview-item_buy__delivery-select">
+                <div class="Select" id="CitySelect"><a class="Select-Head" id="SelectCity" href="#" data-value="None">
+                        <sapn class="StatusOrder-Text">Выберите город</sapn></a>
+                    <div class="Select-Catalog" style="display: none;"><a class="Select-Item" href="#" data-value="None">
+                            <sapn class="StatusOrder-Text">Не выбрано</sapn></a><a class="Select-Item" href="#" data-value="Moskow">
+                            <sapn class="StatusOrder-Text">Москва</sapn></a><a class="Select-Item" href="#" data-value="Balashiha">
+                            <sapn class="StatusOrder-Text">Балашиха</sapn></a><a class="Select-Item" href="#" data-value="Zkorpat">
+                            <sapn class="StatusOrder-Text">Зажорпатье</sapn></a></div>
+                </div>
+            </div>
+            <div class="quickview-item_buy__delivery-popup">
+                <div class="delivery-car"><span class="delivery-car_icon"></span>
+                    <p class="delivery-car_text">Доставка:&nbsp;<span class="changed_delivery">800 ₽</span></p>
+                </div>
+                <div class="delivery-self"><span class="delivery-self_icon"></span>
+                    <p class="delivery-self_text">Самовывоз:&nbsp;</p><a class="delivery-self_link modalLink" href="Pick">5 пунктов</a>
+                </div>
+            </div>
+        </div>
+
         <!-- Sharing button -->
         <div class="widget_sharing">
             <?php

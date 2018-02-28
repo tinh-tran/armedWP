@@ -1724,6 +1724,10 @@ h3
 {
     width: 40%;
 }
+.view-feature-width a
+{
+    text-decoration: underline;
+}
 
 .add-to-cart
 {
@@ -1917,6 +1921,671 @@ h3
     text-align: left;
 
     color: #bdbdbd !important;
+}
+
+.woodmart-social-icons .woodmart-social-icon
+{
+    display: inline-block;
+
+    margin-right: 6px;
+}
+
+.quickview
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row; 
+
+    height: 591px;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
+.quickview_head
+{
+    margin-bottom: 0;
+    padding-bottom: 20px; 
+
+    -webkit-box-shadow: 0 5px 6px rgba(0, 0, 0, .02);
+            box-shadow: 0 5px 6px rgba(0, 0, 0, .02);
+}
+.quickview-wrapper_slider
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    padding: 40px 15px; 
+
+    border-right: 1px solid #e0e0e0;
+
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+        flex: 2;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+.quickview-wrapper_description
+{
+    padding: 15px 15px 15px 15px;
+
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+        flex: 3;
+}
+.quickview-wrapper_description .description_title
+{
+    font-family: 'Roboto';
+    font-size: 1.8em;
+    font-weight: normal;
+
+    text-align: left;
+
+    color: #4f4f4f;
+}
+.quickview-wrapper_buy
+{
+    padding: 15px 4px 15px 15px;
+
+    background: #fbfbfb;
+
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+        flex: 2;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.quickview-inner_slider--group
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    margin: 10px 0;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.quickview-inner_about
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column; 
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+.quickview-inner_color
+{
+    margin: 15px 0;
+}
+.quickview-inner_color-box,
+.quickview-inner_size-box
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row; 
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
+.quickview-inner_size
+{
+    margin-bottom: 20px;
+}
+.quickview-inner_buy__buybutton
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row; 
+
+    margin: 25px 0 10px 0;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
+.quickview-inner_buy__delivery
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    margin: 20px 0 15px 0; 
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+.quickview-inner_buy__icons
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row; 
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
+.quickview-inner_buy__icons-like,
+.quickview-inner_buy__icons-arrow,
+.quickview-inner_buy__icons-click
+{
+    width: 44px;
+    height: 44px;
+    margin-right: 18px;
+
+    border-radius: 50%; 
+    background-color: #f2f2f2;
+    background-image: url('images/sprite.png');
+    background-repeat: no-repeat;
+    background-position: 0 -139px;
+}
+.quickview-inner_buy__icons-like:hover,
+.quickview-inner_buy__icons-arrow:hover,
+.quickview-inner_buy__icons-click:hover
+{
+    background-position: -44px -139px;
+}
+.quickview-inner_buy__icons-arrow
+{
+    background-position: 0 -183px;
+}
+.quickview-inner_buy__icons-arrow:hover
+{
+    background-position: -44px -183px;
+}
+.quickview-inner_buy__icons-click
+{
+    background-position: 0 -227px;
+}
+.quickview-inner_buy__icons-click:hover
+{
+    background-position: -44px -227px;
+}
+.quickview-inner_buy__cost
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    margin: 10px 0;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+.quickview-inner_buy__amount
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row; 
+
+    margin-top: 12px;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
+.quickview-item_slider--main
+{
+    width: 310px;
+    height: 360px;
+}
+.quickview-item_slider--main__img
+{
+    width: 310px;
+}
+.quickview-item_slider--bottom
+{
+    width: 53px;
+}
+.quickview-item_buy__social
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row; 
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
+.quickview-item_buy__social-icon,
+.quickview-item_buy__social-icon__vk,
+.quickview-item_buy__social-icon__fb,
+.quickview-item_buy__social-icon__yt,
+.quickview-item_buy__social-icon__it,
+.quickview-item_buy__social-icon__tw,
+.quickview-item_buy__social-icon__google,
+.quickview-item_buy__social-icon__wa
+{
+    width: 24px;
+    height: 24px; 
+
+    background: url('/wp-content/themes/woodmart/images/sprite/social.svg');
+    background-repeat: no-repeat;
+}
+.quickview-item_buy__social-icon__vk
+{
+    background-position: -255px 0;
+}
+.quickview-item_buy__social-icon__vk:hover
+{
+    background-position: -279px 0;
+}
+.quickview-item_buy__social-icon__fb
+{
+    background-position: -255px -24px;
+}
+.quickview-item_buy__social-icon__fb:hover
+{
+    background-position: -279px -24px;
+}
+.quickview-item_buy__social-icon__yt
+{
+    background-position: -255px -48px;
+}
+.quickview-item_buy__social-icon__yt:hover
+{
+    background-position: -279px -48px;
+}
+.quickview-item_buy__social-icon__it
+{
+    background-position: -255px -72px;
+}
+.quickview-item_buy__social-icon__it:hover
+{
+    background-position: -279px -72px;
+}
+.quickview-item_buy__social-icon__tw
+{
+    background-position: -255px -96px;
+}
+.quickview-item_buy__social-icon__tw:hover
+{
+    background-position: -279px -96px;
+}
+.quickview-item_buy__social-icon__google
+{
+    background-position: -255px -168px;
+}
+.quickview-item_buy__social-icon__google:hover
+{
+    background-position: -279px -168px;
+}
+.quickview-item_buy__social-icon__wa
+{
+    background-position: -255px -240px;
+}
+.quickview-item_buy__social-icon__wa:hover
+{
+    background-position: -279px -240px;
+}
+.quickview-item_buy__delivery-select
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row; 
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
+.quickview-item_buy__delivery-popup
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column; 
+
+    margin: 10px 0 15px 0;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+.quickview-item_buy__delivery-popup .delivery-self,
+.quickview-item_buy__delivery-popup .delivery-car
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row; 
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+}
+.quickview-item_buy__delivery-popup .delivery-self_link
+{
+    font-size: 1.2em; 
+
+    text-decoration: none;
+
+    color: #7dc472;
+}
+.quickview-item_buy__delivery-popup .delivery-self_icon
+{
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+
+    background-image: url('/wp-content/themes/woodmart/images/sprite/samovivoz__quickview.svg');
+    background-repeat: no-repeat; 
+    background-position: 0 -15px;
+}
+.quickview-item_buy__delivery-popup .delivery-car
+{
+    margin: 6px 0;
+}
+.quickview-item_buy__delivery-popup .delivery-car_icon
+{
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+
+    background-image: url('/wp-content/themes/woodmart/images/sprite/samovivoz__quickview.svg');
+    background-repeat: no-repeat; 
+    background-position: 0 0;
+}
+.quickview-item_buy__delivery-popup .delivery-car_text,
+.quickview-item_buy__delivery-popup .delivery-self_text
+{
+    font-family: 'Roboto';
+    font-size: 1.2em;
+
+    color: #828282;
+}
+.quickview-item_buy__amount-title
+{
+    font-size: 1.5em;
+
+    margin-right: 10px;
+
+    color: #828282;
+}
+.quickview-item_buy__vendor
+{
+    font-size: 1.2em;
+    font-weight: normal;
+
+    text-align: left; 
+
+    color: #888;
+}
+.quickview-item_buy__newcost
+{
+    font-family: 'Roboto';
+    font-size: 2.2em;
+    font-weight: 500; 
+
+    color: #4f4f4f;
+}
+.quickview-item_buy__newcost-symbol
+{
+    font-family: 'Roboto'; 
+    font-size: 20px;
+    font-weight: normal;
+}
+.quickview-item_buy__oldcost,
+.quickview-item_buy__oldcost-symbol
+{
+    font-size: 1.4em;
+    font-weight: normal; 
+
+    padding: 3px 0 3px 5px;
+
+    text-decoration: line-through;
+
+    color: #bdbdbd;
+}
+.quickview-item_buy__oldcost-symbol
+{
+    padding: 3px 0;
+
+    text-decoration: none;
+}
+.quickview-item_about-text
+{
+    font-size: 1.3em;
+
+    margin-top: 10px;
+    padding-right: 10px;
+
+    text-align: left; 
+
+    color: #828282;
+}
+.quickview-item_about-link
+{
+    font-size: 1.3em;
+
+    margin: 10px 0;
+
+    cursor: pointer;
+    text-align: left;
+    text-decoration: underline;
+
+    color: #4f4f4f;
+}
+.quickview-item_about-link:hover
+{
+    color: #c62929;
+}
+.quickview-item_size-link
+{
+    font-size: 1.4em;
+    font-weight: 300; 
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    color: #c62828;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.quickview-item_color-link,
+.quickview-item_size-link
+{
+    width: 60px;
+    height: 60px;
+    margin: 0 5px; 
+
+    cursor: pointer;
+
+    border: 1px solid #e0e0e0;
+}
+.quickview-item_color-link:hover,
+.quickview-item_size-link:hover
+{
+    -webkit-transition: .7s;
+            transition: .7s;
+
+    border: 1px solid #828282;
+}
+.quickview-item_color-link:first-child,
+.quickview-item_size-link:first-child
+{
+    margin-left: 0;
+}
+.quickview-item_color-link:last-child,
+.quickview-item_size-link:last-child
+{
+    margin-right: 0;
+}
+.quickview-item_color-image
+{
+    width: 60px;
+}
+.quickview-item_feature-text
+{
+    display: table;
+
+    width: 100%;
+    margin: 15px 0; 
+
+    table-layout: fixed;
+}
+.quickview-item_feature-text_in,
+.quickview-item_feature-text_name,
+.quickview-item_feature-text_value
+{
+    font-family: 'Roboto';
+    font-size: 1.3em;
+    font-weight: normal;
+
+    position: relative;
+
+    display: table-cell;
+    overflow: hidden;
+
+    text-align: left; 
+    vertical-align: middle;
+
+    color: #828282;
+}
+.quickview-item_feature-text_name p:after
+{
+    position: absolute;
+
+    width: 100%;
+    height: 13px;
+    margin-left: 12px; 
+
+    content: '';
+
+    border-bottom: 1px dotted #bdbdbd;
+}
+.quickview-item_feature-text_value p
+{
+    margin-left: 12px;
+}
+.quickview-item_feature-text_value:after
+{
+    border: none;
+}
+
+.dilevery_header
+{
+    font-family: 'Roboto';
+    font-size: 1.4em;
+
+    margin-bottom: 10px;
+
+    text-align: left;
+
+    color: #bdbdbd;
+}
+
+.description-item_title
+{
+    font-family: 'Roboto';
+    font-size: 1.6em;
+    font-weight: normal;
+
+    text-align: left;
+
+    color: #4f4f4f;
+}
+
+.description-item_text
+{
+    font-family: 'Roboto';
+    font-size: 1.3em;
+    font-weight: normal;
+
+    margin: 10px 0;
+
+    text-align: left;
+
+    color: #828282;
+}
+
+.quickview__select
+{
+    font-family: 'Roboto';
+    font-size: 1.4em;
+    font-weight: normal;
+
+    width: 195px;
+    height: 26px;
+    padding-left: 6px;
+
+    cursor: pointer;
+    text-indent: 1px;
+
+    color: #4f4f4f;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    background-color: #fff;
+    background-image: url('/images/quickview/quickview__select.svg');
+    background-repeat: no-repeat;
+    background-position: 168px -1px;
+
+       -moz-appearance: none;
+        -ms-appearance: none;
+    -webkit-appearance: none !important;
+            appearance: none !important;
+}
+.quickview__select::-ms-expand
+{
+    display: none;
+}
+
+.active_color_image
+{
+    border: 1px solid #c62828;
+}
+
+.quickview_entry
+{
+    background: transparent;
+}
+
+.select__active
+{
+    background-position: 168px -49px;
+}
+
+.select__hover
+{
+    background-position: 168px -25px;
 }
 
 /* detail-tabs */
@@ -2169,10 +2838,11 @@ ol.commentlist
 
 h4.product_title
 {
-    font-family: Rubik;
+    font-family: Rubik !important;
     font-size: 1.4em;
+    font-weight: normal; 
 
-    margin: 0 !important; 
+    margin: 0 !important;
 
     color: #4f4f4f;
 }
@@ -2961,7 +3631,7 @@ span.sku_wrapper
 
 .lk
 {
-    position: relative; 
+    position: relative;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2970,6 +3640,10 @@ span.sku_wrapper
     margin: 0 auto;
 
     background-color: #fff;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .head-lk
@@ -6202,4 +6876,23 @@ iframe
 .Button:hover .Button-Icon_BasketRed
 {
     background-position: -60px -270px;
+}
+
+.woodmart-cookies-inner
+{
+    max-width: 1456px;
+    margin: 0 auto;
+}
+
+.cookies-info-text
+{
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+
+    letter-spacing: .05em;
+
+    color: #4f4f4f;
 }
