@@ -87,6 +87,7 @@ h3
 
 .price inc .amount
 {
+    font-size: 22px !important; 
     font-weight: 500;
 
     color: #4f4f4f;
@@ -94,6 +95,7 @@ h3
 
 .price del .amount
 {
+    font-size: 14px !important; 
     font-weight: 500;
 
     color: #bdbdbd !important;
@@ -1197,7 +1199,7 @@ h3
 }
 .view__item-feature__text-value
 {
-    width: 40%;
+    width: 20%;
 }
 .view__item-feature__text-value p,
 .view__item-feature__text-value a
@@ -1250,6 +1252,11 @@ h3
 
     width: 70px;
     height: 60px;
+}
+
+.view-feature-width
+{
+    width: 40%;
 }
 
 .add-to-cart
@@ -1804,6 +1811,73 @@ span.sku_wrapper
 .poduct-tabs-inner section
 {
     margin-bottom: 40px;
+}
+
+.variations_button__grid
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: row;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.variations_button__title
+{
+    font-size: 1.5em;
+
+    color: #828282;
+}
+
+.quantity input[type=button].plus,
+.quantity input[type=number]
+{
+    font-size: 16px !important;
+    font-weight: 400 !important; 
+
+    border: none !important;
+}
+.quantity input[type=button].plus:hover,
+.quantity input[type=number]:hover
+{
+    color: #c62828 !important; 
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
+
+.quantity input[type=button].minus
+{
+    font-size: 25px !important;
+    font-weight: 400 !important; 
+
+    border: none !important;
+}
+.quantity input[type=button].minus:hover
+{
+    color: #c62828 !important; 
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
+
+.quantity input[type=number]
+{
+    width: 15px !important;
+
+    color: #7dc472 !important;
+}
+
+.product-image-summary .quantity
+{
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .banner-wrapper

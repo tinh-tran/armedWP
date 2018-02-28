@@ -151,3 +151,41 @@ span.sku_wrapper
 
 .poduct-tabs-inner section
   margin-bottom: 40px
+
+
+// Quantity
+.variations_button
+  &__grid
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+  &__title
+    font-size: 1.5em
+    color: #828282
+
+.quantity input[type=button].plus,
+.quantity input[type=number]
+  border: none!important
+  font-size: 16px!important
+  font-weight: 400!important
+  &:hover
+    border-color: transparent!important
+    background-color: transparent!important
+    color: $GlobalColor!important
+.quantity input[type=button].minus
+  border: none!important
+  font-size: 25px!important
+  font-weight: 400!important
+  &:hover
+    border-color: transparent!important
+    background-color: transparent!important
+    color: $GlobalColor!important
+
+.quantity input[type=number]
+  width: 15px !important
+  color: #7dc472!important
+
+.product-image-summary .quantity
+  margin-right: 0!important
+  margin-bottom: 0!important
