@@ -1,0 +1,128 @@
+.infolk
+  padding: 0 30px
+  width: 100%
+  height: 60px
+  background-color: $headerInfolkBgColor
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-top: 1px solid #f2f2f2
+  border-bottom: 1px solid #f2f2f2
+  &__notifaction
+    height: 100%
+    align-items: center
+    display: flex
+    justify-content: center
+
+  &__link
+    display: flex
+    align-items: center
+    color: $headerInfolkLinkColor
+    font-size: 1.2em
+    text-decoration: none
+  &__user
+    &-data
+      text-align: right
+      padding-right: 5px
+    &-foto
+      border-radius: 50%
+    &-company
+      color: $headerInfolkCompanyColor
+      font-size: 1.6em
+      font-family: 'Rubik'
+      letter-spacing: 0.05em
+      text-transform: uppercase
+    &-name
+      font-size: 1.4em
+      color: $headerInfolkNameColor
+  &__info
+    flex-grow: 1
+    display: flex
+    justify-content: space-between
+    &-user
+      display: flex
+      align-items: center
+      margin-right: 35px
+      position: relative
+      cursor: pointer
+    &-text
+      font-family: 'Rubik'
+      font-size: 1.6em;
+      color: $headerInfolkTextColor
+      letter-spacing: 0.05em;
+      width: 100%
+      &-manager
+        display: flex
+        flex-wrap: wrap
+    &-foto
+      width: 36px
+      height: 36px
+      border-radius: 50%
+      margin-right: 11px
+    &-name
+      font-size: 0.7em
+      color: $headerInfolkNameColor
+      padding-left: 6px
+    &-manager
+      display: flex
+      align-items: center
+      &-wrapp
+        display: flex
+        justify-content: flex-start
+        align-items: center
+  &__exit
+    height: 100%
+    display: flex
+    align-items: center
+    position: relative
+    &-link
+      display: flex
+      align-items: center
+      text-decoration: none
+      font-size: 1.6em
+      color: #000
+  &__icon
+    width: 24px
+    height: 24px
+    background-image: url("/wp-content/themes/woodmart/images/sprite/sprite.png")
+    background-repeat: no-repeat
+    &_mail
+      background-position: -187px -282px
+      &:hover
+        background-position: -211px -282px
+    &_ring
+      background-position: -187px -306px
+      &:hover
+        background-position: -211px -306px
+    &_exit
+      background-position: -187px -330px
+      &:hover
+        background-position: -211px -330px
+    &_tel
+      margin: 0 6px
+      width: 12px
+      height: 12px
+      background-position: -88px -108px
+    &_mailsm
+      margin: 0 6px
+      width: 12px
+      height: 12px
+      background-position: -100px -108px
+  &__mail, &__ring
+    width: 24px
+    height: 24px
+    margin-right: 34px
+    display: flex
+    position: relative
+  &__alarm
+    background-color: $GlobalColor
+    width: 9px
+    height: 9px
+    position: absolute
+    border-radius: 50%
+    &_mail
+      top: 0
+      right: 0
+    &_ring
+      top: 0
+      right: 0

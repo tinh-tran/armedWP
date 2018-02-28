@@ -105,28 +105,10 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                 $varWeight = "_weight";
                                 $weight = get_field_object($varWeight);
 
-                                /*
-                                 * ========================================
-                                 * Ингаляторы-небулайзеры
-                                 * ========================================
-                                 */
-                                    $varRezhim      = "rezhim";
-                                    $rezhim         = get_field_object($varRezhim);
-
-                                    $varSpeedRaspil = "speed_raspil";
-                                    $speed_raspil   = get_field_object($varSpeedRaspil);
-
-                                    $varMaxFlow     = "max_flow";
-                                    $max_flow       = get_field_object($varMaxFlow);
-
-                                    $varMaxPower    = "max_power";
-                                    $max_power      = get_field_object($varMaxFlow);
-
-                                    $varMaxVol      = "max_vol";
-                                    $max_vol        = get_field_object($varMaxVol);
-
-                                    $varAvRash      = "av_rash";
-                                    $av_rash        = get_field_object($varAvRash);
+                                // Кислородные концентраторы
+                                $concentrators = acf_get_fields('4616');
+                                // Рециркуляторы
+                                $recirculators = acf_get_fields('4626');
 
                                 ?>
 
@@ -163,78 +145,65 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                     </div>
                                 <?php endif; ?>
 
-
                                 <?php
                                 /*
                                  * =========================================
                                  * Кислородные концентраторы
                                  * =========================================
                                  */
-                                $varVozdPot  = "vozd_pot";
-                                $vozd_pot    = get_field_object($varVozdPot);
-
-                                $varKoncOxy   = "konc_oxy";
-                                $konc_oxy     = get_field_object($varKoncOxy);
-
-                                $varAvPower  = "av_power";
-                                $av_power    = get_field_object($varAvPower);
-
-                                $varMaxPres  = "max_pres";
-                                $max_pres    = get_field_object($varMaxPres);
-
-                                $varNoiseLv  = "noise_lv";
-                                $noise_lv    = get_field_object($varNoiseLv);
-
-                                $varTimeRezh = "time_rezh";
-                                $time_rezh   = get_field_object($varTimeRezh);
-
-                                $varVolUvl   = "vol_uvl";
-                                $vol_uvl     = get_field_object($varVolUvl);
-
-                                $varPdu      = "pdu";
-                                $pdu         = get_field_object($varPdu);
+                                    if( $concentrators )
+                                        //$i = 0;
+                                    {
+                                        foreach( $concentrators as $concentrator )
+                                        { //$i++;
+                                        //if($i >5) break;
+                                            $value = get_field( $concentrator['name'] );
+                                            if ($concentrator['choices']){
+                                                $map = array(
+                                                    'yes' => '<i class="icon-ok"></i>'
+                                                );
+                                                $value = $map[ $value ];
+                                            } else {
+                                            }
+                                            if( $value && $value != 'no') {
+                                                echo '<div class="view__item-feature__text">';
+                                                    echo '<div class="view__item-feature__text-name"><p>' . $concentrator['label'] . '</p></div>';
+                                                    echo '<div class="view__item-feature__text-value"><p>' . $value . '</p></div>';
+                                                echo '</div>';
+                                            }
+                                        }
+                                    }
                                 ?>
-
-
-
-                                <?php // Воздушный поток (производительность)
-                                    if ( $vozd_pot ):
-                                ?>
-                                    <div class="view__item-feature__text">
-                                        <div class="view__item-feature__text-name">
-                                            <p><?php echo $vozd_pot['label']; ?></p>
-                                        </div>
-                                        <div class="view__item-feature__text-value">
-                                            <p><?php echo $vozd_pot['value']; ?></p>
-                                        </div>
-                                    </div>
-                                <?php endif; ?>
-
-                                <?php // Концентрация кислорода на выходе (при производительности ? 5 л/мин):
-                                    if ( $konc_oxy ):
-                                ?>
-                                <div class="view__item-feature__text">
-                                    <div class="view__item-feature__text-name">
-                                        <p><?php echo $konc_oxy['label']; ?></p>
-                                    </div>
-                                    <div class="view__item-feature__text-value">
-                                        <p><?php echo $konc_oxy['value']; ?></p>
-                                    </div>
-                                </div>
-                                <?php endif; ?>
 
                                 <?php
-                                    if ( $av_power ):
+                                /*
+                                 * =========================================
+                                 * Рециркуляторы
+                                 * =========================================
+                                 */
+                                if( $recirculators )
+                                    //$i = 0;
+                                {
+                                    foreach( $recirculators as $recirculator )
+                                    { //$i++;
+                                    //if($i >5) break;
+                                        $value = get_field( $recirculator['name'] );
+                                        if ($recirculator['choices']){
+                                            $map = array(
+                                                'yes' => '<i class="icon-ok"></i>'
+                                            );
+                                            $value = $map[ $value ];
+                                        } else {
+                                        }
+                                        if( $value && $value != 'no') {
+                                            echo '<div class="view__item-feature__text">';
+                                            echo '<div class="view__item-feature__text-name"><p>' . $recirculator['label'] . '</p></div>';
+                                            echo '<div class="view__item-feature__text-value"><p>' . $value . '</p></div>';
+                                            echo '</div>';
+                                        }
+                                    }
+                                }
                                 ?>
-                                <div class="view__item-feature__text">
-                                    <div class="view__item-feature__text-name">
-                                        <p><?php echo $av_power['label']; ?></p>
-                                    </div>
-                                    <div class="view__item-feature__text-value">
-                                        <p><?php echo $av_power['value']; ?> Вт</p>
-                                    </div>
-                                </div>
-                                <?php endif; ?>
                             </div>
 
 
@@ -404,60 +373,34 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                 </tr>
                             <?php endif; ?>
 
-
-                            <!--
-                             * =====================================
-                             * Концентраторы
-                             * =====================================
-                             -->
-
-                            <?php // Воздушный поток (производительность)
-                                if ( $vozd_pot ):
+                            <?php
+                            /*
+                             * =========================================
+                             * Кислородные концентраторы
+                             * =========================================
+                             */
+                            if( $concentrators )
+                            {
+                                foreach( $concentrators as $concentrator )
+                                {
+                                    $value = get_field( $concentrator['name'] );
+                                    if ($concentrator['choices']){
+                                        $map = array(
+                                            'yes' => '<i class="icon-ok"></i>'
+                                        );
+                                        $value = $map[ $value ];
+                                    } else {
+                                    }
+                                    if( $value && $value != 'no') {
+                                        echo '<tr>';
+                                            echo '<th><p class="detail__table-item">' . $concentrator['label'] . '</p></th>';
+                                            echo '<td><p class="detail__table-item">' . $value . '</p></td>';
+                                        echo '</tr>';
+                                    }
+                                }
+                            }
                             ?>
-                                <tr>
-                                    <th>
-                                        <p class="detail__table-item"><?php echo $vozd_pot['label']; ?></p>
-                                    </th>
-                                    <td>
-                                        <p class="detail__table-item"><?php echo $vozd_pot['value']; ?></p>
-                                    </td>
-                                </tr>
-                            <?php endif; ?>
 
-
-                            <?php // Концентрация кислорода на выходе (при производительности ? 5 л/мин):
-                                if ( $konc_oxy ):
-                            ?>
-                                <tr>
-                                    <th>
-                                        <p class="detail__table-item"><?php echo $konc_oxy['label']; ?></p>
-                                    </th>
-                                    <td>
-                                        <p class="detail__table-item"><?php echo $konc_oxy['value']; ?></p>
-                                    </td>
-                                </tr>
-                            <?php endif; ?>
-
-                            <?php // Средняя потребляемая мощность
-                                if ( $av_power ):
-                            ?>
-                                <tr>
-                                    <th>
-                                        <p class="detail__table-item"><?php echo $av_power['label']; ?></p>
-                                    </th>
-                                    <td>
-                                        <p class="detail__table-item"><?php echo $av_power['value']; ?></p>
-                                    </td>
-                                </tr>
-                            <?php endif; ?>
-                            <tr>
-                                <th>
-                                    <p class="detail__table-item">Гарантия<a class="product__question product__question-detail" title="Информация о гарантии или другом" href="#"></a></p>
-                                </th>
-                                <td>
-                                    <p class="detail__table-item detail__table-item__success">Есть</p>
-                                </td>
-                            </tr>
                             </tbody>
                         </table>
 
@@ -471,76 +414,15 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                         <table class="detail__table">
                             <tbody>
 
-                            <!--
-                             * =====================================
-                             * Концентраторы
-                             * =====================================
-                             -->
+                                <tr>
+                                    <th>
+                                        <p class="detail__table-item">Гарантия<a class="product__question product__question-detail" title="Информация о гарантии или другом" href="#"></a></p>
+                                    </th>
+                                    <td>
+                                        <p class="detail__table-item detail__table-item__success">Есть</p>
+                                    </td>
+                                </tr>
 
-                                <?php // Максимальное давление квс на выходе
-                                if ( $max_pres ):
-                                    ?>
-                                    <tr>
-                                        <th>
-                                            <p class="detail__table-item"><?php echo $max_pres['label']; ?></p>
-                                        </th>
-                                        <td>
-                                            <p class="detail__table-item"><?php echo $max_pres['value']; ?></p>
-                                        </td>
-                                    </tr>
-                                <?php endif; ?>
-
-                                <?php // Уровень шума (не более)
-                                if ( $noise_lv ):
-                                    ?>
-                                    <tr>
-                                        <th>
-                                            <p class="detail__table-item"><?php echo $noise_lv['label']; ?></p>
-                                        </th>
-                                        <td>
-                                            <p class="detail__table-item"><?php echo $noise_lv['value']; ?> дБ</p>
-                                        </td>
-                                    </tr>
-                                <?php endif; ?>
-
-                                <?php // Время выхода концентратора на рабочий режим
-                                if ( $time_rezh ):
-                                    ?>
-                                    <tr>
-                                        <th>
-                                            <p class="detail__table-item"><?php echo $time_rezh['label']; ?></p>
-                                        </th>
-                                        <td>
-                                            <p class="detail__table-item"><?php echo $time_rezh['value']; ?></p>
-                                        </td>
-                                    </tr>
-                                <?php endif; ?>
-
-                                <?php // Объем увлажнителя (не более)
-                                if ( $vol_uvl ):
-                                    ?>
-                                    <tr>
-                                        <th>
-                                            <p class="detail__table-item"><?php echo $vol_uvl['label']; ?></p>
-                                        </th>
-                                        <td>
-                                            <p class="detail__table-item"><?php echo $vol_uvl['value']; ?></p>
-                                        </td>
-                                    </tr>
-                                <?php endif; ?>
-
-                                <?php // Дальность действия ПДУ, не более
-                                if ( $pdu ):
-                                    ?>
-                                    <tr>
-                                        <th>
-                                            <p class="detail__table-item"><?php echo $pdu['label']; ?></p>
-                                        </th>
-                                        <td>
-                                            <p class="detail__table-item"><?php echo $pdu['value']; ?></p>
-                                        </td>
-                                    </tr>
-                                <?php endif; ?>
                             </tbody>
                         </table>
 

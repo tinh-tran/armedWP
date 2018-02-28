@@ -472,6 +472,284 @@ h3
     }
 }
 
+.infolk
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    width: 100%;
+    height: 60px;
+    padding: 0 30px;
+
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2; 
+    background-color: white;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.infolk__notifaction
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    height: 100%;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.infolk__link
+{
+    font-size: 1.2em;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    text-decoration: none; 
+
+    color: #828282;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.infolk__user-data
+{
+    padding-right: 5px; 
+
+    text-align: right;
+}
+.infolk__user-foto
+{
+    border-radius: 50%;
+}
+.infolk__user-company
+{
+    font-family: 'Rubik';
+    font-size: 1.6em;
+
+    letter-spacing: .05em;
+    text-transform: uppercase; 
+
+    color: #4f4f4f;
+}
+.infolk__user-name
+{
+    font-size: 1.4em;
+
+    color: #828282;
+}
+.infolk__info
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.infolk__info-user
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    margin-right: 35px;
+
+    cursor: pointer; 
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.infolk__info-text
+{
+    font-family: 'Rubik';
+    font-size: 1.6em;
+
+    width: 100%; 
+
+    letter-spacing: .05em;
+
+    color: #4f4f4f;
+}
+.infolk__info-text-manager
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.infolk__info-foto
+{
+    width: 36px;
+    height: 36px;
+    margin-right: 11px; 
+
+    border-radius: 50%;
+}
+.infolk__info-name
+{
+    font-size: .7em;
+
+    padding-left: 6px; 
+
+    color: #828282;
+}
+.infolk__info-manager
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.infolk__info-manager-wrapp
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.infolk__exit
+{
+    position: relative; 
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    height: 100%;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.infolk__exit-link
+{
+    font-size: 1.6em;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    text-decoration: none;
+
+    color: #000; 
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.infolk__icon
+{
+    width: 24px;
+    height: 24px;
+
+    background-image: url('/wp-content/themes/woodmart/images/sprite/sprite.png');
+    background-repeat: no-repeat;
+}
+.infolk__icon_mail
+{
+    background-position: -187px -282px;
+}
+.infolk__icon_mail:hover
+{
+    background-position: -211px -282px;
+}
+.infolk__icon_ring
+{
+    background-position: -187px -306px;
+}
+.infolk__icon_ring:hover
+{
+    background-position: -211px -306px;
+}
+.infolk__icon_exit
+{
+    background-position: -187px -330px;
+}
+.infolk__icon_exit:hover
+{
+    background-position: -211px -330px;
+}
+.infolk__icon_tel
+{
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+
+    background-position: -88px -108px;
+}
+.infolk__icon_mailsm
+{
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+
+    background-position: -100px -108px;
+}
+.infolk__mail,
+.infolk__ring
+{
+    position: relative; 
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 34px;
+}
+.infolk__alarm
+{
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%; 
+    background-color: #c62828;
+}
+.infolk__alarm_mail
+{
+    top: 0;
+    right: 0;
+}
+.infolk__alarm_ring
+{
+    top: 0;
+    right: 0;
+}
+
 .footer__contacts-item
 {
     display: -webkit-box;
