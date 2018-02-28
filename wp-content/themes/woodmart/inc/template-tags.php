@@ -1320,15 +1320,18 @@ if( ! function_exists( 'woodmart_header_block_search' ) ) {
 
 		$ajax_args = apply_filters('woodmart_ajax_search_args', array('thumbnail' => 1, 'price' => 1, 'count' => $count) );
 		?>
+			<!-- TODO Здесь виджет с выпадающим поиском. Может пригодиться
 			<div class="search-button <?php echo $classes; ?>">
-				<a href="#"></a>
+				<a href="#"></a>-->
+            <div class="search-extended">
 				<div class="woodmart-search-wrapper">
 					<div class="woodmart-search-inner">
 						<span class="woodmart-close-search"><?php esc_html_e('close', 'woodmart'); ?></span>
 						<?php woodmart_header_block_search_extended( false, false, true, $ajax_args, false ); ?>
 					</div>
 				</div>
-			</div>
+            </div>
+			<!--</div>-->
 		<?php
 	}
 }
@@ -2177,10 +2180,10 @@ if( ! function_exists( 'woodmart_generate_header' ) ) {
 					'container' => array(
 						'secondary-inner' => array(
 							'categories_menu',
-							'search_extended',
+							//'search_extended', todo полный поиск
+							'search', // выпадающий поиск (изменен глобально!!!)
                                 'right-column' => array(
                                 'header_links',
-                                'search',
                                 'wishlist',
                                 'cart',
                                 'full_screen_menu_icon',

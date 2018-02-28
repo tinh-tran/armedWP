@@ -62,7 +62,8 @@ if ( $product->is_in_stock() ) : ?>
                 </div>
             </div>
 
-        <button type="submit" class="single_add_to_cart_button button Button Button_Color_Red Button_Size_Sm product__button alt"><span class="Button-Text Button-Text_Color_White"><span class="Button-Icon Button-Icon_Basket"></span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
+
+        <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button Button Button_Color_Red Button_Size_Sm button alt"><span class="Button-Text Button-Text_Color_White"><span class="Button-Icon Button-Icon_Basket"></span><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span></button>
 
 		<?php
 			/**

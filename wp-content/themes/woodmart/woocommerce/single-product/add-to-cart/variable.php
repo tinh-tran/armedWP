@@ -36,6 +36,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		<p class="stock out-of-stock"><?php esc_html_e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
 	<?php else : ?>
 		<table class="variations" cellspacing="0">
+            <p class="variable-title">Другие варианты товара:</p>
 			<tbody>
 				<?php $loop = 0; foreach ( $attributes as $attribute_name => $options ) : $loop++; ?>
 					<?php 
