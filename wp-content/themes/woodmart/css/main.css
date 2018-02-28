@@ -80,6 +80,7 @@ h3
 /* Price Global */
 .price .amount
 {
+    font-size: 22px !important; 
     font-weight: 500 !important;
 
     color: #4f4f4f !important;
