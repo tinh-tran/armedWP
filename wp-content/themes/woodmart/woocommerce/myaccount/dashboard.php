@@ -135,64 +135,9 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
             <div class="LkIndex-XlContainer">
               <p class="LkIndex-Head_Big">Новинки товаров</p>
-              <div class="LkIndex-ProductWrap slick-initialized slick-slider"><i class="LkIndex-ProductWrap_ArrowRight slick-arrow" style=""></i><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 3920px; transform: translate3d(-560px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 280px;"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="0">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="0"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 280px;"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="0">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="0"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide" data-slick-index="4" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide slick-cloned" data-slick-index="10" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div><div class="slick-slide slick-cloned" data-slick-index="11" aria-hidden="true" style="width: 280px;" tabindex="-1"><div><div class="LkProduct" style="width: 100%; display: inline-block;"><a class="modalLink LkProduct-Head" href="#" data-id="quickview" tabindex="-1">Кресло-кровать для родовспоможения ЫС-М1</a><a class="LkProduct-Link" href="#" tabindex="-1"><img class="LkProduct-Image" src="images/product/product__image.png" alt="Кресло-кровать для родовспоможения ЫС-М1"></a>
-                  <div class="LkProduct-Price">
-                    <p class="LkProduct-Cost">47 990<span class="LkProduct-Value">&nbsp;₽</span></p>
-                  </div><img class="LkProduct-Rating" src="images/product/rating.png" alt="рейтинг">
-                </div></div></div></div></div><i class="LkIndex-ProductWrap_ArrowLeft slick-arrow" style=""></i></div>
-              <p class="LkIndex-ProductCount">1 / 6</p>
+			  <div class="LkIndex-ProductWrap slick-initialized slick-slider">
+			  <?php echo do_shortcode('[products limit="4" columns="2" orderby="popularity" on_sale="true" ]');?>
+               </div>
             </div>
             <div class="LkIndex-XlContainer LkIndex-XlContainer_Last">
               <p class="LkIndex-Head_Big">Рекомендуемые видео</p>
@@ -202,7 +147,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           </div>
   </div>
   
-
+<!-- 
 <p><?php
 	/* translators: 1: user display name 2: logout url */
 	printf(
@@ -220,27 +165,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 		esc_url( wc_get_endpoint_url( 'edit-account' ) )
 	);
 ?></p>
-
+ -->
 <?php
 	/**
 	 * My Account dashboard.
 	 *
 	 * @since 2.6.0
 	 */
-	do_action( 'woocommerce_account_dashboard' );
+	// do_action( 'woocommerce_account_dashboard' );
 
-	/**
-	 * Deprecated woocommerce_before_my_account action.
-	 *
-	 * @deprecated 2.6.0
-	 */
-	do_action( 'woocommerce_before_my_account' );
+	// /**
+	 // * Deprecated woocommerce_before_my_account action.
+	 // *
+	 // * @deprecated 2.6.0
+	 // */
+	// do_action( 'woocommerce_before_my_account' );
 
-	/**
-	 * Deprecated woocommerce_after_my_account action.
-	 *
-	 * @deprecated 2.6.0
-	 */
-	do_action( 'woocommerce_after_my_account' );
+	// /**
+	 // * Deprecated woocommerce_after_my_account action.
+	 // *
+	 // * @deprecated 2.6.0
+	 // */
+	// do_action( 'woocommerce_after_my_account' );
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

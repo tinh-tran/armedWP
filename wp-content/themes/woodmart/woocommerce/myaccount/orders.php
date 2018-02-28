@@ -37,11 +37,11 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
               </div>
 			  </header>
             <div class="orders__tabs">
-              <ul class="orders__tabs-list tabs">
+         <!--      <ul class="orders__tabs-list tabs">
                 <li class="order__tabs-element tabs__element"><a class="orders__tabs-link tabs__link" href="#orderTabs1">В процессе</a></li>
                 <li class="order__tabs-element tabs__element"><a class="orders__tabs-link tabs__link" href="#orderTabs2">Не завершенные</a></li>
                 <li class="order__tabs-element tabs__element"><a class="orders__tabs-link tabs__link" href="#orderTabs3">Последние</a></li>
-              </ul>
+              </ul> -->
               <div class="orders__tabs" id="orderTabs1">
                 <div class="orders__table table">
                   <div class="orders__head table__head">
@@ -66,7 +66,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
                       <p class="orders__customer table__element table__element_customer">В заказе <?php echo $item_count; ?> наименований</p>
                       <p class="orders__customer table__element table__element_customer"><?php echo esc_html($order->get_formatted_billing_full_name( ));?></p>
                       <p class="orders__data table__element"><?php echo esc_html( wc_format_datetime( $order->get_date_created() ) ); ?></p>
-                      <p class="orders__sum table__element"><?php echo   $order->get_total(); ?></p>
+                      <p class="orders__sum table__element"><?php echo   $order->get_total(); ?>&nbsp;<span class="woocommerce-Price-currencySymbol"><span class="rur">р<span>уб.</span></span></span></p>
                       <div class="orders__actions table__element table__element_actions">
 					  <a class="orders__icon orders__icon_save" href="#"></a>
 					  <a class="orders__icon orders__icon_print" href="#"></a>
