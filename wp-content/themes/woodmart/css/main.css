@@ -581,7 +581,7 @@ h3
 }
 .infolk__info-text
 {
-    font-family: 'Rubik';
+    font-family: Rubik;
     font-size: 1.6em;
 
     width: 100%; 
@@ -748,6 +748,193 @@ h3
 {
     top: 0;
     right: 0;
+}
+
+.Mail
+{
+    position: absolute;
+    top: 58px;
+    right: 116px;
+
+    display: none;
+
+    width: 306px;
+    height: 385px;
+
+    border: solid 1px #f6f6f6; 
+    background-color: white;
+}
+.Mail-Head
+{
+    font-family: 'Rubik';
+    font-size: 1.4em;
+
+    padding: 8px;
+
+    letter-spacing: .7px;
+
+    color: #4f4f4f;
+    border-bottom: 1px solid #f6f6f6;
+}
+.Mail-List
+{
+    height: 343px; 
+    padding: 15px 15px 0 15px;
+}
+.Mail-Item
+{
+    padding: 8px 0;
+
+    border-bottom: 1px solid #f6f6f6;
+}
+.Mail-MessageHead
+{
+    font-size: 1.4em;
+
+    color: #828282;
+}
+.Mail-Message
+{
+    font-size: 1.4em;
+
+    color: #4f4f4f;
+}
+.Mail-Date
+{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.Notification
+{
+    position: absolute;
+    top: 58px;
+    right: 36px;
+
+    display: none;
+
+    width: 306px;
+    height: 385px;
+
+    border: solid 1px #f6f6f6; 
+    background-color: white;
+}
+.Notification-Head
+{
+    font-family: 'Rubik';
+    font-size: 1.4em;
+
+    padding: 8px;
+
+    letter-spacing: .7px;
+
+    color: #4f4f4f;
+    border-bottom: 1px solid #f6f6f6;
+}
+.Notification-List
+{
+    height: 343px; 
+    padding: 15px 15px 0 15px;
+}
+.Notification-Item
+{
+    padding: 8px 0;
+
+    border-bottom: 1px solid #f6f6f6;
+}
+.Notification-MessageHead
+{
+    font-size: 1.4em;
+
+    color: #828282;
+}
+.Notification-Message
+{
+    font-size: 1.4em;
+
+    color: #4f4f4f;
+}
+.Notification-Date
+{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.Client
+{
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    display: none;
+
+    width: 300px;
+    height: auto;
+
+    border: 1px solid #e0e0e0;
+    background-color: white;
+}
+.Client-Organization
+{
+    height: 185px;
+}
+.Client-Item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    padding: 10px 0 10px 5px;
+
+    border-bottom: 1px solid #e0e0e0; 
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.Client-Link
+{
+    text-decoration: none;
+
+    background-color: rgba(255, 255, 255, 0);
+}
+.Client-Link:hover
+{
+    background-color: #f2f2f2;
+}
+.Client-Foto
+{
+    width: 38px;
+    height: 38px;
+    margin-right: 5px; 
+
+    border-radius: 50%;
+}
+.Client-Text
+{
+    font-size: 1.4em;
+
+    text-align: center;
+
+    color: #bdbdbd; 
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.Client-Name
+{
+    font-family: Rubik;
+    font-size: 1.2em;
+
+    letter-spacing: .7px;
+
+    color: #4f4f4f;
+}
+.Client-OrderCount
+{
+    color: #bdbdbd;
 }
 
 .footer__contacts-item
