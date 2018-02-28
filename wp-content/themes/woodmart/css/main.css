@@ -1901,6 +1901,24 @@ h3
     background-position: 0 -66px;
 }
 
+.widget_sharing
+{
+    margin: 20px 0;
+}
+
+.product-share .share-title
+{
+    font-family: 'Roboto' !important;
+    font-size: 14px;
+    font-weight: 400 !important;
+
+    margin-bottom: 10px;
+
+    text-align: left;
+
+    color: #bdbdbd !important;
+}
+
 /* detail-tabs */
 .detail
 {
@@ -5527,6 +5545,25 @@ span.sku_wrapper
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+body.woocommerce-checkout .woocommerce > .login
+{
+    margin: 0 auto !important;
+}
+
+.form-row
+{
+    margin: 20px 0 !important;
+}
+
+.woocommerce-billing-fields h3
+{
+    font-family: 'Rubik' !important;
+    font-weight: 500 !important;
+
+    letter-spacing: .05em;
+    text-transform: uppercase;
 }
 
 .bg-product-grid-item

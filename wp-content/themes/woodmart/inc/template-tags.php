@@ -1814,7 +1814,7 @@ if( ! function_exists( 'woodmart_get_header_links' ) ) {
 				$links['register']['dropdown'] = '
 					<div class="sub-menu-dropdown color-scheme-' . $color_scheme . '">
 						<div class="login-dropdown-inner">
-							<h3 class="login-title"><span>' . esc_html__('Sign in', 'woodmart') . '</span><a class="create-account-link" href="' . esc_url( $account_link ) . '">' . esc_html__('Create an Account', 'woodmart') . '</a>' . '</h3>
+							<h3 class="login-title"><span>' . esc_html__('Авторизация', 'woodmart') . '</span><a class="create-account-link" href="' . esc_url( $account_link ) . '">' . esc_html__('Create an Account', 'woodmart') . '</a>' . '</h3>
 							' . woodmart_login_form( false, $account_link ) . '
 						</div>
 					</div>
@@ -1958,16 +1958,16 @@ if( ! function_exists( 'woodmart_login_form' ) ) {
 
 				<?php do_action( 'woocommerce_login_form_start' ); ?>
 
-				<?php if ( $message ) echo wpautop( wptexturize( $message ) ); ?>
+				<?php// if ( $message ) echo wpautop( wptexturize( $message ) ); ?>
 
 				<div class="close-login-form"><span><?php esc_html_e('Close', 'woodmart'); ?></span></div>
 
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide form-row-username">
-					<label for="username"><?php esc_html_e( 'Username or email address', 'woodmart' ); ?> <span class="required">*</span></label>
+					<label for="username"><?php esc_html_e( 'Номер телефона или почта', 'woodmart' ); ?> <span class="required">*</span></label>
 					<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
 				</p>
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide form-row-password">
-					<label for="password"><?php esc_html_e( 'Password', 'woodmart' ); ?> <span class="required">*</span></label>
+					<label for="password"><?php esc_html_e( 'Пароль', 'woodmart' ); ?> <span class="required">*</span></label>
 					<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
 				</p>
 
@@ -1978,13 +1978,13 @@ if( ! function_exists( 'woodmart_login_form' ) ) {
 					<?php if ( $redirect ): ?>
 						<input type="hidden" name="redirect" value="<?php echo esc_url( $redirect ) ?>" />
 					<?php endif ?>
-					<input type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'woodmart' ); ?>" />
+					<input type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Войти', 'woodmart' ); ?>" />
 				</p>
 
 				<div class="login-form-footer">
-					<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" class="woocommerce-LostPassword lost_password"><?php esc_html_e( 'Lost your password?', 'woodmart' ); ?></a>
+					<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" class="woocommerce-LostPassword lost_password"><?php esc_html_e( 'Забыли пароль?', 'woodmart' ); ?></a>
 					<label for="rememberme" class="remember-me-label inline">
-						<input name="rememberme" type="checkbox" value="forever" /> <?php esc_html_e( 'Remember me', 'woodmart' ); ?>
+						<input name="rememberme" type="checkbox" value="forever" /> <?php esc_html_e( 'Запомнить меня', 'woodmart' ); ?>
 					</label>
 				</div>
 
