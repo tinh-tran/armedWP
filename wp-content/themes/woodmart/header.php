@@ -68,7 +68,17 @@
 			<!-- HEADER -->
 			<header <?php woodmart_get_header_classes( $header ); // location: inc/functions.php ?>>
 
-				<?php woodmart_generate_header( $header ); // location: inc/template-tags.php ?>
+				<?php
+if( is_page( '8' ) ){
+				$header= 'myaccount';
+}
+
+
+				woodmart_generate_header( $header ); // location: inc/template-tags.php
+				
+				if( is_page( '8' ) ){include("my-acc-menu.php");}
+				
+				?>
 
 			</header><!--END MAIN HEADER-->
 

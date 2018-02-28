@@ -24,6 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div class="LkIndex">
+
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <div class="LkIndex-SmallContainer LkIndex-SmallContainer_Discount">
               <p class="LkIndex-Count LkIndex-Count_Val">15%</p>
@@ -35,15 +36,15 @@ if ( ! defined( 'ABSPATH' ) ) {
               </div>
             </div>
             <div class="LkIndex-SmallContainer LkIndex-SmallContainer_NewOrders">
-              <p class="LkIndex-Count">13 465</p>
+              <p class="LkIndex-Count"><?php  echo wc_get_customer_order_count($current_user->id) ;?></p>
               <p class="LkIndex-Head">Новых заказов</p>
             </div>
             <div class="LkIndex-SmallContainer LkIndex-SmallContainer_InWorkOrders">
-              <p class="LkIndex-Count">1 203</p>
-              <p class="LkIndex-Head">Заказав в работе</p>
+              <p class="LkIndex-Count"><?php  echo wc_get_customer_order_count($current_user->id) ;?></p>
+              <p class="LkIndex-Head">Заказов в работе</p>
             </div>
             <div class="LkIndex-SmallContainer LkIndex-SmallContainer_FinishedOrders LkIndex-SmallContainer_Last">
-              <p class="LkIndex-Count">678</p>
+              <p class="LkIndex-Count"><?php  echo wc_get_customer_order_count($current_user->id) ;?></p>
               <p class="LkIndex-Head">Завершенных заказов</p>
             </div>
             <div class="LkIndex-BigContainer">
@@ -199,7 +200,8 @@ if ( ! defined( 'ABSPATH' ) ) {
               <p class="LkIndex-VideoCount">1 / 4</p>
             </div>
           </div>
-
+  </div>
+  
 
 <p><?php
 	/* translators: 1: user display name 2: logout url */
