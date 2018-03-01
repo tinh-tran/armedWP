@@ -43,12 +43,13 @@ if ( ! woodmart_is_woo_ajax() ) {
 		<div class="woodmart-shop-tools">
 			<?php
 				/**
+                 * TODO Вывод фильтрации вида товаров в каталоге
 				 * woocommerce_before_shop_loop hook
 				 *
 				 * @hooked woocommerce_result_count - 20
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
-				do_action( 'woocommerce_before_shop_loop' );
+				//do_action( 'woocommerce_before_shop_loop' );
 			?>
 		</div>
 	</div>

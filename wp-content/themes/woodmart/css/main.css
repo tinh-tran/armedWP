@@ -1434,6 +1434,12 @@ h3
     margin-top: 0 !important;
 }
 
+.widget_product_categories .product-categories li.current-cat > .count,
+.widget_product_categories .product-categories li a:hover + .count
+{
+    background-color: #f2f2f2 !important;
+}
+
 .banner
 {
     font-family: Rubik;
