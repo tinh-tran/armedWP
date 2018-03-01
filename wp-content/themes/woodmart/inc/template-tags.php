@@ -124,7 +124,7 @@ add_filter( 'the_content_more_link', 'woodmart_modify_read_more_link' );
 
 if( ! function_exists( 'woodmart_read_more_tag' ) ) {
 	function woodmart_read_more_tag() {
-		return '<a class="btn-read-more more-link" href="' . get_permalink() . '">' . esc_html__('Continue reading', 'woodmart') . '</a>';
+		return '<a class="Button Button_Color_Not Button_Size_Sm home__content_button-info news-inner__button" href="' . get_permalink() . '"> <span class="Button-Text Button-Text_Color_Black Button-Text_Margin25">' . esc_html__('Подробнее', 'woodmart') . '</span></a>';
 	}
 }
 

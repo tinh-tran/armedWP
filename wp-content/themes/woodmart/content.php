@@ -82,6 +82,7 @@ $random = 'carousel-' . rand(100,999);
 			<?php endif ?>
 
 			<?php if ( is_single() && $parts['title'] ) : ?>
+
 				<h3 class="entry-title"><?php the_title(); ?></h3>
 			<?php elseif( $parts['title'] ) : ?>
 				<h3 class="entry-title">
@@ -128,9 +129,9 @@ $random = 'carousel-' . rand(100,999);
 						 ?>
 					<?php elseif ( ! is_single() ): ?>
 
-						<div class="post-img-wrapp">
+						<div class="news-image">
 							<a href="<?php echo esc_url( get_permalink() ); ?>">
-								<?php echo woodmart_get_post_thumbnail( 'large' ); ?>
+								<?php //echo woodmart_get_post_thumbnail( 'large' ); ?>
 							</a>
 						</div>
 						<div class="post-image-mask">
@@ -147,7 +148,7 @@ $random = 'carousel-' . rand(100,999);
 
 		</header><!-- .entry-header -->
 
-		<div class="">
+		<div class="news-inner col-between">
 			<?php if ( $blog_design != 'default-alt' && ! is_single() ): ?>
 
 				<?php if ( $parts['meta'] && get_the_category_list( ', ' ) ): ?>
@@ -155,15 +156,15 @@ $random = 'carousel-' . rand(100,999);
 				<?php endif ?>
 
 				<?php if ( is_single() && $parts['title'] ) : ?>
-					<h3 class="entry-title"><?php the_title(); ?></h3>
+					<h3 ><?php the_title(); ?></h3>
 				<?php elseif( $parts['title'] ) : ?>
-					<h3 class="entry-title">
+					<h3 >
 						<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h3>
 				<?php endif; // is_single() ?>
 
 				<?php if ( $parts['meta'] && ! is_single() ): ?>
-					<div class="entry-meta woodmart-entry-meta">
+					<div class="news-inner__text">
 						<?php woodmart_post_meta(array(
 							'labels' => 1,
 							'author' => 1,
@@ -187,7 +188,8 @@ $random = 'carousel-' . rand(100,999);
 					<?php the_excerpt(); ?>
 				</div><!-- .entry-summary -->
 			<?php elseif( $parts['text'] ) : ?>
-				<div class="entry-content woodmart-entry-content">
+				
+				<div class="news-inner__text">
 					<?php woodmart_get_content( $parts['btn'], is_single() ); ?>
 					<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'woodmart' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 				</div><!-- .entry-content -->
