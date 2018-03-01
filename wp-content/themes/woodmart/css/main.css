@@ -1414,22 +1414,6 @@ h3
     background-color: #fff;
 }
 
-.product-categories .cat-item
-{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-        flex-direction: row; 
-
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-}
 .product-categories .cat-item .count
 {
     font-size: 1.3em !important;
@@ -1440,9 +1424,121 @@ h3
     border: none !important;
 }
 
+.cat-item a
+{
+    width: 230px;
+}
+
 .main-page-wrapper
 {
     margin-top: 0 !important;
+}
+
+/* Catalog banners */
+.catalog__content-bannerKoncentrator
+{
+    color: #4f4f4f; 
+    background-color: white;
+    background-image: url('images/bunner/concentrator.png');
+    background-position: 10% center;
+}
+
+.catalog__content-bannerPuls
+{
+    color: #6ea3db; 
+    background-color: #e8f4fc;
+    background-image: url('images/bunner/puls.png');
+    background-position: 90% center;
+}
+
+.catalog__content-bannerBrearh
+{
+    color: #828282; 
+    background-color: #f0f0f0;
+    background-image: url('images/bunner/breath.png');
+    background-position: center 10%;
+}
+
+.catalog__content-bannerKokteiler
+{
+    color: #bd4243; 
+    background-color: #fff7f7;
+    background-image: url('images/bunner/kokteiler.png');
+    background-position: center 90%;
+}
+
+.catalog__content-bannerKislorod
+{
+    color: #8388a5; 
+    background-color: #f1f0ff;
+    background-image: url('images/bunner/kislorod.png');
+    background-position: bottom right;
+}
+
+.catalog__content-bannerAssociated
+{
+    color: #4ebf9d; 
+    background-color: #f0faf7;
+    background-image: url('images/bunner/associated.png');
+    background-position: left bottom;
+}
+
+.catalog__content-banners
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    margin-bottom: 30px; 
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.catalog__content-nameKoncentrator
+{
+    right: 90px;
+}
+
+.catalog__content-namePuls
+{
+    left: 40px;
+}
+
+.catalog__content-nameBrearh
+{
+    bottom: 10px;
+}
+
+.catalog__content-nameKislorod
+{
+    left: 10px;
+}
+
+.catalog__content-nameKokteiler
+{
+    top: 10px;
+}
+
+.catalog__content-nameAssociated
+{
+    top: -20px; 
+    right: 20px;
+}
+
+.catalog__content-main
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
 }
 
 /* Product menu */
