@@ -53,13 +53,13 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 				  <a class="order__head-link table__head-link" href="#">Сумма<span class="order__head-arrow table__head-arrow"></span></a>
 				  <a class="order__head-link table__head-link table__element_actions" href="#">Действие</a></div>
 				  
-				 
+				 <div class="orders__body table__body">
 				  <?php foreach ( $customer_orders->orders as $customer_order ) :
 				$order      = wc_get_order( $customer_order );
 				$item_count = $order->get_item_count();
 				?>
 				  
-                  <div class="orders__body table__body">
+                  
                     <div class="orders__row table__row">
                       <p class="orders__status table__element"><span class="orders__status-color orders__status-color_blue"></span><?php echo esc_html( wc_get_order_status_name( $order->get_status() ) ); ?></p>
                       <p class="orders__orderNumber table__element"><?php echo _x( '#', 'hash before order number', 'woocommerce' ) . $order->get_order_number(); ?></p>
