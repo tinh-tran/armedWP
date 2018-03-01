@@ -456,3 +456,16 @@ function my_woocommerce_save_account_details( $user_id ) {
 }
 
 
+add_filter( 'woocommerce_product_subcategories_args', 'remove_uncategorized_category' );
+add_filter( 'woocommerce_product_categories_widget_args', 'remove_uncategorized_category' );
+/**
+ * Remove uncategorized category from shop page.
+ *
+ * @param array $args Current arguments.
+ * @return array
+ **/
+function remove_uncategorized_category( $args ) {
+  $uncategorized = get_option( 'default_product_cat' );
+  $args['exclude'] = $uncategorized;
+  return $args;
+}
