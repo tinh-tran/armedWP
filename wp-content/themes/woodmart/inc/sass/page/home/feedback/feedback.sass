@@ -1,0 +1,59 @@
+#feedback
+  height: auto
+  padding: 50px 0 0 0
+
+.contact-form
+  background: url(images/page/index/contact-form_bg.jpg) center no-repeat
+  height: 485px
+  &__wrapper
+    padding-left: 270px
+    padding-top: 50px
+    padding-right: 85px
+    padding-bottom: 52px
+  &__title
+    h3
+      font-family: $fontFamilyAdditionally
+      font-weight: 500
+      font-size: 2em
+      letter-spacing: 0.05em
+      color: $headerCartTitle
+  &__subtitle
+    font-family: $fontFamilyAdditionally
+    font-size: 1.6em
+    letter-spacing: 0.05em
+    color: $headerItemColor
+    padding: 5px 0
+  &__inner
+    width: 500px
+    &-input
+      margin: 15px 0
+      background: #fff
+      input,
+      textarea
+        width: 500px
+        outline: none
+        border: none
+        padding-left: 15px
+        &::-webkit-input-placeholder
+          font:
+            family: $fontFamilyDefault
+            size: 0.9em
+          color: #bdbdbd
+      input[type=text]
+        height: 33px
+      textarea
+        padding-top: 9px
+        width: 500px
+        min-height: 100px
+        resize: none
+    &-submit
+      float: right
+      margin: 15px 0
+//a
+  position: relative
+  //&:hover
+    background-color: rgb(251, 251, 251)
+    border-color: rgb(216, 216, 216)
+  //.icon-right
+    top: 40%
+    right: 25px
