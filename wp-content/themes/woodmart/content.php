@@ -143,11 +143,11 @@ $random = 'carousel-' . rand(100,999);
 
 				</figure>
 			<?php endif; ?>
-			<?php woodmart_post_date(); ?>
+			<?php //woodmart_post_date(); ?>
 
 		</header><!-- .entry-header -->
 
-		<div class="article-body-container">
+		<div class="">
 			<?php if ( $blog_design != 'default-alt' && ! is_single() ): ?>
 
 				<?php if ( $parts['meta'] && get_the_category_list( ', ' ) ): ?>
