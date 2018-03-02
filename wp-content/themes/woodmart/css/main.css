@@ -163,7 +163,7 @@ h3
     content: '';
 
     color: #636c72;
-    background: url(/wp-content/themes/woodmart/images/breadcrums.png) center no-repeat;
+    background: url(../images/breadcrums.png) center no-repeat;
 }
 .woodmart-woo-breadcrumbs .woocommerce-breadcrumb .breadcrumb-last
 {
@@ -535,7 +535,7 @@ h3
 }
 .infolk__user-company
 {
-    font-family: 'Rubik';
+    font-family: Rubik;
     font-size: 1.6em;
 
     letter-spacing: .05em;
@@ -672,7 +672,7 @@ h3
     width: 24px;
     height: 24px;
 
-    background-image: url('/wp-content/themes/woodmart/images/sprite/sprite.png');
+    background-image: url(../images/sprite.png);
     background-repeat: no-repeat;
 }
 .infolk__icon_mail
@@ -765,7 +765,7 @@ h3
 }
 .Mail-Head
 {
-    font-family: 'Rubik';
+    font-family: Rubik;
     font-size: 1.4em;
 
     padding: 8px;
@@ -820,7 +820,7 @@ h3
 }
 .Notification-Head
 {
-    font-family: 'Rubik';
+    font-family: Rubik;
     font-size: 1.4em;
 
     padding: 8px;
@@ -1533,7 +1533,7 @@ h3
 {
     color: #4f4f4f; 
     background-color: white;
-    background-image: url('images/bunner/concentrator.png');
+    background-image: url('../images/bunner/concentrator.png');
     background-position: 10% center;
 }
 
@@ -1541,7 +1541,7 @@ h3
 {
     color: #6ea3db; 
     background-color: #e8f4fc;
-    background-image: url('images/bunner/puls.png');
+    background-image: url('../images/bunner/puls.png');
     background-position: 90% center;
 }
 
@@ -1549,7 +1549,7 @@ h3
 {
     color: #828282; 
     background-color: #f0f0f0;
-    background-image: url('images/bunner/breath.png');
+    background-image: url('../images/bunner/breath.png');
     background-position: center 10%;
 }
 
@@ -1557,7 +1557,7 @@ h3
 {
     color: #bd4243; 
     background-color: #fff7f7;
-    background-image: url('images/bunner/kokteiler.png');
+    background-image: url('../images/bunner/kokteiler.png');
     background-position: center 90%;
 }
 
@@ -1565,7 +1565,7 @@ h3
 {
     color: #8388a5; 
     background-color: #f1f0ff;
-    background-image: url('images/bunner/kislorod.png');
+    background-image: url('../images/bunner/kislorod.png');
     background-position: bottom right;
 }
 
@@ -1573,7 +1573,7 @@ h3
 {
     color: #4ebf9d; 
     background-color: #f0faf7;
-    background-image: url('images/bunner/associated.png');
+    background-image: url('../images/bunner/associated.png');
     background-position: left bottom;
 }
 
@@ -2288,7 +2288,7 @@ h3
 
     border-radius: 50%; 
     background-color: #f2f2f2;
-    background-image: url('images/sprite.png');
+    background-image: url('../images/sprite.png');
     background-repeat: no-repeat;
     background-position: 0 -139px;
 }
@@ -2382,7 +2382,7 @@ h3
     width: 24px;
     height: 24px; 
 
-    background: url('/wp-content/themes/woodmart/images/sprite/social.svg');
+    background: url('../images/sprite/social.svg');
     background-repeat: no-repeat;
 }
 .quickview-item_buy__social-icon__vk
@@ -2491,7 +2491,7 @@ h3
     height: 15px;
     margin-right: 6px;
 
-    background-image: url('/wp-content/themes/woodmart/images/sprite/samovivoz__quickview.svg');
+    background-image: url('../images/sprite/samovivoz__quickview.svg');
     background-repeat: no-repeat; 
     background-position: 0 -15px;
 }
@@ -2505,7 +2505,7 @@ h3
     height: 15px;
     margin-right: 6px;
 
-    background-image: url('/wp-content/themes/woodmart/images/sprite/samovivoz__quickview.svg');
+    background-image: url('../images/sprite/samovivoz__quickview.svg');
     background-repeat: no-repeat; 
     background-position: 0 0;
 }
@@ -2745,7 +2745,7 @@ h3
     border: 1px solid #f2f2f2;
     border-radius: 2px;
     background-color: #fff;
-    background-image: url('/images/quickview/quickview__select.svg');
+    background-image: url('../images/quickview/quickview__select.svg');
     background-repeat: no-repeat;
     background-position: 168px -1px;
 
@@ -3820,13 +3820,13 @@ span.sku_wrapper
     width: 100%;
     height: 310px; 
 
-    background: url(images/page/index/news-1.jpg) center no-repeat;
+    background: url(../images/page/index/news-1.jpg) center no-repeat;
     background-size: cover;
 }
 
 .news-image-2
 {
-    background: url(images/page/index/news-2.jpg) center no-repeat;
+    background: url(../images/page/index/news-2.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -3906,7 +3906,7 @@ span.sku_wrapper
 {
     height: 485px; 
 
-    background: url(images/page/index/contact-form_bg.jpg) center no-repeat;
+    background: url(../images/page/index/contact-form_bg.jpg) center no-repeat;
 }
 .contact-form__wrapper
 {
@@ -4062,7 +4062,7 @@ span.sku_wrapper
     width: 30px;
     height: 30px;
 
-    background-image: url('images/sprite.png');
+    background-image: url('../images/sprite.png');
     background-repeat: no-repeat;
 }
 .head-lk__icon_change
@@ -4187,7 +4187,7 @@ span.sku_wrapper
     height: 24px;
     margin-right: 20px;
 
-    background-image: url('images/sprite.png');
+    background-image: url('../images/sprite.png');
     background-repeat: no-repeat;
 }
 .asside_left__icon_index
@@ -4314,7 +4314,7 @@ span.sku_wrapper
     margin-right: 15px;
     margin-left: 15px;
 
-    background-image: url('images/sprite.png');
+    background-image: url('../images/sprite.png');
     background-repeat: no-repeat;
 }
 .asside_right__icon_compar
@@ -4367,7 +4367,7 @@ span.sku_wrapper
     width: 30px;
     height: 30px;
 
-    background-image: url('images/Icon/lk_sprite.svg');
+    background-image: url('../images/Icon/lk_sprite.svg');
     background-repeat: no-repeat;
 }
 .edit__icon_company
@@ -4417,7 +4417,7 @@ span.sku_wrapper
     height: 90px;
     margin-bottom: 15px;
 
-    background-image: url('images/lk/drope__zone.svg');
+    background-image: url('../images/lk/drope__zone.svg');
     background-repeat: no-repeat;
 }
 .edit__tabs-text
@@ -4545,7 +4545,7 @@ span.sku_wrapper
     width: 9px;
     height: 6px;
 
-    background-image: url('images/lk/users__arrow.svg');
+    background-image: url('../images/lk/users__arrow.svg');
     background-repeat: no-repeat;
 }
 .edit__users-head
@@ -4630,7 +4630,7 @@ span.sku_wrapper
 
     cursor: pointer; 
 
-    background-image: url('images/lk/user__edit.svg');
+    background-image: url('../images/lk/user__edit.svg');
     background-repeat: no-repeat;
 }
 .edit__user-icon_edit
@@ -4787,7 +4787,7 @@ span.sku_wrapper
 
     cursor: pointer; 
 
-    background-image: url('images/lk/delete__break.png');
+    background-image: url('../images/lk/delete__break.png');
     background-repeat: no-repeat;
 }
 
@@ -4998,19 +4998,19 @@ span.sku_wrapper
 }
 .LkIndex-SmallContainer_Discount
 {
-    background-image: url('images/lk/discount.svg');
+    background-image: url('../images/lk/discount.svg');
 }
 .LkIndex-SmallContainer_NewOrders
 {
-    background-image: url('images/lk/NewOrders.svg');
+    background-image: url('../images/lk/NewOrders.svg');
 }
 .LkIndex-SmallContainer_InWorkOrders
 {
-    background-image: url('images/lk/InWorkOrders.svg');
+    background-image: url('../images/lk/InWorkOrders.svg');
 }
 .LkIndex-SmallContainer_FinishedOrders
 {
-    background-image: url('images/lk/FinishedOrders.svg');
+    background-image: url('../images/lk/FinishedOrders.svg');
 }
 .LkIndex-Count,
 .LkIndex-Head
@@ -5583,7 +5583,7 @@ span.sku_wrapper
 
     border-radius: 50%;
     background-color: #c62828; 
-    background-image: url('images/sprite.png');
+    background-image: url('../images/sprite.png');
     background-repeat: no-repeat;
 }
 .orders__filter-icon_create
@@ -5686,7 +5686,7 @@ span.sku_wrapper
     color: #4f4f4f;
     border-bottom: 1px solid #e0e0e0;
     background-color: transparent;
-    background-image: url('images/lk/search__icon.png');
+    background-image: url('../images/lk/search__icon.png');
     background-repeat: no-repeat;
     background-position: 0 0;
 }
@@ -5785,7 +5785,7 @@ span.sku_wrapper
 
     cursor: pointer; 
 
-    background-image: url('images/sprite.png');
+    background-image: url('../images/sprite.png');
     background-repeat: no-repeat;
 }
 .orders__icon:not(:last-child)
@@ -6039,7 +6039,7 @@ span.sku_wrapper
     width: 9px;
     height: 6px;
 
-    background-image: url('images/lk/users__arrow.svg');
+    background-image: url('../images/lk/users__arrow.svg');
     background-repeat: no-repeat;
 }
 
@@ -6576,7 +6576,7 @@ span.sku_wrapper
     height: 12px;
     margin-left: 10px;
 
-    background-image: url('images/sprite.png');
+    background-image: url('../images/sprite.png');
     background-repeat: no-repeat;
     background-position: -84px -72px;
 }
@@ -7173,7 +7173,7 @@ iframe
     height: 20px;
     padding: 0 13px; 
 
-    background-image: url('/wp-content/themes/woodmart/images/sprite/sprite.png');
+    background-image: url('../images/sprite.png');
     background-repeat: no-repeat;
 }
 .Button-Icon_Tel
