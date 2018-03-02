@@ -87,8 +87,8 @@
   .widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-add-button a,
   .widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-wishlistaddedbrowse a,
   .widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-wishlistexistsbrowse a,
-  .widget__compare > .compare-button a,
-  .widget__compare > .compare-button a.added,
+  .widget__compare > .product-compare-button a,
+  .widget__compare > .product-compare-button a.added,
   .widget__oneclick a,
   .widget__quick-view > .quick-view > a
     display: flex
@@ -113,7 +113,7 @@
   .widget__add-to-wishlist > .yith-wcwl-add-to-wishlist > .yith-wcwl-wishlistexistsbrowse a,
   &:hover
     background-position: -121px -138px
-  .widget__compare > .compare-button a
+  .widget__compare > .product-compare-button a
     background-position: -88px -171px
     .added, &:hover
       background-position: -121px -171px
@@ -125,6 +125,9 @@
     background-position: -88px -237px
     &:hover
       background-position: -121px -237px
+
+.widget__compare > .product-compare-button a:before
+  content: ""!important
 
 .hidden-widget
   .widget-icon-grid

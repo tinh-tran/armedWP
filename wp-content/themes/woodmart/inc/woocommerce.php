@@ -2480,7 +2480,8 @@ if( ! function_exists( 'woodmart_cart_subtotal' ) ) {
  */
 
 if( ! function_exists( 'woodmart_ajax_add_to_cart' ) ) {
-    function woodmart_ajax_add_to_cart() {
+    function woodmart_ajax_add_to_cart()
+    {
 
         // Get messages
         ob_start();
@@ -2498,19 +2499,19 @@ if( ! function_exists( 'woodmart_ajax_add_to_cart' ) ) {
         $mini_cart = ob_get_clean();
 
         // Fragments and mini cart are returned
-        $data = array(
-            'notices' => $notices,
-            'fragments' => apply_filters( 'woocommerce_add_to_cart_fragments', array(
-                    'div.widget_shopping_cart_content' => '<div class="widget_shopping_cart_content">' . $mini_cart . '</div>'
-                )
-            ),
-            'cart_hash' => apply_filters( 'woocommerce_add_to_cart_hash', WC()->cart->get_cart_for_session() ? md5( json_encode( WC()->cart->get_cart_for_session() ) ) : '', WC()->cart->get_cart_for_session() )
-        );
+            $data = array(
+                'notices' => $notices,
+                'fragments' => apply_filters('woocommerce_add_to_cart_fragments', array(
+                        'div.widget_shopping_cart_content' => '<div class="widget_shopping_cart_content">' . $mini_cart . '</div>'
+                    )
+                ),
+                'cart_hash' => apply_filters('woocommerce_add_to_cart_hash', WC()->cart->get_cart_for_session() ? md5(json_encode(WC()->cart->get_cart_for_session())) : '', WC()->cart->get_cart_for_session())
+            );
 
-        wp_send_json( $data );
+            wp_send_json($data);
 
-        die();
-    }
+            die();
+        }
 }
 
 add_action( 'wp_ajax_woodmart_ajax_add_to_cart', 'woodmart_ajax_add_to_cart' );
@@ -2979,7 +2980,7 @@ if( ! function_exists( 'woodmart_my_account_wrapp_end' ) ) {
  */
 if( ! function_exists( 'woodmart_mini_cart_view_cart_btn' ) ) {
     function woodmart_mini_cart_view_cart_btn(){
-        echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="button btn-cart wc-forward">' . esc_html__( 'View cart', 'woocommerce' ) . '</a>';
+        echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="button btn-cart wc-forward">' . esc_html__( 'В корзину', 'woocommerce' ) . '</a>';
     }
     remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
     add_action( 'woocommerce_widget_shopping_cart_buttons', 'woodmart_mini_cart_view_cart_btn', 10 );

@@ -29,10 +29,18 @@ $items_to_show = ( $position == 'side' ) ? 30 : 3;
 <?php do_action( 'woocommerce_before_mini_cart' ); ?>
 
 <div class="shopping-cart-widget-body <?php if( $position == 'side' ) echo 'woodmart-scroll'; ?>">
+
+    <?php if ( ! WC()->cart->is_empty() ) : ?>
+
+        <div class="primary-menu__cart_title">Всего товаров:&nbsp;<span>0</span><span>&nbsp;шт.</span></div>
+
+    <?php endif; ?>
+
 	<div class="<?php if( $position == 'side' ) echo 'woodmart-scroll-content'; ?> scroll-content dropdown-cart__scroll">
 		<ul class="product_list_widget woocommerce-mini-cart <?php echo esc_attr( $args['list_class'] ); ?>">
 
 			<?php if ( ! WC()->cart->is_empty() ) : ?>
+
 
 				<?php
 					do_action( 'woocommerce_before_mini_cart_contents' );
@@ -109,7 +117,8 @@ $items_to_show = ( $position == 'side' ) ? 30 : 3;
 
 		<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
-		<p class="woocommerce-mini-cart__buttons buttons"><?php do_action( 'woocommerce_widget_shopping_cart_buttons' ); ?></p>
+		<p class="woocommerce-mini-cart__buttons buttons">
+            <?php do_action( 'woocommerce_widget_shopping_cart_buttons' ); ?></p>
 
 	<?php endif; ?>
 
