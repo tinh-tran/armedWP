@@ -188,7 +188,7 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
                                 {
                                     foreach( $recirculators as $recirculator )
                                     { $i++;
-                                    if($i >2) break;
+                                    if($i >5) break;
                                         $value = get_field( $recirculator['name'] );
                                         if ($recirculator['choices']){
                                             $map = array(
