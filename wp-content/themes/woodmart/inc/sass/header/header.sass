@@ -9,10 +9,10 @@
     display: flex
 
 .vertical-navigation .item-level-0>a
-  padding: 12px 18px
-  color: #828282!important
+  padding: 12px 42px !important
+  color: #4f4f4f!important
   line-height: 20px
-  font-size: 16px!important
+  font-size: 14px!important
   font-weight: 400!important
 
 .right-column > .woodmart-header-links,
@@ -65,7 +65,7 @@
   margin: 0 17px!important
 
 #menu-main-navarmed > .menu-item > .woodmart-nav-link span
-  font-weight: 400
+  font-weight: 300
   text-transform: none!important
   color: #828282
   font-size: 14px!important
@@ -141,7 +141,7 @@
     &_text
       font-size: 1.4em
       padding: 10px
-      color: #828282
+      color: #4f4f4f
       &:hover
         color: $GlobalColor
 
@@ -153,7 +153,20 @@
   letter-spacing: .05em
   color: #828282!important
   font-weight: 500!important
-
+.catalog-bottom > .vc_column-inner > .wpb_wrapper > .wpb_content_element
+  margin-bottom: 0 !important
+.vertical-navigation .menu
+  border: none !important
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .06)!important
+.sub-menu-dropdown
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .06)!important
+.vertical-navigation .item-level-0
+  border-bottom: none!important
+  &:hover > a
+    background: #fff!important
+    color: #c62828 !important
+    margin-left: 6px
+    transition: 0.4s
 
 @media (min-width: 1200px)
   .header-full-width .main-header .navigation-wrap > .container, .header-full-width .main-header .secondary-header > .container, .header-full-width .main-header > .container, .header-full-width .single-breadcrumbs-wrapper > .container, .header-full-width .sticky-header > .container, .header-full-width .topbar-wrapp > .container
