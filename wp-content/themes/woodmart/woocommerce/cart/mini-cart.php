@@ -29,7 +29,7 @@ $items_to_show = ( $position == 'side' ) ? 30 : 3;
 <?php do_action( 'woocommerce_before_mini_cart' ); ?>
 
 <div class="shopping-cart-widget-body <?php if( $position == 'side' ) echo 'woodmart-scroll'; ?>">
-	<div class=" <?php if( $position == 'side' ) echo 'woodmart-scroll-content'; ?>">
+	<div class="<?php if( $position == 'side' ) echo 'woodmart-scroll-content'; ?> scroll-content dropdown-cart__scroll">
 		<ul class="product_list_widget woocommerce-mini-cart <?php echo esc_attr( $args['list_class'] ); ?>">
 
 			<?php if ( ! WC()->cart->is_empty() ) : ?>
@@ -37,10 +37,10 @@ $items_to_show = ( $position == 'side' ) ? 30 : 3;
 				<?php
 					do_action( 'woocommerce_before_mini_cart_contents' );
 
-					$_i = 0;
+					//$_i = 0;
 					foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-						$_i++;
-						if( $_i > $items_to_show ) break;
+						//$_i++;
+						//if( $_i > $items_to_show ) break;
 						
 						$_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 						$product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
@@ -105,7 +105,7 @@ $items_to_show = ( $position == 'side' ) ? 30 : 3;
 <div class="shopping-cart-widget-footer">
 	<?php if ( ! WC()->cart->is_empty() ) : ?>
 
-		<p class="woocommerce-mini-cart__total total"><strong><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
+		<p class="woocommerce-mini-cart__total total"><strong><?php esc_html_e( 'Итого', 'woocommerce' ); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
 
 		<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
