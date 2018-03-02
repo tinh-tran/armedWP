@@ -30,7 +30,7 @@ $items_to_show = ( $position == 'side' ) ? 30 : 3;
 
 <div class="shopping-cart-widget-body <?php if( $position == 'side' ) echo 'woodmart-scroll'; ?>">
 	<div class=" <?php if( $position == 'side' ) echo 'woodmart-scroll-content'; ?>">
-		<ul class="cart_list product_list_widget woocommerce-mini-cart <?php echo esc_attr( $args['list_class'] ); ?>">
+		<ul class="product_list_widget woocommerce-mini-cart <?php echo esc_attr( $args['list_class'] ); ?>">
 
 			<?php if ( ! WC()->cart->is_empty() ) : ?>
 
