@@ -17,6 +17,8 @@
  *
  * @package WordPress
  */
+define('WP_CACHE', true);
+define( 'WPCACHEHOME', '/home/u481580/wp.armed.ru/www/wp-content/plugins/wp-super-cache/' );
 define('WPLANG', 'ru_RU');
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
