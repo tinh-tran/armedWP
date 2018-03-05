@@ -23433,7 +23433,7 @@ form.woocommerce-currency-switcher-form .dd-pointer-up.dd-pointer-down {
   height: 30px;
   margin-top: -15px;
   margin-left: -15px;
-  background-color: transparent !important;
+  background-color: transparent;
   border-radius: 0;
   cursor: ew-resize;
   outline: none;
