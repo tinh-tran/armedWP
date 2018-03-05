@@ -1,7 +1,7 @@
 .bg-product-grid-item
   background: #fff
   border: 1px solid #E0E0E0
-  height: 430px
+  height: 390px
   display: flex
   flex-direction: column
   align-items: center
@@ -11,6 +11,9 @@
 .product-element-top, .product-element-top .hover-img
     padding: 0 20px
 
+.product-grid-item__title
+  z-index: 1
+
 .product-grid-item__title > h3.product-title
   font-family: Rubik
   font-style: normal
@@ -19,21 +22,13 @@
   font-size: 16px
   text-align: center
   text-transform: uppercase
-  margin-bottom: 30px
-  padding:
-    top: 15px
-    bottom: 15px
-    left: 30px
-    right: 30px
+  padding: 15px 30px
+  margin: 15px 0
   a
     color: #828282 !important
 
 .woodmart-hover-base.has-stars.purchasable .star-rating
   height: 40px!important
-
-.content-product-imagin
-  .product-grid-item__title > h3.product-title
-    padding: 15px 40px
 
 
 .product-price-rating
@@ -43,6 +38,7 @@
   align-items: center
   justify-content: center
   height: auto!important
+  margin-bottom: 20px
   .star-rating
     margin: 10px 0
     width: 93px
@@ -60,7 +56,6 @@
   justify-content: center!important
   align-items: center
   .woodmart-add-btn a
-    margin-top: 20px
     width: 164px!important
     border-radius: 2px!important
     font-family: Rubik

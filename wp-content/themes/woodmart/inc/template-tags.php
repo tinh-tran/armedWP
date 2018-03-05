@@ -1774,6 +1774,7 @@ if( ! function_exists( 'woodmart_header_block_header_links' ) ) {
 					<?php endforeach; ?>
 				</ul>		
 			</div>
+
 		<?php
 		}
 	}

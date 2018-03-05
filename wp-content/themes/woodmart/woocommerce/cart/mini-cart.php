@@ -32,7 +32,7 @@ $items_to_show = ( $position == 'side' ) ? 30 : 3;
 
     <?php if ( ! WC()->cart->is_empty() ) : ?>
 
-        <div class="primary-menu__cart_title">Всего товаров:&nbsp;<span>0</span><span>&nbsp;шт.</span></div>
+        <div class="primary-menu__cart_title">Всего товаров:&nbsp;<span><?php echo sprintf ( _n( '%d шт.', '%d шт.', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></div>
 
     <?php endif; ?>
 
@@ -94,7 +94,7 @@ $items_to_show = ( $position == 'side' ) ? 30 : 3;
 				?>
 
 			<?php else : ?>
-
+                <div class="cart_empty">
 				<li class="woocommerce-mini-cart__empty-message empty"><?php esc_html_e( 'No products in the cart.', 'woocommerce' ); ?></li>
 				<?php if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 					<p class="return-to-shop">
@@ -103,6 +103,7 @@ $items_to_show = ( $position == 'side' ) ? 30 : 3;
 						</a>
 					</p>
 				<?php endif; ?>
+                </div>
 
 			<?php endif; ?>
 
