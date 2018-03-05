@@ -51,6 +51,7 @@ jQuery(document).ready(function( $ ) {
  *  - Main loop
  *  - Widget loop
  *  - Sticky
+ *  - YouTube frame
  *  - Slider
  *  - Anchor-menu
  *  - Tooltip
@@ -89,6 +90,27 @@ jQuery(document).ready(function( $ ) {
         simple_tooltip(".detail__table-item a","tooltip");
     });
 
+    // YouTube frame function
+    $(".youtube").each(function() {
+        // Based on the YouTube ID, we can easily find the thumbnail image
+        $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+
+        // Overlay the Play icon to make it look like a video player
+        $(this).append($('<div/>', {'class': 'play'}));
+
+        $(document).delegate('#'+this.id, 'click', function() {
+            // Create an iFrame with autoplay set to true
+            var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+            if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
+
+            // The height and width of the iFrame should be the same as parent
+            var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
+
+            // Replace the YouTube thumbnail with YouTube HTML5 Player
+            $(this).replaceWith(iframe);
+        });
+    });
+
     // Slick slider advantages
     $('.slider-advantages').slick({dots: false,autoplaySpeed: 5000,speed: 300,infinite: true,arrows: true,nextArrow: '<button type="button" role="button" aria-label="Next" style="color:#bdbdbd; font-size:20px;" class="slick-next default"><i class="ultsl-arrow-right4"></i></button>',prevArrow: '<button type="button" role="button" aria-label="Previous" style="color:#bdbdbd; font-size:20px;" class="slick-prev default"><i class="ultsl-arrow-left4"></i></button>',slidesToScroll:4,slidesToShow:4,swipe: true,draggable: true,touchMove: true,pauseOnHover: true,adaptiveHeight: true,responsive: [
             {
@@ -116,32 +138,33 @@ jQuery(document).ready(function( $ ) {
             return '<i type="button" style="color:#333333;" class="ultsl-record" data-role="none"></i>';
         },});
 
-        // Slick slider video
-        $('.slider-video').slick({dots: false,autoplay: false,autoplaySpeed: 5000,speed: 300,infinite: true,arrows: true,nextArrow: '<button type="button" role="button" aria-label="Next" style="color:#bdbdbd; font-size:20px;" class="slick-next default"><i class="ultsl-arrow-right4"></i></button>',prevArrow: '<button type="button" role="button" aria-label="Previous" style="color:#bdbdbd; font-size:20px;" class="slick-prev default"><i class="ultsl-arrow-left4"></i></button>',slidesToScroll:2,slidesToShow:2,swipe: true,draggable: true,touchMove: true,pauseOnHover: true,adaptiveHeight: true,responsive: [
-                {
-                    breakpoint: 1025,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 769,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 481,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
+    // Slick slider video
+    // TODO при скролле ставить видео на паузу
+    $('.slider-video').slick({dots: false,autoplay: false,autoplaySpeed: 5000,speed: 300,infinite: true,arrows: true,nextArrow: '<button type="button" role="button" aria-label="Next" style="color:#bdbdbd; font-size:20px;" class="slick-next default"><i class="ultsl-arrow-right4"></i></button>',prevArrow: '<button type="button" role="button" aria-label="Previous" style="color:#bdbdbd; font-size:20px;" class="slick-prev default"><i class="ultsl-arrow-left4"></i></button>',slidesToScroll:2,slidesToShow:2,swipe: true,draggable: true,touchMove: true,pauseOnHover: true,adaptiveHeight: true,responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
                 }
-            ],pauseOnDotsHover: true,customPaging: function(slider, i) {
-                return '<i type="button" style="color:#333333;" class="ultsl-record" data-role="none"></i>';
-            },});
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ],pauseOnDotsHover: true,customPaging: function(slider, i) {
+            return '<i type="button" style="color:#333333;" class="ultsl-record" data-role="none"></i>';
+        },});
 });
 
 
@@ -216,28 +239,3 @@ jQuery(document).ready(function( $ ) {
         }
     );
 });
-
-
-/* Youtube js */
-jQuery(document).ready(function ($) {
-    $(".youtube").each(function() {
-        // Based on the YouTube ID, we can easily find the thumbnail image
-        $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
-
-        // Overlay the Play icon to make it look like a video player
-        $(this).append($('<div/>', {'class': 'play'}));
-
-        $(document).delegate('#'+this.id, 'click', function() {
-            // Create an iFrame with autoplay set to true
-            var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
-            if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
-
-            // The height and width of the iFrame should be the same as parent
-            var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
-
-            // Replace the YouTube thumbnail with YouTube HTML5 Player
-            $(this).replaceWith(iframe);
-        });
-    });
-});
-

@@ -9,14 +9,6 @@
 <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 <div class="bg-product-grid-item hidden-widget">
     <div class="content-product-imagin">
-        <div class="product-grid-item__title">
-            <h3 class="product-title">
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_field('short_title'); ?>
-                    <?php the_field('model'); ?>
-                </a>
-            </h3>
-        </div>
 
     </div>
         <div class="product-grid-item__title">

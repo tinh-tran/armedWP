@@ -31,32 +31,29 @@ $woocommerce_loop['view'] = 'quick-view';
 <div id="product-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
 
 	<div class="row product-image-summary">
-		<div class="col-md-6 col-sm-6 col-xs-12 product-images woocommerce-product-gallery">
+		<div class="col-md-4 col-sm-4 col-xs-12 product-images woocommerce-product-gallery">
 			<?php
 				woodmart_product_images_slider();
 				woodmart_view_product_button();
 			?>
 		</div>
-		<div class="col-md-6 col-sm-6 col-xs-12 summary entry-summary">
+		<div class="col-md-4 col-sm-4 col-xs-12 summary entry-summary">
 			<div class="summary-inner woodmart-scroll">
 				<div class="woodmart-scroll-content">
-					<?php
-						/**
-						 * woocommerce_single_product_summary hook
-						 *
-						 * @hooked woocommerce_template_single_title - 5
-						 * @hooked woocommerce_template_single_rating - 10
-						 * @hooked woocommerce_template_single_price - 10
-						 * @hooked woocommerce_template_single_excerpt - 20
-						 * @hooked woocommerce_template_loop_add_to_cart - 30
-						 * @hooked woocommerce_template_single_meta - 40
-						 * @hooked woocommerce_template_single_sharing - 50
-						 */
-						do_action( 'woocommerce_single_product_summary' );
-					?>
+                    <h3 class="product-title">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_field('short_title'); ?>
+                            <?php the_field('model'); ?>
+                        </a>
+                    </h3>
+                    <?php the_field('full_description'); ?>
 				</div>
 			</div>
 		</div><!-- .summary -->
+        <div class="col-md-4 col-sm-4 col-xs-12">
+
+
+        </div>
 	</div>
 
 

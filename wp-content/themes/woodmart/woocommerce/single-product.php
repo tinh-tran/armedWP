@@ -23,7 +23,7 @@ get_header( 'shop' ); ?>
     <div class="container">
         <div class="anchor__wrapper">
             <ul class="anchor__inner">
-                <li class="anchor__item"><a class="anchor__item-link" onclick="javascript:history.back(); return false;" href="#">Вернуться в раздел</a></li>
+                <li class="anchor__item"><a class="anchor__item-link" href="/shop">Вернуться в раздел</a></li>
                 <li class="anchor__item"><a class="anchor__item-link" href="#">Обзор товара</a></li>
                 <li class="anchor__item"><a class="anchor__item-link" href="#advantages">Преимущества</a></li>
                 <li class="anchor__item"><a class="anchor__item-link" href="#video">Видео</a></li>

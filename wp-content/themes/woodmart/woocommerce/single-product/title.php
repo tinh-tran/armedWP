@@ -26,4 +26,13 @@ $is_quick_view = ( isset( $woocommerce_loop['view'] ) && $woocommerce_loop['view
 
 ?>
 <!-- TODO дефольный вывод title h1 продукта -->
-<!--<h1 itemprop="name" class="product_title entry-title"><?php if( $is_quick_view ): ?><a href="<?php the_permalink(); ?>"><?php endif; ?><?php the_title(); ?><?php if( $is_quick_view ): ?></a><?php endif; ?></h1>-->
+<h1 itemprop="name" class="product_title entry-title">
+    <?php if( $is_quick_view ): ?>
+        <a href="<?php the_permalink(); ?>">
+
+            <?php the_field('short_title'); ?>
+            <?php the_field('model'); ?>
+
+        </a>
+    <?php endif; ?>
+</h1>

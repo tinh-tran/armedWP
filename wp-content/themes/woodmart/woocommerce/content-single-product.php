@@ -353,8 +353,8 @@ if( woodmart_get_opt( 'single_full_width' ) ) {
 
                                     <div class="video-item">
                                         <h2 class="wpb_heading wpb_video_heading"><?php echo $title; ?></h2>
-                                        <!--<div style="width:509px;height:286px;" class="youtube" id="<?php echo $link; ?>" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd720"></div>-->
-                                        <iframe width="509" height="286" src="https://www.youtube.com/embed/<?php echo $link; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        <div style="width:509px;height:286px;" class="youtube" id="<?php echo $link; ?>" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd720"></div>
+                                        <!--<iframe width="509" height="286" src="https://www.youtube.com/embed/<?php echo $link; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
                                     </div>
 
 
