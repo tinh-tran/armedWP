@@ -171,7 +171,7 @@ else
                 </div>
 
                 <div class="widget__compare">
-                    <?php echo do_shortcode("[yith_compare_button]"); ?>
+                    <?php woodmart_compare_btn(); ?>
                 </div>
 
                 <div class="widget__quick-view">
