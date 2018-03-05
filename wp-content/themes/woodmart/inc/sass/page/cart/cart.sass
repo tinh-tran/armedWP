@@ -18,20 +18,31 @@ td.product-name a
 
 .cart-content-wrapper
   flex-direction: column !important
-td.product-remove, th.product-remove
-  width: 20px !important
-td.c, th.product-thumbnail
-  width: 120px!important
-.shop_table > thead
-  border: none
-  box-shadow: 0 5px 6px rgba(0, 0, 0, .02)
-  > tr > th
-    border: none !important
-    font:
-      family: $fontFamilyAdditionally
-      size: 16px!important
-      weight: 400 !important
-    color: #828282 !important
-    text-transform: none !important
-  td.product-quantity
-    text-align: center!important
+//td.product-remove, th.product-remove
+//  width: 20px !important
+//td.c, th.product-thumbnail
+//  width: 120px!important
+.shop_table
+  > thead
+    border: none
+    box-shadow: 0 5px 6px rgba(0, 0, 0, .02)
+    > tr > th
+      border: none !important
+      font:
+        family: $fontFamilyAdditionally
+        size: 16px!important
+        weight: 400 !important
+      color: #828282 !important
+      text-transform: none !important
+  thead tr,
+  tr
+    td, th
+      text-align: center !important
+      &:nth-child(1),
+      &:nth-child(3)
+        text-align: left !important
+      &:nth-child(2)
+        width: 120px !important
+        text-align: center!important
+td.product-quantity
+  text-align: center!important
