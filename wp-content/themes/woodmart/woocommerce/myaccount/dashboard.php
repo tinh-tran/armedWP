@@ -123,14 +123,30 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="LkIndex-MediumContainer LkIndex-MediumContainer_Last">
               <p class="LkIndex-Head_Big">Действующие акции</p>
               <!--TODO Добавить див для внутреннего скрола-->
-              <ul class="LkIndex-ActionList">
-                <li class="LkIndex-ActionItem"><a class="LkIndex-ActionLink" href="#"><span class="LkIndex-ActionDash">—&nbsp;</span><span class="LkIndex-ActionName">Lorem Ipsum - это текст-"рыба", часто используемый в печать</span></a></li>
-                <li class="LkIndex-ActionItem"><a class="LkIndex-ActionLink" href="#"><span class="LkIndex-ActionDash">—&nbsp;</span><span class="LkIndex-ActionName">Lorem Ipsum - это текст-"рыба", часто используемый в печать</span></a></li>
-                <li class="LkIndex-ActionItem"><a class="LkIndex-ActionLink" href="#"><span class="LkIndex-ActionDash">—&nbsp;</span><span class="LkIndex-ActionName">Lorem Ipsum - это текст-"рыба", часто используемый в печать</span></a></li>
-                <li class="LkIndex-ActionItem"><a class="LkIndex-ActionLink" href="#"><span class="LkIndex-ActionDash">—&nbsp;</span><span class="LkIndex-ActionName">Lorem Ipsum - это текст-"рыба", часто используемый в печать</span></a></li>
-                <li class="LkIndex-ActionItem"><a class="LkIndex-ActionLink" href="#"><span class="LkIndex-ActionDash">—&nbsp;</span><span class="LkIndex-ActionName">Lorem Ipsum - это текст-"рыба", часто используемый в печать</span></a></li>
-                <li class="LkIndex-ActionItem"><a class="LkIndex-ActionLink" href="#"><span class="LkIndex-ActionDash">—&nbsp;</span><span class="LkIndex-ActionName">Lorem Ipsum - это текст-"рыба", часто используемый в печать</span></a></li>
-                <li class="LkIndex-ActionItem"><a class="LkIndex-ActionLink" href="#"><span class="LkIndex-ActionDash">—&nbsp;</span><span class="LkIndex-ActionName">Lorem Ipsum - это текст-"рыба", часто используемый в печать</span></a></li>
+			   <ul class="LkIndex-ActionList">
+			  <?php 
+					// параметры по умолчанию
+					$args = array(
+						'numberposts' => 7,
+						'category'    => 10857,
+						'orderby'     => 'date',
+						'order'       => 'DESC',
+						'post_type'   => 'post' 
+						
+					);
+
+					$actoins = get_posts( $args );
+
+					foreach($actoins as $actoin){ setup_postdata($actoin);
+						// формат вывода
+						//print_r ($post);
+						echo '<li class="LkIndex-ActionItem"><a class="LkIndex-ActionLink" href="'.$actoin->guid.'"><span class="LkIndex-ActionDash">—&nbsp;</span><span class="LkIndex-ActionName">'.$actoin->post_title.'</span></a></li>';
+						
+					}
+
+					wp_reset_postdata(); // сброс?>
+			  
+                
               </ul>
             </div>
             <div class="LkIndex-XlContainer">
@@ -141,7 +157,12 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
             <div class="LkIndex-XlContainer LkIndex-XlContainer_Last">
               <p class="LkIndex-Head_Big">Рекомендуемые видео</p>
-              <div class="LkIndex-VideoWrap slick-initialized slick-slider"><i class="LkIndex-VideoWrap_ArrowRight slick-arrow" style=""></i><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 5850px; transform: translate3d(-650px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/0dRQJRtEODc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 650px;"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/G4sS2Uzwwqk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/TyF6SKxaANo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/KD_hdv2oI80" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/0dRQJRtEODc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/G4sS2Uzwwqk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/TyF6SKxaANo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/KD_hdv2oI80" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/0dRQJRtEODc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div></div></div><i class="LkIndex-VideoWrap_ArrowLeft slick-arrow" style=""></i></div>
+              <div class="LkIndex-VideoWrap slick-initialized slick-slider"><i class="LkIndex-VideoWrap_ArrowRight slick-arrow" style=""></i><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 5850px; transform: translate3d(-650px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 650px;" tabindex="-1">
+			  <div>
+			  <iframe width="650" height="365" src="https://www.youtube.com/embed/0dRQJRtEODc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div>
+			  <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 650px;">
+			  <div>
+			  <iframe width="650" height="365" src="https://www.youtube.com/embed/G4sS2Uzwwqk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/TyF6SKxaANo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/KD_hdv2oI80" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/0dRQJRtEODc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/G4sS2Uzwwqk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/TyF6SKxaANo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/KD_hdv2oI80" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div><div class="slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" style="width: 650px;" tabindex="-1"><div><iframe width="650" height="365" src="https://www.youtube.com/embed/0dRQJRtEODc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: 100%; display: inline-block;"></iframe></div></div></div></div><i class="LkIndex-VideoWrap_ArrowLeft slick-arrow" style=""></i></div>
               <p class="LkIndex-VideoCount">1 / 4</p>
             </div>
           </div>

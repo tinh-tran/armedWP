@@ -30,6 +30,19 @@ jQuery(document).ready(function( $ ) {
             theme:"dark",
             scrollbarPosition: "outside"
         });
+        $(".widget_shopping_cart").css('height', '450px');
+    });
+
+    // Widger - dropdown cart change parent class
+    // - If cart empty
+    $(".woocommerce-mini-cart__empty-message")
+        .parents(".widget_shopping_cart")
+            .css('height', '30px');
+    // - If cart empty only deleted all product of widget cart
+    $(".dropdown-cart").on('DOMSubtreeModified', function () {
+        $(this).find(".woocommerce-mini-cart__empty-message")
+            .parents(".widget_shopping_cart")
+            .css('height', '30px');
     });
 });
 /**

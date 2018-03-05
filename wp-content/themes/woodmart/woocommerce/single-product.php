@@ -38,7 +38,20 @@ get_header( 'shop' ); ?>
 <div class="single-product_wrapper">
     <div class="single-product_content col-sm-10">
         <div class="product_title">
-            <h1 itemprop="name" class="entry-title"><?php if( $is_quick_view ): ?><a href="<?php the_permalink(); ?>"><?php endif; ?><?php the_title(); ?><?php if( $is_quick_view ): ?></a><?php endif; ?> <small><?php the_field('short_title'); ?></small></h1>
+            <h1 itemprop="name" class="entry-title">
+
+                <?php the_field('full_title'); ?>
+                <?php the_field('model'); ?>
+
+                <!-- TODO Добавить разделение через запятую на пыхе -->
+                <?php if ( have_rows('otl_osob') ): ?>
+                    <?php while (have_rows ('otl_osob') ) : the_row(); ?>
+
+                        <small><?php echo the_sub_field('osob'); ?></small>
+
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </h1>
             <?php if ( woodmart_get_opt( 'products_nav' ) ): ?>
                 <?php woodmart_products_nav(); ?>
             <?php endif ?>
@@ -73,7 +86,10 @@ get_header( 'shop' ); ?>
 </div>
     <div class="single-product_fixed col-sm-4">
     <div class="single-product_fixed-wrapper">
-        <h4 itemprop="name" class="product_title entry-title"><?php if( $is_quick_view ): ?><a href="<?php the_permalink(); ?>"><?php endif; ?><?php the_title(); ?><?php if( $is_quick_view ): ?></a><?php endif; ?></h4>
+        <h4 itemprop="name" class="product_title entry-title">
+            <?php the_field('short_title'); ?>
+            <?php the_field('model'); ?>
+        </h4>
         <?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
 
             <span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span></span>

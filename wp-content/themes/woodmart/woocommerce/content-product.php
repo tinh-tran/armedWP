@@ -122,29 +122,16 @@ else
 
     <div class="bg-product-grid-item hidden-widget">
         <div class="content-product-imagin">
-            <div class="product-grid-item__title">
-                <?php
-                /**
-                 * woocommerce_shop_loop_item_title hook
-                 *
-                 * @hooked woocommerce_template_loop_product_title - 10
-                 */
 
-                do_action( 'woocommerce_shop_loop_item_title' );
-                ?>
-            </div>
 
         </div>
         <div class="product-grid-item__title">
-            <?php
-            /**
-             * woocommerce_shop_loop_item_title hook
-             *
-             * @hooked woocommerce_template_loop_product_title - 10
-             */
-
-            do_action( 'woocommerce_shop_loop_item_title' );
-            ?>
+            <h3 class="product-title">
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_field('short_title'); ?>
+                    <?php the_field('model'); ?>
+                </a>
+            </h3>
         </div>
 
         <div class="product-element-top">

