@@ -63,5 +63,6 @@
 <div class="woodmart-close-side"></div>
 <?php wp_footer(); ?>
 <script src="/wp-content/themes/woodmart/js/custom.js"></script>
+<script src="/wp-content/themes/woodmart/js/geo.js"></script>
 </body>
 </html>
